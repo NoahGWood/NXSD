@@ -1,3 +1,6 @@
 [submodule "vendor/NTest"]
 	path = vendor/NTest
 	url = https://github.com/NoahGWood/NTest
+[submodule "vendor/tinyxml2"]
+	path = vendor/tinyxml2
+	url = https://github.com/leethomason/tinyxml2.git

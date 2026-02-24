@@ -1,0 +1,1533 @@
+<xs:schema 
+    ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/4.0/#ExtensionSchemaDocument"
+    xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+    xmlns:itl="http://biometrics.nist.gov/standard/2011"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:s="http://release.niem.gov/niem/structures/4.0/"
+    xmlns:biom="http://publication.niem.gov/niem/domains/biometrics/4.0/1/"
+    xmlns:i="http://release.niem.gov/niem/appinfo/4.0/"
+    xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/"
+    xmlns:niem-xs="http://release.niem.gov/niem/proxy/xsd/4.0/"
+    xmlns:fbi="http://release.niem.gov/niem/codes/fbi_ncic/4.0/"
+    xmlns:j="http://release.niem.gov/niem/domains/jxdm/6.0/"
+ 
+    targetNamespace="http://biometrics.nist.gov/standard/2011" version="2011_NIEM4_Update">
+    
+    <xs:annotation>
+        <xs:documentation>ANSI/NIST-ITL 2011 Biometric Information Exchange Package, NIEM 4 Update</xs:documentation>
+        <xs:appinfo>
+            <i:ConformantIndicator>true</i:ConformantIndicator>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:import namespace="http://release.niem.gov/niem/appinfo/4.0/" schemaLocation="../niem/utility/appinfo/4.0/appinfo.xsd"/>
+    <xs:import namespace="http://publication.niem.gov/niem/domains/biometrics/4.0/1/" schemaLocation="../niem/domains/biometrics/4.0/1/biom.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/codes/fbi_ncic/4.0/" schemaLocation="../niem/codes/fbi_ncic/4.0/fbi_ncic.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/niem-core/4.0/" schemaLocation="../niem/niem-core/4.0/niem-core.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/proxy/xsd/4.0/" schemaLocation="../niem/proxy/xsd/4.0/xs.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/structures/4.0/" schemaLocation="../niem/utility/structures/4.0/structures.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/domains/jxdm/6.0/" schemaLocation="../niem/domains/jxdm/6.0/jxdm.xsd"/>
+    <xs:element name="NISTBiometricInformationExchangePackage" type="itl:NISTBiometricInformationExchangePackageType">
+        <xs:annotation>
+            <xs:documentation>A biometric information exchange package representing one biometric transaction</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="NISTBiometricInformationExchangePackageType">
+        <xs:annotation>
+            <xs:documentation>A data type for a biometric information exchange package representing
+                one biometric transaction</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="itl:PackageInformationRecord"/>
+                    <xs:element ref="itl:PackageDescriptiveTextRecord" minOccurs="1" maxOccurs="2"/>
+                    <xs:element ref="itl:PackageDataRecordAbstract" minOccurs="0" maxOccurs="998"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="PackageInformationRecord" type="itl:PackageInformationRecordType">
+        <xs:annotation> 
+            <xs:documentation>A Type-1 transactional information record</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="PackageInformationRecordType">
+        <xs:annotation>
+            <xs:documentation>A data type for a Type-1 transactional information record</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="itl:Transaction"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+      
+    <xs:element name="PackageDescriptiveTextRecord" type="itl:PackageDescriptiveTextRecordType">
+        <xs:annotation>
+            <xs:documentation>A Type-2 descriptive record</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="PackageDescriptiveTextRecordType">
+        <xs:annotation>
+            <xs:documentation>A data type for a Type-2 descriptive record</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                    <xs:sequence>
+                        <xs:element ref="biom:ImageReferenceID"/>                                                      
+                        <xs:element ref="itl:UserDefinedFields" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element ref="itl:UserDefinedDescriptiveDetail" minOccurs="0"/>                        
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="PackageLegacyFingerprintImageRecord" type="itl:PackageLegacyFingerprintImageRecordType" substitutionGroup="itl:PackageDataRecordAbstract">
+        <xs:annotation>
+            <xs:documentation>An element to represent a legacy exemplar finger image</xs:documentation>
+        </xs:annotation> 
+    </xs:element>
+    
+    <xs:complexType name="PackageLegacyFingerprintImageRecordType">
+        <xs:annotation>
+            <xs:documentation>A data type for a Type-4 legacy 500 ppi exemplar record</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:ImageReferenceID"/> 
+                    <xs:element ref="itl:FingerprintLegacyImageData"/>                                 
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="PackageUserDefinedImageRecord" type="itl:PackageUserDefinedImageRecordType" substitutionGroup="itl:PackageDataRecordAbstract">
+        <xs:annotation>
+            <xs:documentation>A Type-7 user-defined image record</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="PackageUserDefinedImageRecordType">
+        <xs:annotation>
+            <xs:documentation>A data type for a user-defined image record (Type-7)</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:ImageReferenceID"/> 
+                    <xs:element ref="itl:UserDefinedFields" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:BiometricImageAbstract" minOccurs="0"/>                                 
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="PackageMinutiaeRecord" substitutionGroup="itl:PackageDataRecordAbstract" type="itl:PackageMinutiaeRecordType">
+        <xs:annotation>
+            <xs:documentation>A Type-9 minutiae data record</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="PackageMinutiaeRecordType">
+        <xs:annotation>
+            <xs:documentation>A data type for a minutiae data record (Type-9)</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:ImageReferenceID"/>  
+                    <xs:element ref="itl:UserDefinedFields" minOccurs="0" maxOccurs="unbounded"/> 
+                    <xs:element ref="biom:ProcessAnnotation" minOccurs="0" maxOccurs="unbounded"/> 
+                    <xs:element ref="biom:FrictionRidgeImageImpressionCaptureCategoryAbstract"/> 
+                    <xs:element ref="biom:MinutiaeUniversalLatentWorkstationAnnotationText" minOccurs="0" maxOccurs="unbounded"/>  
+                    <xs:element ref="biom:CaptureDevice" minOccurs="0"/> 
+                    <xs:element ref="biom:RecordMinutiaeAbstract" maxOccurs="unbounded"/> 
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="PackagePhotographicBodyPartImageRecord" substitutionGroup="itl:PackageDataRecordAbstract" type="itl:PackagePhotographicBodyPartImageRecordType">
+        <xs:annotation>
+            <xs:documentation>A Type-10 facial, SMT, or other body part image record</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="PackagePhotographicBodyPartImageRecordType">
+        <xs:annotation>
+            <xs:documentation>A data type for a facial, SMT, or body part image record (Type-10)</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>                    
+                    <xs:element ref="biom:ImageReferenceID"/>  
+                    <xs:element ref="itl:UserDefinedFields" minOccurs="0" maxOccurs="unbounded"/> 
+                   <xs:element ref="biom:ProcessAnnotation" minOccurs="0" maxOccurs="unbounded"/> 
+                    <xs:element ref="biom:AssociatedContext" minOccurs="0" maxOccurs="255"/>
+                    <xs:element ref="biom:ImageHashValue" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="biom:SourceInformation" minOccurs="0" maxOccurs="255"/>                    
+                    <xs:choice>
+                        <xs:element ref="biom:FaceImage"/>
+                        <xs:element ref="biom:PhysicalFeatureImage"/>
+                    </xs:choice>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>        
+    
+    <xs:element name="PackageLatentImageRecord" substitutionGroup="itl:PackageDataRecordAbstract" type="itl:PackageLatentImageRecordType">
+        <xs:annotation>
+            <xs:documentation>A Type-13 Latent Friction Ridge Image Record</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="PackageLatentImageRecordType">
+        <xs:annotation>
+            <xs:documentation>A data type for a Type-13 Latent Friction Ridge Image Record</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:ImageReferenceID"/>
+                    <xs:element ref="itl:UserDefinedFields" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:ProcessAnnotation" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:AssociatedContext" minOccurs="0" maxOccurs="255"/>
+                    <xs:element ref="biom:ImageHashValue" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="biom:SourceInformation" minOccurs="0" maxOccurs="255"/>                  
+                    <xs:element ref="nc:Base64BinaryObject"/>
+                    <xs:element ref="biom:FrictionRidgeDetail"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>   
+    
+    <xs:element name="PackageFingerImpressionImageRecord" substitutionGroup="itl:PackageDataRecordAbstract" type="itl:PackageFingerImpressionImageRecordType">
+        <xs:annotation>
+            <xs:documentation>A Type-14  Variable Resolution Friction Ridge Image Record</xs:documentation>
+        </xs:annotation>
+    </xs:element>    
+    <xs:complexType name="PackageFingerImpressionImageRecordType">
+        <xs:annotation>
+            <xs:documentation>A data type for a fingerprint image record (Type-14)</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:ImageReferenceID"/>
+                    <xs:element ref="itl:UserDefinedFields" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:ProcessAnnotation" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:AssociatedContext" minOccurs="0" maxOccurs="255"/>
+                    <xs:element ref="biom:ImageHashValue" minOccurs="0"/>
+                    <xs:element ref="biom:SourceInformation" minOccurs="0" maxOccurs="255"/>
+                    <xs:element ref="nc:Base64BinaryObject" minOccurs="0"/>
+                    <xs:element ref="biom:FingerImpressionImageDetail"/>      
+                </xs:sequence>   
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="PackagePalmPrintImageRecord" type="itl:PackagePalmPrintImageRecordType" substitutionGroup="itl:PackageDataRecordAbstract">
+        <xs:annotation>
+            <xs:documentation>A Type-15 Palm print exemplar record</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="PackagePalmPrintImageRecordType">
+        <xs:annotation>
+            <xs:documentation>A data type for a Palm print exemplar record</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:ImageReferenceID"/>
+                    <xs:element ref="itl:UserDefinedFields" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:ProcessAnnotation" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:AssociatedContext" minOccurs="0" maxOccurs="255"/>
+                    <xs:element ref="biom:ImageHashValue" minOccurs="0"/>
+                    <xs:element ref="biom:SourceInformation" minOccurs="0" maxOccurs="255"/>            
+                    <xs:element ref="nc:Base64BinaryObject" minOccurs="0"/>
+                    <xs:element ref="biom:PalmPrintImageDetail"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+      
+    <xs:element name="PackageUserDefinedTestingImageRecord" type="itl:PackageUserDefinedTestingImageRecordType" substitutionGroup="itl:PackageDataRecordAbstract">
+    <xs:annotation>
+        <xs:documentation>A Type-16 user-defined variable-resolution testing image record</xs:documentation>
+    </xs:annotation>
+    </xs:element>
+    <xs:complexType name="PackageUserDefinedTestingImageRecordType">
+    <xs:annotation>
+        <xs:documentation>A data type for a user-defined variable-resolution testing image record (Type-16)</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+        <xs:extension base="s:ObjectType">
+            <xs:sequence>
+                <xs:element ref="biom:ImageReferenceID"/>
+                <xs:element ref="itl:UserDefinedFields" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="biom:ProcessAnnotation" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="biom:AssociatedContext" minOccurs="0" maxOccurs="255"/>
+                <xs:element ref="biom:ImageHashValue" minOccurs="0"/>
+                <xs:element ref="biom:SourceInformation" minOccurs="0" maxOccurs="255"/>
+                <!-- <xs:choice minOccurs="1" maxOccurs="1"> -->
+                    <xs:element ref="nc:Base64BinaryObject"/>
+                    <!-- <xs:element ref="biom:SourceExternalFileReferenceText"/> -->
+            <!--     </xs:choice> -->
+                <xs:element ref="biom:TestImageDetail"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="PackageIrisImageRecord" type="itl:PackageIrisImageRecordType" substitutionGroup="itl:PackageDataRecordAbstract">
+        <xs:annotation>
+            <xs:documentation>A Type-17 iris image record</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="PackageIrisImageRecordType">
+        <xs:annotation>
+            <xs:documentation>A data type for an iris image record (Type-17)</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:ImageReferenceID"/>
+                    <xs:element ref="itl:UserDefinedFields" minOccurs="0" maxOccurs="unbounded"/>                    
+                    <xs:element ref="biom:ProcessAnnotation" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:AssociatedContext" minOccurs="0" maxOccurs="255"/>
+                    <xs:element ref="biom:ImageHashValue" minOccurs="0"/>
+                    <xs:element ref="biom:SourceInformation" minOccurs="0" maxOccurs="255"/>
+                    <xs:element ref="nc:Base64BinaryObject" minOccurs="0"/>
+                    <xs:element ref="biom:IrisImageDetail"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="PackagePlantarImageRecord" type="itl:PackagePlantarImageRecordType" substitutionGroup="itl:PackageDataRecordAbstract">
+        <xs:annotation>
+            <xs:documentation>A Type-19 Plantar image data record</xs:documentation>
+        </xs:annotation>
+    </xs:element>    
+    <xs:complexType name="PackagePlantarImageRecordType">
+        <xs:annotation>
+            <xs:documentation>A Type-19 plantar exemplar record</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:ImageReferenceID"/>
+                    <xs:element ref="itl:UserDefinedFields" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:ProcessAnnotation" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:AssociatedContext" minOccurs="0" maxOccurs="255"/>
+                    <xs:element ref="biom:ImageHashValue" minOccurs="0"/>
+                    <xs:element ref="biom:SourceInformation" minOccurs="0" maxOccurs="255"/>
+                    <xs:element ref="nc:Base64BinaryObject"/>                 
+                    <xs:element ref="biom:PlantarImageDetail"/>           
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="PackageSourceRepresentationRecord" type="itl:PackageSourceRepresentationRecordType" substitutionGroup="itl:PackageDataRecordAbstract">
+        <xs:annotation>
+            <xs:documentation>A Type-20 source representation data record</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="PackageSourceRepresentationRecordType">
+        <xs:annotation>
+            <xs:documentation>A data type for a source representation data record (Type-20)</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:ImageReferenceID"/>
+                    <xs:element ref="itl:UserDefinedFields" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:ProcessAnnotation" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:AssociatedContext" minOccurs="0" maxOccurs="255"/>
+                    <xs:element ref="biom:ImageHashValue" minOccurs="0"/>                 
+                    <xs:element ref="biom:SourceRecordCardinalityCode"/>
+                    <xs:element ref="biom:SourceAcquisition" maxOccurs="9"/>
+                    <xs:element ref="biom:SourceFileFormat"/>
+                    <xs:element ref="biom:SourceCommentText" minOccurs="0"/>
+                    <xs:element ref="biom:SourceID"/>
+                    <xs:element ref="nc:Base64BinaryObject"/>
+                    <xs:element ref="biom:SourceMediaDetail"/>        
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="PackageAssociatedContextRecord" type="itl:PackageAssociatedContextRecordType" substitutionGroup="itl:PackageDataRecordAbstract">
+        <xs:annotation>
+            <xs:documentation>A Type-21 Associated Context Record</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="PackageAssociatedContextRecordType">
+        <xs:annotation>
+            <xs:documentation>A data type for an Associated Context Record (Type-21)</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:ImageReferenceID"/>
+                    <xs:element ref="itl:UserDefinedFields" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:ProcessAnnotation" minOccurs="0" maxOccurs="unbounded"/>
+                   <xs:element ref="biom:ImageHashValue" minOccurs="0"/>
+                    <xs:element ref="biom:ContextFileFormat"/>
+                    <xs:element ref="biom:ContextCommentText" minOccurs="0"/>
+                    <xs:element ref="biom:ContextID"/>
+                      <xs:element ref="nc:Base64BinaryObject"/>
+                    <xs:element ref="biom:ContextMediaDetail"/>                    
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="PackageCBEFFBiometricDataRecord" substitutionGroup="itl:PackageDataRecordAbstract" type="itl:PackageCBEFFBiometricDataRecordType">
+        <xs:annotation>
+            <xs:documentation>A Type-99 CBEFF biometric data record</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="PackageCBEFFBiometricDataRecordType">
+        <xs:annotation>
+            <xs:documentation>A Type-99 CBEFF biometric data record</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:ImageReferenceID"/>
+                    <xs:element ref="itl:UserDefinedFields" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:ProcessAnnotation" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:AssociatedContext" minOccurs="0" maxOccurs="255"/>
+                    <xs:element ref="biom:ImageHashValue" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="biom:SourceInformation" minOccurs="0" maxOccurs="255"/>
+                    <xs:element ref="biom:CBEFFImage"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    
+    
+      
+  <!--~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*-->
+  
+  <!-- A -->
+    
+    <xs:element name="AgencyName" type="nc:TextType">
+        <xs:annotation>
+            <xs:documentation>A common name for an agency</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="ApplicationProfileVersionNumberID" type="niem-xs:string" nillable="false">
+        <xs:annotation>
+            <xs:documentation>An identification of the version number of an application profile specification</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    
+   <!-- B -->
+    <!-- C -->
+    <xs:element name="CharacterSetCommonNameCode" type="itl:CharacterSetCommonNameCodeType">
+        <xs:annotation>
+            <xs:documentation>A common name for the character set associated with the index number that references an associated character set throughout a transaction</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:simpleType name="CharacterSetCommonNameCodeSimpleType">
+        <xs:annotation>
+            <xs:documentation>A data type for a common name for a character set</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="ASCII">
+                <xs:annotation>
+                    <xs:documentation>ASCII 7-bit (with zero added in high bit position)</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="UTF-16">
+                <xs:annotation>
+                    <xs:documentation>UTF-16</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="UTF-32">
+                <xs:annotation>
+                    <xs:documentation>UTF-32</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="UTF-8">
+                <xs:annotation>
+                    <xs:documentation>UTF-8</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ASCII 8-bit">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <i:Deprecated i:value="true"/>
+                    </xs:appinfo>
+                    <xs:documentation>8-bit ASCII, Latin-1 character set (ISO/IEC 8859-1)</xs:documentation>
+                </xs:annotation>                
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="CharacterSetCommonNameCodeType">     
+        <xs:annotation>
+            <xs:documentation>A data type for standard character set names</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="itl:CharacterSetCommonNameCodeSimpleType">
+                        <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:extension> 
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:element name="CharacterSetIndexUserDefinedCode" type="itl:CharacterSetIndexUserDefinedCodeType">
+        <xs:annotation>
+            <xs:documentation>A user defined character set name</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="CharacterSetIndexUserDefinedCodeType">
+        <xs:annotation>
+            <xs:documentation>A data type for a user defined character set</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:restriction base="niem-xs:integer">
+                <xs:minInclusive value="128"/>
+                <xs:maxInclusive value="999"/>
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:element name="CharacterSetUserDefinedName" type="itl:CharacterSetUserDefinedNameType">
+        <xs:annotation>
+            <xs:documentation>A data type for user-defined character set names</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="CharacterSetUserDefinedNameType">     
+        <xs:annotation>
+            <xs:documentation>A data type for user-defined character set names</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:restriction base="niem-xs:string">
+                <xs:minLength value="1"/>
+                <xs:maxLength value="16"/>
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    
+    <xs:element name="CharacterSetIndexCode" type="itl:CharacterSetIndexCodeType" nillable="true">
+        <xs:annotation>
+            <xs:documentation>A character set index number that references an associated character set throughout a transaction</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+     <xs:simpleType name="CharacterSetIndexCodeSimpleType">
+        <xs:annotation>
+            <xs:documentation>A data type for a character set index number that references an associated character set throughout a transaction</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="0">
+                <xs:annotation>
+                    <xs:documentation>ASCII</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="1">
+                <xs:annotation>
+                    <xs:documentation>ASCII 8-bit (Deprecated)</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="2">
+                <xs:annotation>
+                    <xs:documentation>UTF-16</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="3">
+                <xs:annotation>
+                    <xs:documentation>UTF-8</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="4">
+                <xs:annotation>
+                    <xs:documentation>UTF-32</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="CharacterSetIndexCodeType">
+        <xs:annotation>
+            <xs:documentation>A data type for a character set index number that references an
+                associated character set throughout a transaction</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="itl:CharacterSetIndexCodeSimpleType">
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:element name="CharacterSetVersionID" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>A version number of a character set</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="ContentRecordQuantity" type="itl:ContentRecordQuantityType">
+        <xs:annotation>
+            <xs:documentation>A total count of records in the transaction, not including the Type-1 record</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="ContentRecordQuantityType">
+        <xs:annotation>
+            <xs:documentation>A data type for a representation of numbers that cannot exceed three digits</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:restriction base="niem-xs:positiveInteger">
+                <xs:maxInclusive value="999"/>
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:element name="ContentRecordSummary" type="itl:ContentRecordSummaryType">
+        <xs:annotation>
+            <xs:documentation>A summary of the contents of each record in the transaction other than the Type-1 transaction record</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="ContentRecordSummaryType">
+        <xs:annotation>
+            <xs:documentation>A data type for a summary of the contents of each record in the transaction other than the Type-1 transaction record</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:ImageReferenceID"/>
+                    <xs:element ref="itl:RecordCategoryCode"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+        
+    <!-- D -->
+    
+    <xs:element name="DomainDefinedDescriptiveDetail" abstract="true">
+        <xs:annotation>
+            <xs:documentation>A data concept for a set of domain-defined descriptive information to
+                be included in a Type-2 descriptive record; intended to be substituted by a
+                domain-defined extension element</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="DomainVersionNumberID" type="niem-xs:string" nillable="true">
+        <xs:annotation>
+            <xs:documentation>An identification of the version of a domain for a user-defined Type-2 descriptive record implementation</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- E -->
+    <!-- F -->
+    
+    <xs:element name="FingerprintLegacyImageData" type="itl:FingerprintLegacyImageDataType" substitutionGroup="biom:BiometricImageAbstract">
+        <xs:annotation>
+            <xs:documentation>An element representing the image of and data associated with legacy 500ppi grayscale fingerprint exemplars</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="FingerprintLegacyImageDataType">
+        <xs:annotation>
+            <xs:documentation>A data type for representing the image of and data associated with legacy 500ppi grayscale fingerprint exemplars</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="itl:FingerprintLegacyImageType">
+                <xs:sequence>
+                    <xs:element ref="biom:ImageHorizontalLineLengthPixelQuantity"/>                    
+                    <xs:element ref="biom:ImageVerticalLineLengthPixelQuantity"/>  
+                    <xs:element ref="biom:LegacyExemplarFingerPositionCode" maxOccurs="6"/>                       
+                    <xs:element ref="biom:FingerprintLegacyImageImpressionCaptureCategoryCode"/> 
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="FingerprintLegacyImageType">
+        <xs:annotation>
+            <xs:documentation>A data type for a legacy exemplar finger image</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:restriction base="biom:ImageType">
+                <xs:sequence>
+                    <xs:element ref="nc:Base64BinaryObject"/>                          
+                    <xs:element ref="itl:LegacyImageCompressionAlgorithmCode"/>                     
+                    <xs:element ref="biom:ScanningResolutionCategoryCode"/>   
+                </xs:sequence>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="FrictionRidgePatternCoreLocation" type="biom:VertexType" nillable="true">
+        <xs:annotation>
+            <xs:documentation>A location of a fingerprint pattern's core in a fingerprint image</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="FrictionRidgePatternDeltaLocation" type="biom:VertexType" nillable="true">
+        <xs:annotation>
+            <xs:documentation>A location of a fingerprint pattern's delta in a fingerprint image</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    
+    <!-- G -->
+    <!-- H -->
+    <!-- I -->
+   
+    <xs:complexType name="Integer0to63Type">
+        <xs:annotation>
+            <xs:documentation>A data type to restrict values to between 0 and 63, inclusive</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:restriction base="niem-xs:nonNegativeInteger">
+                <xs:maxInclusive value="63"/>
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+   
+    <!-- L -->
+  
+    <xs:element name="LegacyImageCompressionAlgorithmCode" type="itl:LegacyImageCompressionAlgorithmCodeType" substitutionGroup="biom:ImageCompressionAlgorithmAbstract">
+        <xs:annotation>
+            <xs:documentation>An element for a legacy exemplar image compression algorithm</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="LegacyImageCompressionAlgorithmCodeType">
+        <xs:annotation>
+            <xs:documentation>A restriction of the data type for a legacy exemplar image compression algorithm</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:restriction base="biom:ImageCompressionAlgorithmCodeType">
+                <xs:enumeration value="0">
+                    <xs:annotation>
+                        <xs:documentation>NONE - Uncompressed</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>                
+                <xs:enumeration value="1">
+                    <xs:annotation>
+                        <xs:documentation>WSQ20 - WSQ Version 3.1 or higher (Version 2.0 or Version 3.0 may be used for platen areas less than 2 inches in height)</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="2">
+                    <xs:annotation>
+                        <xs:appinfo>
+                            <i:Deprecated i:value="true"/>
+                        </xs:appinfo>
+                        <xs:documentation>JPEGB - JPEG ISO/IEC 10918 (Lossy)</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="3">
+                    <xs:annotation>
+                        <xs:appinfo>
+                            <i:Deprecated i:value="true"/>
+                        </xs:appinfo>
+                        <xs:documentation>JPEGL - JPEG ISO/IEC 10918 (Lossless)</xs:documentation>
+                    </xs:annotation>
+                </xs:enumeration>
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <!-- M -->
+    
+    <xs:complexType name="MajorVersionNumberType">
+        <xs:annotation>
+            <xs:documentation>A data type for a representation of allowed A/N-ITL major version values</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:restriction base="niem-xs:nonNegativeInteger">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="5"/>
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:complexType name="MinorVersionNumberType">
+        <xs:annotation>
+            <xs:documentation>A data type for a representation of allowed A/N-ITL minor version values</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:restriction base="niem-xs:nonNegativeInteger">
+                <xs:minInclusive value="0"/>
+                <xs:maxInclusive value="3"/>
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    
+    <!-- O -->
+    
+    <xs:element name="OtherDescriptiveDetail" abstract="true">
+        <xs:annotation>
+            <xs:documentation>A data concept for a set of domain-defined descriptive information to
+                be included in a Type-2 descriptive record; intended to be substituted by a
+                domain-defined extension element</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    
+    <!-- P -->
+    
+    <xs:element name="PackageDataRecordAbstract" abstract="true">
+        <xs:annotation>
+            <xs:documentation>A data concept for a biometric record; should be substituted with record types 4 through 99</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+     
+    <xs:complexType name="PenPressureType">
+        <xs:annotation>
+            <xs:documentation>A data type to limit the upper and lower bounds on the values allowed to represent pen pressure</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:restriction base="niem-xs:nonNegativeInteger">
+                <xs:maxInclusive value="255"/>
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:complexType name="PriorityValueType">
+        <xs:annotation>
+            <xs:documentation>A data type for a representation of allowed priority values</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:restriction base="niem-xs:nonNegativeInteger">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="9"/>
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <!-- R -->
+    
+    <xs:element name="RecordCategoryCode" type="itl:RecordCategoryCodeType" nillable="false">
+        <xs:annotation>
+            <xs:documentation>A code to represent the ITL Record category.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="RecordCategoryCodeType">
+        <xs:annotation>
+            <xs:documentation>A data type to enumerate the allowed codes that represent ANSI/NIST-ITL Record categories.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+        <xs:restriction base="niem-xs:integer">
+            <xs:enumeration value="02">
+                <xs:annotation>
+                    <xs:documentation>User-Defined Descriptive Text Record</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="04">
+                <xs:annotation>
+                    <xs:documentation>Grayscale fingerprint image, 500 ppi</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="07">
+                <xs:annotation>
+                    <xs:documentation>User-Defined Image Record</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+         
+            <xs:enumeration value="09">
+                <xs:annotation>
+                    <xs:documentation>Minutiae Data Record</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="10">
+                <xs:annotation>
+                    <xs:documentation>Photographic body part imagery Record (Including Face and SMT)</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+          
+            <xs:enumeration value="13">
+                <xs:annotation>
+                    <xs:documentation>Friction-Ridge Latent Image Record</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="14">
+                <xs:annotation>
+                    <xs:documentation>Variable-Resolution Fingerprint Exemplar Image Record</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="15">
+                <xs:annotation>
+                    <xs:documentation>Variable-Resolution Palm Print Exemplar Image Record</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="16">
+                <xs:annotation>
+                    <xs:documentation>User-Defined Test Image Record</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="17">
+                <xs:annotation>
+                    <xs:documentation>Iris Image Record</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        
+            <xs:enumeration value="19">
+                <xs:annotation>
+                    <xs:documentation>Variable-Resolution Plantar Exemplar Image Record</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="20">
+                <xs:annotation>
+                    <xs:documentation>Source Representation Record</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="21">
+                <xs:annotation>
+                    <xs:documentation>Associated Context Record (Non-Biometric)</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+         
+            <xs:enumeration value="99">
+                <xs:annotation>
+                    <xs:documentation>CBEFF Format Data Record</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+        </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>        
+          
+    <!-- S -->
+
+    <!-- T -->
+    <xs:element name="Transaction" type="itl:TransactionType">
+        <xs:annotation>
+            <xs:documentation>An element to represent the transaction meta-data for an ANSI/NIST-ITL transmission</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="TransactionType">
+        <xs:annotation>
+            <xs:documentation>A data type to contain the meta-data for an ANSI/NIST-ITL transmission</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="itl:TransactionDate"/>                                                   
+                    <xs:element ref="itl:TransactionDestinationAgency"/>                               
+                    <xs:element ref="itl:TransactionOriginatingAgency"/>                               
+                    <xs:element ref="itl:TransactionUTCDate" minOccurs="0"/>                   
+                    <xs:element ref="itl:TransactionControlNumberID"/>                               
+                    <xs:element ref="itl:TransactionControlReferenceNumberID" minOccurs="0"/>  
+                    <xs:element ref="itl:TransactionDomain"/>                            
+                    <xs:element ref="itl:TransactionApplicationProfile" minOccurs="0" maxOccurs="99"/> 
+                    <xs:element ref="itl:TransactionImageResolutionDetails"/>                     
+                    <xs:element ref="itl:TransactionMajorVersionValue"/>                             
+                    <xs:element ref="itl:TransactionMinorVersionValue"/>                              
+                    <xs:element ref="itl:TransactionPriorityValue" minOccurs="0"/>             
+                    <xs:element ref="itl:TransactionCategoryAbstract"/>                                 
+                    <xs:element ref="itl:TransactionContentSummary"/>                                 
+                    <xs:element ref="itl:TransactionCharacterSetDirectory" minOccurs="0"/>     
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="TransactionDestinationAgency" type="itl:TransactionAgencyType">
+        <xs:annotation>
+            <xs:documentation>An agency to which the transaction is being sent</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="TransactionOriginatingAgency" type="itl:TransactionAgencyType">
+        <xs:annotation>
+            <xs:documentation>An agency which is sending the transaction</xs:documentation>
+        </xs:annotation> 
+    </xs:element>
+    
+    <xs:complexType name="TransactionAgencyType">
+        <xs:annotation>
+            <xs:documentation>A data type for a container for low level agency descriptors</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>                          
+                    <xs:element ref="itl:AgencyName" minOccurs="0"/>   
+                    <xs:element ref="nc:IdentificationID"/>    
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+   <xs:element name="TransactionImageResolutionDetails" type="biom:ImageResolutionType" nillable="true">
+        <xs:annotation>
+            <xs:documentation>A set of resolution values in pixels per mm for a transaction</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+  <!--   <xs:element name="TransactionGeographicNameSetCode" type="itl:TransactionGeographicNameSetCodeType" nillable="true">
+        <xs:annotation>
+            <xs:documentation>A Geographic name set</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:simpleType name="TransactionGeographicNameSetCodeSimpleType">
+        <xs:annotation>
+            <xs:documentation>A data type for geographic name set</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="GENC">
+                <xs:annotation>
+                    <xs:documentation>GENC</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ISO">
+                <xs:annotation>
+                    <xs:documentation>ISO 3166-1</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="TransactionGeographicNameSetCodeType">
+        <xs:annotation>
+            <xs:documentation>A data type definition for Geographic name set</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="itl:TransactionGeographicNameSetCodeSimpleType">
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>  -->
+    
+    <xs:element name="TransactionApplicationProfile" type="itl:TransactionApplicationProfileType">
+        <xs:annotation>
+            <xs:documentation>An application profile specification that is derived from ANSI/NIST-ITL 1-2011update 2015</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="TransactionApplicationProfileType">
+        <xs:annotation>
+            <xs:documentation>A data type for an application profile specification that is derived from ANSI/NIST-ITL 1-2011update 2015</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:ApplicationProfileOrganizationName"/>
+                    <xs:element ref="biom:ApplicationProfileName"/>
+                    <xs:element ref="itl:ApplicationProfileVersionNumberID"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="TransactionCategoryAbstract" abstract="true">
+        <xs:annotation>
+            <xs:documentation>A data concept for a kind of transaction, as defined by the receiving agency</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="TransactionCharacterSetDirectory" type="itl:TransactionCharacterSetType" nillable="true">
+        <xs:annotation>
+            <xs:documentation>A character set used in this transaction</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="TransactionCharacterSetType">
+        <xs:annotation>
+            <xs:documentation>A data type for a character set used in this transaction</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:choice>                      
+                            <xs:element ref="itl:CharacterSetCommonNameCode"/>
+                             <xs:element ref="itl:CharacterSetUserDefinedName"/>
+                        </xs:choice>
+                    <xs:choice>
+                        <xs:element ref="itl:CharacterSetIndexCode"/>
+                        <xs:element ref="itl:CharacterSetIndexUserDefinedCode"/>
+                    </xs:choice>    
+                    <xs:element ref="itl:CharacterSetVersionID" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+       
+    <xs:element name="TransactionContentSummary" type="itl:TransactionContentSummaryType">
+        <xs:annotation>
+            <xs:documentation>A summary of the record contents being transmitted</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="TransactionContentSummaryType">
+        <xs:annotation>
+            <xs:documentation>A data type for a summary of the record contents being transmitted</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="itl:ContentRecordQuantity"/>
+                    <xs:element ref="itl:ContentRecordSummary" maxOccurs="999"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="TransactionControlNumberID" type="niem-xs:string" nillable="true">
+        <xs:annotation>
+            <xs:documentation>An identification of a transaction determined by the originating agency</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="TransactionControlReferenceNumberID" type="niem-xs:string" nillable="true">
+        <xs:annotation>
+            <xs:documentation>An identification of an original transaction control number (TCN) of a request, used in a transaction response or resubmission</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+     <xs:element name="TransactionDate" type="niem-xs:date" nillable="true">
+        <xs:annotation>
+            <xs:documentation>A date the transaction was sent by the user</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="TransactionDomain" type="itl:TransactionDomainType" nillable="true">
+        <xs:annotation>
+            <xs:documentation>A domain for the user-defined Type-02 logical record implementation</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="TransactionDomainName" type="nc:TextType" nillable="true">
+        <xs:annotation>
+            <xs:documentation>A name of the agency, entity, or implementation used for formatting the content of the transaction</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="TransactionDomainType">
+        <xs:annotation>
+            <xs:documentation>A data type for a domain for the user-defined Type-02 logical record implementation</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="itl:DomainVersionNumberID"/>
+                    <xs:element ref="itl:TransactionDomainName"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="TransactionUTCDate" type="nc:ZuluDateTimeType" nillable="true">
+        <xs:annotation>
+            <xs:documentation>A date and time of the transaction in universal Greenwich Mean Time (GMT) units</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+      
+    <xs:element name="TransactionMajorVersionValue" type="itl:MajorVersionNumberType" nillable="false">
+        <xs:annotation>
+            <xs:documentation>A current major version number of the ANSI/NIST-ITL standard implemented by the software or system creating the file. </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="TransactionMinorVersionValue" type="itl:MinorVersionNumberType" nillable="true">
+        <xs:annotation>
+            <xs:documentation>A current minor version number of the ANSI/NIST-ITL standard implemented by the software or system creating the file. </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+   
+    <xs:element name="TransactionPriorityValue" type="itl:PriorityValueType">
+        <xs:annotation>
+            <xs:documentation>An urgency with which transaction response is expected (1 is low, 9 is high)</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+       
+    <xs:complexType name="TwoCharacterTextType">
+        <xs:annotation>
+            <xs:documentation>A user-generated text string that is limited to two characters only</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:restriction base="nc:TextType">
+                <xs:length value="2"/>
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+     <!-- U -->
+    
+    <xs:element name="UserDefinedDescriptiveDetail" type="itl:UserDefinedDescriptiveDetailType">
+        <xs:annotation>
+            <xs:documentation>A set of user-defined descriptive information about the
+                transaction</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="UserDefinedDescriptiveDetailType">
+        <xs:annotation>
+            <xs:documentation>A data type for a set of domain-defined descriptive information to be
+                included in a Type-2 descriptive record; intended to be substituted by a
+                domain-defined extension element</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="itl:DomainDefinedDescriptiveDetail"/>
+                    <xs:element ref="itl:OtherDescriptiveDetail" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+        
+    <xs:element name="UserDefinedFields" abstract="true">
+        <xs:annotation>
+            <xs:documentation>A data concept for a set of user-defined fields; intended to be
+                substituted by a domain-defined extension element</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- V -->
+    
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!--    Only created for testing, remove-->
+   <!-- <xs:element name="TransactionCategoryTOT" type="nc:TextType" substitutionGroup="itl:TransactionCategoryAbstract"/>
+	<xs:element name="PersonEyeColorCode" type="nc:TextType" substitutionGroup="nc:PersonEyeColorAbstract"/>-->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Legacy Items supported ONLY for backwards compatibility -->
+
+    <xs:element name="FingerPattern" abstract="true">
+        <xs:annotation>
+            <xs:documentation>A data concept for a finger pattern. Deprecated.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="FingerPatternCode" type="biom:FingerPatternCodeType"
+        substitutionGroup="itl:FingerPattern">
+        <xs:annotation>
+            <xs:documentation>A finger pattern code. Deprecated.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="FingerPatternCodeSourceCode" type="itl:PCSCodeType">
+        <xs:annotation>
+            <xs:documentation>An outdated NIST standard minutia finger pattern code.
+                Deprecated.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="FingerPatternText" type="nc:TextType" substitutionGroup="itl:FingerPattern">
+        <xs:annotation>
+            <xs:documentation>A finger pattern. Deprecated.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="MinutiaDetail" type="itl:MinutiaType">
+        <xs:annotation>
+            <xs:documentation>An outdated NIST standard minutia element.
+                Deprecated.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="MinutiaLegacyQualityValue" type="itl:Integer0to63Type" nillable="true">
+        <xs:annotation>
+            <xs:documentation>A quality value assigned to a legacy NIST minutia</xs:documentation>
+            <xs:appinfo><i:Deprecated i:value="true"/></xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="Minutiae" type="itl:MinutiaeType" substitutionGroup="biom:RecordMinutiaeAbstract">
+        <xs:annotation>
+            <xs:documentation>An outdated NIST standard minutiae record element. Deprecated in
+                favor of biom:ExtendedFeatureSetMinutiae, biom:INCITSMinutiae or a user-defined
+                substitute.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="MinutiaeFingerPatternDetail" type="itl:MinutiaeFingerPatternType">
+        <xs:annotation>
+            <xs:documentation>An outdated NIST standard minutia finger pattern.
+                Deprecated.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="MinutiaeNISTStandard" type="itl:MinutiaeNISTStandardType">
+        <xs:annotation>
+            <xs:documentation>An outdated NIST standard minutiae element.
+                Deprecated.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="MinutiaeReadingSystem" type="itl:MinutiaeReadingSystemType">
+        <xs:annotation>
+            <xs:documentation>A fingerprint reading system. Deprecated</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="MinutiaeRidgeCountIndicator" type="niem-xs:boolean">
+        <xs:annotation>
+            <xs:documentation>True if a minutiae data record contains ridge count information;
+                false otherwise. Deprecated.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+     <xs:element name="ReadingSystemCodingMethodCode" type="itl:ReadingSystemCodingMethodCodeType">
+        <xs:annotation>
+            <xs:documentation>A method by which the minutiae data was read, encoded, and
+                recorded</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ReadingSystemName" type="nc:TextType">
+        <xs:annotation>
+            <xs:documentation>A name of a system for reading, encoding, and recording
+                minutiae</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ReadingSystemSubsystemID" type="itl:TwoCharacterTextType">
+        <xs:annotation>
+            <xs:documentation>A (two-character) user-generated subsystem designator that uniquely identifies the originator's equipment or the originator's equipment for reading,
+                encoding, and recording minutiae</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:complexType name="MinutiaType">
+        <xs:annotation>
+            <xs:documentation>A data type for a legacy NIST standard minutia element.
+                Deprecated.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="biom:PositionHorizontalCoordinateValue"/>
+                    <xs:element ref="biom:PositionVerticalCoordinateValue"/>
+                    <xs:element ref="biom:MinutiaID"/>
+                    <xs:element ref="biom:PositionThetaAngleMeasure"/>
+                    <xs:element ref="itl:MinutiaLegacyQualityValue" minOccurs="0"/>
+                    <xs:element ref="biom:MinutiaCategoryCode" minOccurs="0"/>
+                    <xs:element ref="biom:MinutiaRidgeCount" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="MinutiaeType">
+        <xs:annotation>
+            <xs:documentation>A data type for an legacy NIST standard minutiae record element.
+                Deprecated in favor of biom:ExtendedFeatureSetMinutiaeType, biom:INCITSMinutiaeType
+                or a user-defined substitute.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="itl:MinutiaeNISTStandard"/>
+                    <xs:element ref="itl:FrictionRidgePatternCoreLocation" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="itl:FrictionRidgePatternDeltaLocation" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="itl:MinutiaeFingerPatternDetail" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="biom:LatentFrictionRidgePositionCode" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+      
+    <xs:complexType name="MinutiaeFingerPatternType">
+        <xs:annotation>
+            <xs:documentation>A data type for an legacy NIST standard minutia finger pattern.
+                Deprecated.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="itl:FingerPatternCodeSourceCode"/>
+                    <xs:element ref="itl:FingerPattern" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    
+    <xs:complexType name="MinutiaeNISTStandardType">
+        <xs:annotation>
+            <xs:documentation>A data type for an legacy NIST standard minutiae element.
+                Deprecated.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="itl:MinutiaDetail" maxOccurs="unbounded"/>
+                    <xs:element ref="biom:MinutiaeQuantity"/> 
+                    <xs:element ref="itl:MinutiaeReadingSystem" minOccurs="0"/>
+                    <xs:element ref="itl:MinutiaeRidgeCountIndicator"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>    
+    
+    <xs:complexType name="MinutiaeReadingSystemType">
+        <xs:annotation>
+            <xs:documentation>A data type for a fingerprint reading system.
+                Deprecated</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="s:ObjectType">
+                <xs:sequence>
+                    <xs:element ref="itl:ReadingSystemCodingMethodCode"/>
+                    <xs:element ref="itl:ReadingSystemName"/>
+                    <xs:element ref="itl:ReadingSystemSubsystemID" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:simpleType name="ReadingSystemCodingMethodCodeSimpleType">
+        <xs:annotation>
+            <xs:documentation>A data type for a method by which the minutiae data was read,
+                encoded, and recorded</xs:documentation>
+            <xs:appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="A">
+                <xs:annotation>
+                    <xs:documentation>Automatic, human never involved</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="E">
+                <xs:annotation>
+                    <xs:documentation>Automatic, human edited</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="M">
+                <xs:annotation>
+                    <xs:documentation>Manual</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="U">
+                <xs:annotation>
+                    <xs:documentation>Automatic, human editing possible but unneeded</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="ReadingSystemCodingMethodCodeType">
+        <xs:annotation>
+            <xs:documentation>A data type for a method by which the minutiae data was read,
+                encoded, and recorded</xs:documentation>
+            <xs:appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <i:Deprecated i:value="true"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="itl:ReadingSystemCodingMethodCodeSimpleType">
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:simpleType name="PCSCodeSimpleType">
+        <xs:annotation>
+            <xs:documentation>A data type for an outdated NIST standard minutia finger pattern
+                code. Deprecated.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="T">
+                <xs:annotation>
+                    <xs:documentation>Pattern codes from Table 16 of ANSI-NIST/ITL
+                        2007</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="U">
+                <xs:annotation>
+                    <xs:documentation>User-defined pattern codes</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="PCSCodeType">
+        <xs:annotation>
+            <xs:documentation>A data type for an legacy NIST standard minutia finger pattern code.
+                Deprecated.</xs:documentation>
+            <xs:appinfo>
+                <i:Deprecated i:value="true"/>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="itl:PCSCodeSimpleType">
+                <xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>
+    

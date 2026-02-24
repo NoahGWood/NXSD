@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itl:NISTBiometricInformationExchangePackage xmlns:ebts="http://cjis.fbi.gov/fbi_ebts/11.2"
+	xmlns:itl="http://biometrics.nist.gov/standard/2011"
+	xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/"
+	xmlns:j="http://release.niem.gov/niem/domains/jxdm/6.0/"
+	xmlns:biom="http://publication.niem.gov/niem/domains/biometrics/4.0/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://cjis.fbi.gov/fbi_ebts/11.2 ../../base-xsd/fbi_ebts/11.2/fbi_ebts.xsd">
+	<!--******************************************************************-->
+	<!--Type-1 Record (Header Record) -->
+	<!--******************************************************************-->
+	<itl:PackageInformationRecord>
+		<itl:Transaction>
+			<!--DAT 1.005-->
+			<itl:TransactionDate>2017-11-11</itl:TransactionDate>
+			<!--DAI 1.007-->
+			<itl:TransactionDestinationAgency>
+				<!-- 1.017 DAN -->
+				<itl:AgencyName>FDLE</itl:AgencyName>
+				<!-- 1.007 DAI -->
+				<nc:IdentificationID>WI013415Y</nc:IdentificationID>
+			</itl:TransactionDestinationAgency>
+			<itl:TransactionOriginatingAgency>
+				<!--ORI 1.008-->
+				<nc:IdentificationID>DCFBIWAA4</nc:IdentificationID>
+			</itl:TransactionOriginatingAgency>
+			<!--GMT 1.014, Optional-->
+			<itl:TransactionUTCDate>2007-01-01T00:00:01Z</itl:TransactionUTCDate>
+			<!--TCN 1.009-->
+			<itl:TransactionControlNumberID>5683956839</itl:TransactionControlNumberID>
+			<!--TCR 1.010, Optional-->
+			<itl:TransactionControlReferenceNumberID>1234567890</itl:TransactionControlReferenceNumberID>
+			<!--DOM 1.013, Required for EBTS-->
+			<itl:TransactionDomain>
+				<!-- DVN -->
+				<itl:DomainVersionNumberID>EBTS 11.1</itl:DomainVersionNumberID>
+				<!-- DNM -->
+				<itl:TransactionDomainName>NORAM</itl:TransactionDomainName>
+			</itl:TransactionDomain>
+			<!--APS 1.016, Optional -->
+			<itl:TransactionApplicationProfile>
+				<!--APO-->
+				<biom:ApplicationProfileOrganizationName>DoD</biom:ApplicationProfileOrganizationName>
+				<!--APN-->
+				<biom:ApplicationProfileName>EBTS</biom:ApplicationProfileName>
+				<!--APV-->
+				<itl:ApplicationProfileVersionNumberID>3.0</itl:ApplicationProfileVersionNumberID>
+			</itl:TransactionApplicationProfile>
+			<itl:TransactionImageResolutionDetails>
+				<!--NSR 1.011 Non-zero values apply to Type-4 and Type-7 fingerprint records only.-->
+				<biom:NativeScanningResolutionValue>00.00</biom:NativeScanningResolutionValue>
+				<!--NTR 1.012  Non-zero values apply to Type-4 and Type-7 fingerprint records only.-->
+				<biom:NominalTransmittingResolutionValue>00.00</biom:NominalTransmittingResolutionValue>
+			</itl:TransactionImageResolutionDetails>
+			<!--VER 1.002-->
+			<itl:TransactionMajorVersionValue>05</itl:TransactionMajorVersionValue>
+			<itl:TransactionMinorVersionValue>00</itl:TransactionMinorVersionValue>
+			<!--PRY 1.006, Optional-->
+			<itl:TransactionPriorityValue>5</itl:TransactionPriorityValue>
+			<!--TOT 1.004-->
+			<ebts:TransactionCategoryCode>LPNQ</ebts:TransactionCategoryCode>
+			<!--CNT 1.003-->
+			<itl:TransactionContentSummary>
+				<!-- CRC -->
+				<itl:ContentRecordQuantity>1</itl:ContentRecordQuantity>
+				<itl:ContentRecordSummary>
+					<!-- IDC -->
+					<biom:ImageReferenceID>00</biom:ImageReferenceID>
+					<!-- REC -->
+					<itl:RecordCategoryCode>02</itl:RecordCategoryCode>
+				</itl:ContentRecordSummary>
+			</itl:TransactionContentSummary>
+		</itl:Transaction>
+	</itl:PackageInformationRecord>
+	<!--******************************************************************-->
+	<!--Type 2 Record (User Defined Descriptive Text Record)-->
+	<!--******************************************************************-->
+	<itl:PackageDescriptiveTextRecord>
+		<!-- IDC 2.002-->
+		<biom:ImageReferenceID>00</biom:ImageReferenceID>
+		<itl:UserDefinedDescriptiveDetail>
+			<ebts:DomainDefinedDescriptiveFields>
+				<!--ATN 2.006, Optional-->
+				<nc:CaveatText>SA J Q DOE,RM 11867</nc:CaveatText>
+				<!-- NDR 2.098 (0..10)-->
+				<ebts:RecordFBIRepositoryCode>1</ebts:RecordFBIRepositoryCode>
+				<ebts:RecordTransactionData>
+					<!--GEO 2.044 (0..5)-->
+					<ebts:TransactionSearchAreaCode>WV</ebts:TransactionSearchAreaCode>
+				</ebts:RecordTransactionData>
+				<ebts:RecordTransactionActivity>
+					<!--CRI 2.073 (0..3)-->
+					<ebts:RecordControllingAgencyID>NY0303000</ebts:RecordControllingAgencyID>
+					<!--CIN 2.010/CIX 2.011-->
+					<ebts:ContributorCaseIdentificationNumber>
+						<!-- CIN_PRE 2.010A-->
+						<ebts:ContributorCasePrefixText>Investigation Number</ebts:ContributorCasePrefixText>
+						<!-- CIN_ID 2.010B-->
+						<ebts:ContributorCaseID>1963BRT715</ebts:ContributorCaseID>
+						<!--CIX 2.011-->
+						<ebts:ContributorCaseExtensionID>0001</ebts:ContributorCaseExtensionID>
+					</ebts:ContributorCaseIdentificationNumber>
+				</ebts:RecordTransactionActivity>
+				<ebts:RecordSubject>
+					<!-- EYE 2.031, Optional-->
+					<ebts:PersonEyeColorCode>BLU</ebts:PersonEyeColorCode>
+					<!-- HAI 2.032, Optional-->
+					<ebts:PersonHairColorCode>BRO</ebts:PersonHairColorCode>
+					<ebts:PersonPhysicalFeature>
+						<!-- SMT 2.026 (0..10)-->
+						<ebts:PhysicalFeatureCategoryCode>TAT L ARM</ebts:PhysicalFeatureCategoryCode>
+						<ebts:PhysicalFeatureCategoryCode>TAT RF ARM</ebts:PhysicalFeatureCategoryCode>
+					</ebts:PersonPhysicalFeature>
+					<!-- RAC 2.025, Optional-->
+					<j:PersonRaceCode>W</j:PersonRaceCode>
+					<!-- SEX 2.024, Optional-->
+					<j:PersonSexCode>M</j:PersonSexCode>
+					<!-- HTR 2.028, Optional -->
+					<ebts:PersonHeightMeasure>
+						<nc:MeasureIntegerRange>
+							<nc:RangeMaximumIntegerValue>603</nc:RangeMaximumIntegerValue>
+							<nc:RangeMinimumIntegerValue>600</nc:RangeMinimumIntegerValue>
+						</nc:MeasureIntegerRange>
+						<nc:MeasureUnitText>FeetInches</nc:MeasureUnitText>
+					</ebts:PersonHeightMeasure>
+					<!-- WTR 2.030, Optional -->
+					<ebts:PersonWeightMeasure>
+						<nc:MeasureIntegerRange>
+							<nc:RangeMaximumIntegerValue>185</nc:RangeMaximumIntegerValue>
+							<nc:RangeMinimumIntegerValue>175</nc:RangeMinimumIntegerValue>
+						</nc:MeasureIntegerRange>
+						<nc:MeasureUnitText>pounds</nc:MeasureUnitText>
+					</ebts:PersonWeightMeasure>
+					<!-- AGR 2.023, Optional -->
+					<ebts:PersonAgeRange>
+						<nc:RangeMaximumIntegerValue>30</nc:RangeMaximumIntegerValue>
+						<nc:RangeMinimumIntegerValue>25</nc:RangeMinimumIntegerValue>
+					</ebts:PersonAgeRange>
+					<!--POB 2.020, Optional-->
+					<ebts:PersonBirthPlaceCode>VA</ebts:PersonBirthPlaceCode>
+					<ebts:FrictionRidgeInformation>
+						<!-- FGP 2.074 (0..10) -->
+						<ebts:FrictionRidgePositionCode>36</ebts:FrictionRidgePositionCode>
+						<!-- PPD 2.2030 (0..10)-->
+						<ebts:PrintPositionDescriptors>
+							<biom:FingerPositionCode>10</biom:FingerPositionCode>
+							<biom:MajorCasePrintCode>EJI</biom:MajorCasePrintCode>
+						</ebts:PrintPositionDescriptors>
+						<ebts:PersonFingerprintSet>
+							<!--PAT 2.034/RCD1 2.091/RCD2 2.092-->
+							<!--(0..10) i.e., 1 <ebts:FingerprintImageFinger> element per actual finger-->
+							<ebts:FingerprintImageFinger>
+								<!--2.034A/2.091A/2.092A-->
+								<biom:FingerPositionCode>1</biom:FingerPositionCode>
+								<ebts:RidgeCoreDelta>
+									<!--PATCL 2.034B -->
+									<ebts:FingerprintPatternClassificationCode>WU</ebts:FingerprintPatternClassificationCode>
+									<!--RCN1 2.091B, Optional-->
+									<biom:RidgeCountValue>13</biom:RidgeCountValue>
+									<!--RCN2 2.092B, Optional-->
+									<biom:RidgeCountValue>10</biom:RidgeCountValue>
+								</ebts:RidgeCoreDelta>
+							</ebts:FingerprintImageFinger>
+							<ebts:FingerprintImageFinger>
+								<biom:FingerPositionCode>2</biom:FingerPositionCode>
+								<ebts:RidgeCoreDelta>
+									<!--PATCL 2.034B -->
+									<ebts:FingerprintPatternClassificationCode>LS</ebts:FingerprintPatternClassificationCode>
+									<!--RCN1 2.091B-->
+									<biom:RidgeCountValue>6</biom:RidgeCountValue>
+									<!--RCN2 2.092B-->
+									<biom:RidgeCountValue>0</biom:RidgeCountValue>
+								</ebts:RidgeCoreDelta>
+							</ebts:FingerprintImageFinger>
+							<ebts:FingerprintImageFinger>
+								<biom:FingerPositionCode>3</biom:FingerPositionCode>
+								<ebts:RidgeCoreDelta>
+									<!--PATCL 2.034B -->
+									<ebts:FingerprintPatternClassificationCode>LS</ebts:FingerprintPatternClassificationCode>
+									<!--RCN1 2.091B-->
+									<biom:RidgeCountValue>11</biom:RidgeCountValue>
+									<!--RCN2 2.092B-->
+									<biom:RidgeCountValue>0</biom:RidgeCountValue>
+								</ebts:RidgeCoreDelta>
+							</ebts:FingerprintImageFinger>
+							<ebts:FingerprintImageFinger>
+								<biom:FingerPositionCode>4</biom:FingerPositionCode>
+								<ebts:RidgeCoreDelta>
+									<!--PATCL 2.034B -->
+									<ebts:FingerprintPatternClassificationCode>LS</ebts:FingerprintPatternClassificationCode>
+									<!--RCN1 2.091B-->
+									<biom:RidgeCountValue>10</biom:RidgeCountValue>
+									<!--RCN2 2.092B-->
+									<biom:RidgeCountValue>0</biom:RidgeCountValue>
+								</ebts:RidgeCoreDelta>
+							</ebts:FingerprintImageFinger>
+							<ebts:FingerprintImageFinger>
+								<biom:FingerPositionCode>5</biom:FingerPositionCode>
+								<ebts:RidgeCoreDelta>
+									<!--PATCL 2.034B -->
+									<ebts:FingerprintPatternClassificationCode>LS</ebts:FingerprintPatternClassificationCode>
+									<!--RCN1 2.091B-->
+									<biom:RidgeCountValue>11</biom:RidgeCountValue>
+									<!--RCN2 2.092B-->
+									<biom:RidgeCountValue>0</biom:RidgeCountValue>
+								</ebts:RidgeCoreDelta>
+							</ebts:FingerprintImageFinger>
+						</ebts:PersonFingerprintSet>
+					</ebts:FrictionRidgeInformation>
+				</ebts:RecordSubject>
+			</ebts:DomainDefinedDescriptiveFields>
+		</itl:UserDefinedDescriptiveDetail>
+	</itl:PackageDescriptiveTextRecord>
+</itl:NISTBiometricInformationExchangePackage>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itl:NISTBiometricInformationExchangePackage 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:itl="http://biometrics.nist.gov/standard/2011"
+    xmlns:ebts="http://cjis.fbi.gov/fbi_ebts/11.2"
+    xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/"
+    xmlns:j="http://release.niem.gov/niem/domains/jxdm/6.0/"
+    xmlns:biom="http://publication.niem.gov/niem/domains/biometrics/4.0/1/"
+    xsi:schemaLocation="http://cjis.fbi.gov/fbi_ebts/11.2 ../../base-xsd/fbi_ebts/11.2/fbi_ebts.xsd">
+    <!--******************************************************************-->
+    <!--Type-1 Record (Header Record)-->
+    <!--******************************************************************-->
+    <itl:PackageInformationRecord>
+        <itl:Transaction>
+            <!--DAT 1.005-->
+            <itl:TransactionDate>2017-11-11</itl:TransactionDate>
+            <!--DAI 1.007-->
+            <itl:TransactionDestinationAgency>
+                <!-- 1.017 DAN -->
+                <itl:AgencyName>FDLE</itl:AgencyName>
+                <!-- 1.007 DAI -->
+                <nc:IdentificationID>WI013415Y</nc:IdentificationID>
+            </itl:TransactionDestinationAgency>
+            <itl:TransactionOriginatingAgency>
+                <!--ORI 1.008-->
+                <nc:IdentificationID>DCFBIWAA4</nc:IdentificationID>
+            </itl:TransactionOriginatingAgency>
+            <!--GMT 1.014, Optional-->
+            <itl:TransactionUTCDate>2007-01-01T00:00:01Z</itl:TransactionUTCDate>
+            <!--TCN 1.009-->
+            <itl:TransactionControlNumberID>5683956839</itl:TransactionControlNumberID>
+            <!--TCR 1.010, Optional-->
+            <itl:TransactionControlReferenceNumberID>1234567890</itl:TransactionControlReferenceNumberID>
+            <!--DOM 1.013, Required for EBTS-->
+            <itl:TransactionDomain>
+                <!-- DVN -->
+                <itl:DomainVersionNumberID>EBTS 11.1</itl:DomainVersionNumberID>
+                <!-- DNM -->
+                <itl:TransactionDomainName>NORAM</itl:TransactionDomainName>
+            </itl:TransactionDomain>
+            <itl:TransactionImageResolutionDetails>
+            <!--NSR 1.011-->
+                <biom:NativeScanningResolutionValue>00.00</biom:NativeScanningResolutionValue>
+                <!--NTR 1.012-->
+                <biom:NominalTransmittingResolutionValue>00.00</biom:NominalTransmittingResolutionValue>
+            </itl:TransactionImageResolutionDetails>
+                <!--VER 1.002-->
+                <itl:TransactionMajorVersionValue>05</itl:TransactionMajorVersionValue>
+                <itl:TransactionMinorVersionValue>00</itl:TransactionMinorVersionValue>
+                <!--PRY 1.006, Optional-->
+                <itl:TransactionPriorityValue>5</itl:TransactionPriorityValue>
+            <!--TOT 1.004-->
+            <ebts:TransactionCategoryCode>XMNTR</ebts:TransactionCategoryCode>
+            <!--CNT 1.003-->
+            <itl:TransactionContentSummary>
+                <itl:ContentRecordQuantity>01</itl:ContentRecordQuantity>
+                <itl:ContentRecordSummary>
+                    <!-- IDC -->
+                    <biom:ImageReferenceID>00</biom:ImageReferenceID>
+                    <!-- REC -->
+                    <itl:RecordCategoryCode>02</itl:RecordCategoryCode>
+                </itl:ContentRecordSummary>			
+            </itl:TransactionContentSummary>
+        </itl:Transaction>
+    </itl:PackageInformationRecord>
+    <!--******************************************************************-->
+    <!--Type-2 Record (User Defined Descriptive Text Record)-->
+    <!--******************************************************************-->
+    <itl:PackageDescriptiveTextRecord>
+        <!-- IDC 2.002-->
+        <biom:ImageReferenceID>00</biom:ImageReferenceID>
+        <itl:UserDefinedDescriptiveDetail>
+            <ebts:DomainDefinedDescriptiveFields>
+                <ebts:RecordTransactionData>
+                    <!--MAI 2.2052-->
+                    <ebts:TransactionMaintenanceActionCode>REPLACE</ebts:TransactionMaintenanceActionCode>
+                </ebts:RecordTransactionData>					
+                <ebts:RecordSubject>
+                    <!-- FBI 2.014-->
+                    <j:PersonFBIIdentification>
+                        <nc:IdentificationID>62760NY12</nc:IdentificationID>
+                    </j:PersonFBIIdentification>
+                    <!--ESI 2.2037-->
+                    <ebts:ExternalSubjectID>DHS123457</ebts:ExternalSubjectID>
+                </ebts:RecordSubject>
+            </ebts:DomainDefinedDescriptiveFields>
+        </itl:UserDefinedDescriptiveDetail>
+    </itl:PackageDescriptiveTextRecord>
+</itl:NISTBiometricInformationExchangePackage>

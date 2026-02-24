@@ -5,4 +5,4 @@ BUILD_DIR="${1:-build}"
 
 run-clang-tidy \
   -p "$BUILD_DIR" \
-  -header-filter='^(NTemplate/include|NTemplate/src)/'
+  -header-filter='^(nxsd/include|nxsd/src)/'

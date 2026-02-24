@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itl:NISTBiometricInformationExchangePackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:itl="http://biometrics.nist.gov/standard/2011"
+	xmlns:ebts="http://cjis.fbi.gov/fbi_ebts/11.2"
+	xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/"
+	xmlns:j="http://release.niem.gov/niem/domains/jxdm/6.0/"
+	xmlns:biom="http://publication.niem.gov/niem/domains/biometrics/4.0/1/"
+	xsi:schemaLocation="http://cjis.fbi.gov/fbi_ebts/11.2 ../../base-xsd/fbi_ebts/11.2/fbi_ebts.xsd">
+	<!--******************************************************************-->
+	<!--Type-1 Record (Header Record) -->
+	<!--******************************************************************-->
+	<itl:PackageInformationRecord>
+		<itl:Transaction>
+			<!--DAT 1.005-->
+			<itl:TransactionDate>2017-11-11</itl:TransactionDate>
+			<!--DAI 1.007-->
+			<itl:TransactionDestinationAgency>
+				<!-- 1.017 DAN -->
+				<itl:AgencyName>FDLE</itl:AgencyName>
+				<!-- 1.007 DAI -->
+				<nc:IdentificationID>WI013415Y</nc:IdentificationID>
+			</itl:TransactionDestinationAgency>
+			<itl:TransactionOriginatingAgency>
+				<!--ORI 1.008-->
+				<nc:IdentificationID>DCFBIWAA4</nc:IdentificationID>
+			</itl:TransactionOriginatingAgency>
+			<!--GMT 1.014, Optional-->
+			<itl:TransactionUTCDate>2007-01-01T00:00:01Z</itl:TransactionUTCDate>
+			<!--TCN 1.009-->
+			<itl:TransactionControlNumberID>5683956839</itl:TransactionControlNumberID>
+			<!--TCR 1.010, Optional-->
+			<itl:TransactionControlReferenceNumberID>1234567890</itl:TransactionControlReferenceNumberID>
+			<!--DOM 1.013, Required for EBTS-->
+			<itl:TransactionDomain>
+				<!-- DVN -->
+				<itl:DomainVersionNumberID>EBTS 11.1</itl:DomainVersionNumberID>
+				<!-- DNM -->
+				<itl:TransactionDomainName>NORAM</itl:TransactionDomainName>
+			</itl:TransactionDomain>
+			<!--APS 1.016, Optional -->
+			<itl:TransactionApplicationProfile>
+				<!--APO-->
+				<biom:ApplicationProfileOrganizationName>DoD</biom:ApplicationProfileOrganizationName>
+				<!--APN-->
+				<biom:ApplicationProfileName>EBTS</biom:ApplicationProfileName>
+				<!--APV-->
+				<itl:ApplicationProfileVersionNumberID>3.0</itl:ApplicationProfileVersionNumberID>
+			</itl:TransactionApplicationProfile>
+			<itl:TransactionImageResolutionDetails>
+				<!--NSR 1.011-->
+				<biom:NativeScanningResolutionValue>00.00</biom:NativeScanningResolutionValue>
+				<!--NTR 1.012-->
+				<biom:NominalTransmittingResolutionValue>00.00</biom:NominalTransmittingResolutionValue>
+			</itl:TransactionImageResolutionDetails>
+			<!--VER 1.002-->
+			<itl:TransactionMajorVersionValue>05</itl:TransactionMajorVersionValue>
+			<itl:TransactionMinorVersionValue>00</itl:TransactionMinorVersionValue>
+			<!--PRY 1.006, Optional-->
+			<itl:TransactionPriorityValue>5</itl:TransactionPriorityValue>
+			<!--TOT 1.004-->
+			<ebts:TransactionCategoryCode>LSR</ebts:TransactionCategoryCode>
+			<!--CNT 1.003-->
+			<itl:TransactionContentSummary>
+				<itl:ContentRecordQuantity>1</itl:ContentRecordQuantity>
+				<itl:ContentRecordSummary>
+					<biom:ImageReferenceID>00</biom:ImageReferenceID>
+					<itl:RecordCategoryCode>02</itl:RecordCategoryCode>
+				</itl:ContentRecordSummary>
+			</itl:TransactionContentSummary>
+		</itl:Transaction>
+	</itl:PackageInformationRecord>
+	<!--******************************************************************-->
+	<!--Type-2 Record (User Defined Descriptive Text Record)-->
+	<!--******************************************************************-->
+	<itl:PackageDescriptiveTextRecord>
+		<!--IDC 2.002-->
+		<biom:ImageReferenceID>00</biom:ImageReferenceID>
+		<itl:UserDefinedDescriptiveDetail>
+			<ebts:DomainDefinedDescriptiveFields>
+				<!-- SCO 2.007 (0..9)-->
+				<biom:RecordForwardOrganizations>
+					<nc:OrganizationIdentification>
+						<nc:IdentificationID>WV1000000</nc:IdentificationID>
+					</nc:OrganizationIdentification>
+					<nc:OrganizationIdentification>
+						<nc:IdentificationID>NY030025P</nc:IdentificationID>
+					</nc:OrganizationIdentification>
+				</biom:RecordForwardOrganizations>
+				<!--ATN 2.006, Optional-->
+				<nc:CaveatText>SA J Q DOE,RM 11867</nc:CaveatText>
+				<ebts:RecordTransactionData>
+					<ebts:TransactionResponseData>
+						<!-- ACN 2.071, Optional -->
+						<ebts:TransactionActionText>IF NON-IDENT, SUBMIT TO UNSOLVED LATENT FILE</ebts:TransactionActionText>
+						<!-- SRF 2.059 -->
+						<ebts:TransactionSearchResultsCode>I</ebts:TransactionSearchResultsCode>
+						<!--MSG 2.060, Optional-->
+						<ebts:TransactionStatusText>MATCH MADE AGAINST SUBJECTS FINGERPRINTS ON 05/01/94. PLEASE NOTIFY SUBMITTING STATE IF MATCH RESULTS</ebts:TransactionStatusText>
+						<!--ERS 2.075, Optional-->
+						<ebts:TransactionElectronicRapSheetText>Subject's Text Rap Sheet goes here</ebts:TransactionElectronicRapSheetText>
+						<!--ERSX 2.090, Optional-->
+						<ebts:TransactionElectronicRapSheetXML>Subject's XML Rap Sheet goes here</ebts:TransactionElectronicRapSheetXML>
+					</ebts:TransactionResponseData>
+				</ebts:RecordTransactionData>
+				<ebts:RecordTransactionActivity>
+					<!--CRI 2.073 (0..3)-->
+					<ebts:RecordControllingAgencyID>NY0303000</ebts:RecordControllingAgencyID>
+					<!--CST 2.061-->
+					<nc:CaseTitleText>ARMED ROBBERY FIRST COUNTY</nc:CaseTitleText>
+					<!--FFN 2.003, Optional-->
+					<ebts:FBIFileNumberID>2537597861</ebts:FBIFileNumberID>
+					<!--LCN 2.013/LCX 2.013, Optional-->
+					<ebts:FBILatentCaseIdentification>
+						<!--LCN 2.012 Optional -->
+						<ebts:FBILatentCaseNumberID>MX-12345678</ebts:FBILatentCaseNumberID>
+						<!--LCX 2.013 Optional -->
+						<ebts:FBILatentCaseNumberExtensionID>00001</ebts:FBILatentCaseNumberExtensionID>
+					</ebts:FBILatentCaseIdentification>
+				</ebts:RecordTransactionActivity>
+				<ebts:RecordSubject>
+					<!--DOB 2.022 (0..5)-->
+					<nc:PersonBirthDate>
+						<nc:Date>1977-08-25</nc:Date>
+					</nc:PersonBirthDate>
+					<!--CTZ 2.021 (0..10)-->
+					<ebts:PersonCitizenshipCode>US</ebts:PersonCitizenshipCode>
+					<!-- EYE 2.031, Optional-->
+					<ebts:PersonEyeColorCode>BLU</ebts:PersonEyeColorCode>
+					<!-- HAI 2.032, Optional-->
+					<ebts:PersonHairColorCode>BRO</ebts:PersonHairColorCode>
+					<!--NAM 2.018, Optional. Field will be returned in the response if subject identification is made.-->
+					<nc:PersonName>
+						<nc:PersonGivenName>ANTHONY</nc:PersonGivenName>
+						<nc:PersonMiddleName>PAUL</nc:PersonMiddleName>
+						<nc:PersonSurName>JONES</nc:PersonSurName>
+					</nc:PersonName>
+					<ebts:PersonPhysicalFeature>
+						<!-- SMT 2.026 (0..10)-->
+						<ebts:PhysicalFeatureCategoryCode>MISS TOE</ebts:PhysicalFeatureCategoryCode>
+						<ebts:PhysicalFeatureCategoryCode>TAT RF ARM</ebts:PhysicalFeatureCategoryCode>
+					</ebts:PersonPhysicalFeature>
+					<!-- RAC 2.025, Optional-->
+					<j:PersonRaceCode>W</j:PersonRaceCode>
+					<!-- SEX 2.024, Optional-->
+					<j:PersonSexCode>M</j:PersonSexCode>
+					<!-- SOC 2.016 (0..4)-->
+					<nc:PersonSSNIdentification>
+						<nc:IdentificationID>220-56-5855</nc:IdentificationID>
+					</nc:PersonSSNIdentification>
+					<!-- SID 2.015 (0..5). Field will be returned in the response if subject identification is made.-->
+					<nc:PersonStateIdentification>
+						<nc:IdentificationID>NY12345678</nc:IdentificationID>
+					</nc:PersonStateIdentification>
+					<!-- HGT 2.027, Optional-->
+					<ebts:PersonHeightMeasure>
+						<nc:MeasureIntegerValue>601</nc:MeasureIntegerValue>
+						<nc:MeasureUnitText>FeetInches</nc:MeasureUnitText>
+					</ebts:PersonHeightMeasure>
+					<!-- WGT 2.029, Optional-->
+					<ebts:PersonWeightMeasure>
+						<nc:MeasureIntegerValue>182</nc:MeasureIntegerValue>
+						<nc:MeasureUnitText>pounds</nc:MeasureUnitText>
+					</ebts:PersonWeightMeasure>
+					<!--AKA 2.019 (0..10)-->
+					<ebts:PersonAlternateName>
+						<nc:PersonGivenName>TONY</nc:PersonGivenName>
+						<nc:PersonSurName>JONES</nc:PersonSurName>
+					</ebts:PersonAlternateName>
+					<ebts:PersonAlternateName>
+						<nc:PersonGivenName>A</nc:PersonGivenName>
+						<nc:PersonMiddleName>PAUL</nc:PersonMiddleName>
+						<nc:PersonSurName>JONES</nc:PersonSurName>
+					</ebts:PersonAlternateName>
+					<!--POB 2.020, Optional. Field will be returned in the response if subject identification is made.-->
+					<ebts:PersonBirthPlaceCode>VA</ebts:PersonBirthPlaceCode>
+					<!-- FBI 2.014, Optional. Field will be returned in the response if subject identification is made.-->
+					<j:PersonFBIIdentification>
+						<nc:IdentificationID>62760NY12</nc:IdentificationID>
+					</j:PersonFBIIdentification>
+					<!-- MNU 2.017 (0..4)-->
+					<ebts:PersonOtherIdentification>
+						<nc:IdentificationID>1234567890P</nc:IdentificationID>
+						<ebts:PersonIDCategoryCode>PP</ebts:PersonIDCategoryCode>
+					</ebts:PersonOtherIdentification>
+					<!-- PPA 2.035, Optional-->
+					<ebts:PersonPalmPrintAvailableIndicator>true</ebts:PersonPalmPrintAvailableIndicator>
+					<!-- BIA 2.2031 (0..6)-->
+					<ebts:BiometricImageAvailableCode>FP</ebts:BiometricImageAvailableCode>
+					<ebts:BiometricImageAvailableCode>PP</ebts:BiometricImageAvailableCode>
+					<ebts:BiometricImageAvailableCode>SP</ebts:BiometricImageAvailableCode>
+					<ebts:BiometricImageAvailableCode>PHF</ebts:BiometricImageAvailableCode>
+					<ebts:BiometricImageAvailableCode>PSMT</ebts:BiometricImageAvailableCode>
+					<ebts:BiometricImageAvailableCode>IRIS</ebts:BiometricImageAvailableCode>
+					<ebts:FrictionRidgeInformation>
+						<!--DPR 2.038, Optional-->
+						<ebts:CaptureDate>1995-03-24</ebts:CaptureDate>
+						<!-- FGP 2.074 (0..10) -->
+						<ebts:FrictionRidgePositionCode>9</ebts:FrictionRidgePositionCode>
+						<!--FPC 2.033, Optional-->
+						<ebts:NCICFingerprintClassificationCodeText>12XX11CO14115906Cl1</ebts:NCICFingerprintClassificationCodeText>
+						<ebts:PersonFingerprintSet>
+							<!--PAT 2.034 (0..10)-->
+							<ebts:FingerprintImageFinger>
+								<!--FGP 2.034A -->
+								<biom:FingerPositionCode>1</biom:FingerPositionCode>
+								<ebts:RidgeCoreDelta>
+									<!--PATCL 2.034B -->
+									<ebts:FingerprintPatternClassificationCode>WU</ebts:FingerprintPatternClassificationCode>
+								</ebts:RidgeCoreDelta>
+							</ebts:FingerprintImageFinger>
+						</ebts:PersonFingerprintSet>
+					</ebts:FrictionRidgeInformation>
+				</ebts:RecordSubject>
+			</ebts:DomainDefinedDescriptiveFields>
+		</itl:UserDefinedDescriptiveDetail>
+	</itl:PackageDescriptiveTextRecord>
+</itl:NISTBiometricInformationExchangePackage>

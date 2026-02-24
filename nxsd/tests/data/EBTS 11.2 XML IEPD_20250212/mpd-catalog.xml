@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: mpd-catalog.xml $ -->
+<c:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://reference.niem.gov/niem/resource/mpd/catalog/3.0/ NIEM%204%20MPD%20Validator/mpd-catalog-3.0.xsd"
+ xmlns:c="http://reference.niem.gov/niem/resource/mpd/catalog/3.0/"
+ xmlns:nc="http://release.niem.gov/niem/niem-core/3.0/"
+ xmlns:s="http://release.niem.gov/niem/structures/3.0/">
+	 
+	<c:MPD 
+		c:mpdURI="http://cjis.fbi.gov/fbi_ebts/11.2" 
+	     c:mpdClassURIList="http://reference.niem.gov/niem/specification/model-package-description/3.0.1/#MPD
+	                       http://reference.niem.gov/niem/specification/model-package-description/3.0.1/#IEPD"  
+	    c:mpdName="EBTS11" 
+	    c:mpdVersionID="0">
+		<nc:DescriptionText>This Information Exchange Package Documentation (IEPD) documents the Next Generation Identification System exchange specification, EBTS 11.2.</nc:DescriptionText>
+		<c:MPDInformation>
+			<c:AuthoritativeSource>
+				<nc:EntityOrganization>
+					<nc:OrganizationName>FBI CJIS</nc:OrganizationName>
+					<nc:OrganizationPrimaryContactInformation>
+						<nc:ContactEmailID>datastandards@fbi.gov</nc:ContactEmailID>
+						<nc:ContactMailingAddress>
+							<nc:AddressFullText>1000 Custer Hollow Road, Clarksburg, WV 26306</nc:AddressFullText>
+						</nc:ContactMailingAddress>
+						<nc:ContactTelephoneNumber>
+							<nc:FullTelephoneNumber>
+								<nc:TelephoneNumberFullID>304-625-2000</nc:TelephoneNumberFullID>
+							</nc:FullTelephoneNumber>
+						</nc:ContactTelephoneNumber>
+					</nc:OrganizationPrimaryContactInformation>
+				</nc:EntityOrganization>
+			</c:AuthoritativeSource>
+			<c:CreationDate>2020-09-08</c:CreationDate>
+			<c:StatusText>rc</c:StatusText>
+			<c:KeywordText>FBI, CJIS, NGI, EBTS, ANSI/NIST-ITL 2011</c:KeywordText>
+			<c:DomainText>Justice, Biometrics, FBI</c:DomainText>
+		</c:MPDInformation>
+		
+		<c:IEPConformanceTarget s:id="EBTS 11.2 Transaction">
+			<nc:DescriptionText>Transaction between NGI and partner agency.</nc:DescriptionText>
+			<c:HasDocumentElement c:qualifiedNameList="itl:NISTBiometricInformationExchangePackage"/>
+			<c:ValidToXPath c:xPathText="itl:NISTBiometricInformationExchangePackage/itl:PackageDescriptiveTextRecord/exists(ebts:DomainDefinedDescriptiveFields)"/>
+			<c:XMLSchemaValid>
+				<c:XMLSchemaDocument c:pathURI="base-xsd/fbi_ebts/11.2/fbi_ebts.xsd"/>
+			</c:XMLSchemaValid>
+			<c:IEPSampleXMLDocument c:pathURI="iep-sample/Identification Service/*">
+				<nc:DescriptionText>Identification Service Templates</nc:DescriptionText>
+			</c:IEPSampleXMLDocument>
+			<c:IEPSampleXMLDocument c:pathURI="iep-sample/Investigation Service/*">
+				<nc:DescriptionText>Investigation Service Templates</nc:DescriptionText>
+			</c:IEPSampleXMLDocument>
+			<c:IEPSampleXMLDocument c:pathURI="iep-sample/Data Management Service/*">
+				<nc:DescriptionText>Data Management Service Templates</nc:DescriptionText>
+			</c:IEPSampleXMLDocument>
+			<c:IEPSampleXMLDocument c:pathURI="iep-sampleVerification Service/*">
+				<nc:DescriptionText>Verification Service Templates</nc:DescriptionText>
+			</c:IEPSampleXMLDocument>
+			<c:IEPSampleXMLDocument c:pathURI="iep-sample/Notification Service/*">
+				<nc:DescriptionText>Notification Service Templates</nc:DescriptionText>
+			</c:IEPSampleXMLDocument>
+			<c:IEPSampleXMLDocument c:pathURI="iep-sample/Information Service/*">
+				<nc:DescriptionText>Information Service Templates</nc:DescriptionText>
+			</c:IEPSampleXMLDocument>
+		</c:IEPConformanceTarget>
+		<c:ReadMe c:pathURI="readme.pdf"/>
+		<c:MPDChangeLog c:pathURI="changelog.pdf"/>
+		<c:ConformanceAssertion c:pathURI="conformance-assertion.pdf"/>
+		<c:Wantlist c:pathURI="base-xsd/wantlist.xml">
+			<nc:DescriptionText>NIEM 4.0.1 wantlist for EBTS 11.0/11.1</nc:DescriptionText>
+		</c:Wantlist>
+		<c:ExtensionSchemaDocument c:pathURI="base-xsd/fbi_ebts/11.2/fbi_ebts.xsd"/>
+		<c:ExtensionSchemaDocument c:pathURI="base-xsd/itl/itl.xsd"/>
+	</c:MPD>
+</c:Catalog>

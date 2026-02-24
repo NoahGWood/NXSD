@@ -1,2 +1,2 @@
-# NTemplate-
-Template repository for Noah's C++ NTemplates
+# nxsd-
+Template repository for Noah's C++ nxsds

@@ -3,9 +3,9 @@ set -euo pipefail
 
 
 FILES=$(git ls-files \
-  'NTemplate/src/**/*.cpp' \
-  'NTemplate/include/**/*.h' \
-  'NTemplate/tests/**/*.cpp' \
+  'nxsd/src/**/*.cpp' \
+  'nxsd/include/**/*.h' \
+  'nxsd/tests/**/*.cpp' \
 )
 
 if [ -z "$FILES" ]; then

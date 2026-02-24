@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itl:NISTBiometricInformationExchangePackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://cjis.fbi.gov/fbi_ebts/11.2 ../../base-xsd/fbi_ebts/11.2/fbi_ebts.xsd"
+	xmlns:itl="http://biometrics.nist.gov/standard/2011"
+	xmlns:ebts="http://cjis.fbi.gov/fbi_ebts/11.2"
+	xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/"
+	xmlns:j="http://release.niem.gov/niem/domains/jxdm/6.0/"
+	xmlns:biom="http://publication.niem.gov/niem/domains/biometrics/4.0/1/">
+	<!--******************************************************************-->
+	<!--Type-1 Record (Header Record) -->
+	<!--******************************************************************-->
+	<itl:PackageInformationRecord>
+		<itl:Transaction>
+			<!--DAT 1.005-->
+			<itl:TransactionDate>2017-11-11</itl:TransactionDate>
+			<!--DAI 1.007-->
+			<itl:TransactionDestinationAgency>
+				<nc:IdentificationID>WI013415Y</nc:IdentificationID>
+			</itl:TransactionDestinationAgency>
+			<itl:TransactionOriginatingAgency>
+				<!--ORI 1.008-->
+				<nc:IdentificationID>DCFBIWAA4</nc:IdentificationID>
+			</itl:TransactionOriginatingAgency>
+			<!--GMT 1.014, Optional-->
+			<itl:TransactionUTCDate>2017-11-11T00:00:01Z</itl:TransactionUTCDate>
+			<!--TCN 1.009-->
+			<itl:TransactionControlNumberID>5683956839</itl:TransactionControlNumberID>
+			<!--TCR 1.010, Optional-->
+			<itl:TransactionControlReferenceNumberID>1234567890</itl:TransactionControlReferenceNumberID>
+			<!--DOM 1.013, Required for EBTS-->
+			<itl:TransactionDomain>
+				<!-- DVN -->
+				<itl:DomainVersionNumberID>EBTS 11.1</itl:DomainVersionNumberID>
+				<!-- DNM -->
+				<itl:TransactionDomainName>NORAM</itl:TransactionDomainName>
+			</itl:TransactionDomain>
+			<!--APS 1.016, Optional -->
+			<itl:TransactionApplicationProfile>
+				<!--APO-->
+				<biom:ApplicationProfileOrganizationName>DoD</biom:ApplicationProfileOrganizationName>
+				<!--APN-->
+				<biom:ApplicationProfileName>EBTS</biom:ApplicationProfileName>
+				<!--APV-->
+				<itl:ApplicationProfileVersionNumberID>3.0</itl:ApplicationProfileVersionNumberID>
+			</itl:TransactionApplicationProfile>
+			<itl:TransactionImageResolutionDetails>
+				<!--NSR 1.011-->
+				<biom:NativeScanningResolutionValue>00.00</biom:NativeScanningResolutionValue>
+				<!--NTR 1.012-->
+				<biom:NominalTransmittingResolutionValue>00.00</biom:NominalTransmittingResolutionValue>
+			</itl:TransactionImageResolutionDetails>
+			<!--VER 1.002-->
+			<itl:TransactionMajorVersionValue>05</itl:TransactionMajorVersionValue>
+			<itl:TransactionMinorVersionValue>00</itl:TransactionMinorVersionValue>
+			<!--PRY 1.006, Optional-->
+			<itl:TransactionPriorityValue>5</itl:TransactionPriorityValue>
+			<!--TOT 1.004-->
+			<ebts:TransactionCategoryCode>PRR</ebts:TransactionCategoryCode>
+			<!--CNT 1.003-->
+			<itl:TransactionContentSummary>
+				<!-- CRC -->
+				<itl:ContentRecordQuantity>3</itl:ContentRecordQuantity>
+				<itl:ContentRecordSummary>
+					<!-- IDC -->
+					<biom:ImageReferenceID>00</biom:ImageReferenceID>
+					<!-- REC -->
+					<itl:RecordCategoryCode>02</itl:RecordCategoryCode>
+				</itl:ContentRecordSummary>
+				<itl:ContentRecordSummary>
+					<!-- IDC -->
+					<biom:ImageReferenceID>01</biom:ImageReferenceID>
+					<!-- REC -->
+					<itl:RecordCategoryCode>10</itl:RecordCategoryCode>
+				</itl:ContentRecordSummary>
+				<itl:ContentRecordSummary>
+					<!-- IDC -->
+					<biom:ImageReferenceID>02</biom:ImageReferenceID>
+					<!-- REC -->
+					<itl:RecordCategoryCode>10</itl:RecordCategoryCode>
+				</itl:ContentRecordSummary>
+			</itl:TransactionContentSummary>
+		</itl:Transaction>
+	</itl:PackageInformationRecord>
+	
+	<!--******************************************************************-->
+	<!--Type-2 Record (User Defined Descriptive Text Record)-->
+	<!--******************************************************************-->
+	<itl:PackageDescriptiveTextRecord>
+		<!-- IDC 2.002-->
+		<biom:ImageReferenceID>00</biom:ImageReferenceID>
+		<itl:UserDefinedDescriptiveDetail>
+			<ebts:DomainDefinedDescriptiveFields>
+				<!-- SCO 2.007 (0..9)-->
+				<biom:RecordForwardOrganizations>
+					<nc:OrganizationIdentification>
+						<nc:IdentificationID>WV1000000</nc:IdentificationID>
+					</nc:OrganizationIdentification>
+					<nc:OrganizationIdentification>
+						<nc:IdentificationID>NY030025P</nc:IdentificationID>
+					</nc:OrganizationIdentification>
+				</biom:RecordForwardOrganizations>
+				<!--ATN 2.006, Optional-->
+				<nc:CaveatText>SA J Q DOE,RM 11867</nc:CaveatText>
+				<ebts:RecordTransactionData>
+					<ebts:TransactionResponseData>
+						<!-- EXP 2.080, Optional -->
+						<ebts:TransactionReasonText>PHOTO NOT FOUND FOR SPECIFIED DOA DOS</ebts:TransactionReasonText>
+						<!-- REC 2.082 -->
+						<ebts:TransactionResponseIndicator>true</ebts:TransactionResponseIndicator>
+					</ebts:TransactionResponseData>
+				</ebts:RecordTransactionData>
+				<ebts:RecordTransactionActivity>
+					<!-- DOA 2.045, Optional -->
+					<ebts:ArrestDate>1995-03-24</ebts:ArrestDate>
+					<!-- DOS 2.046, Optional -->
+					<ebts:ArrestDateSuffixCode>L</ebts:ArrestDateSuffixCode>
+					<!-- CRI 2.073 (0..3) -->
+					<ebts:RecordControllingAgencyID>NY0303000</ebts:RecordControllingAgencyID>
+				</ebts:RecordTransactionActivity>
+				<ebts:RecordSubject>
+					<!-- FBI 2.014-->
+					<j:PersonFBIIdentification>
+						<nc:IdentificationID>62760NY12</nc:IdentificationID>
+					</j:PersonFBIIdentification>
+				</ebts:RecordSubject>
+			</ebts:DomainDefinedDescriptiveFields>
+		</itl:UserDefinedDescriptiveDetail>
+	</itl:PackageDescriptiveTextRecord>
+	
+	<!--******************************************************************-->
+	<!--	BIOMETRIC RECORDS-->
+	<!--PRR Transactions allow the following biometric record types:	-->
+	<!-- 									 -->
+	<!--Type-10 (0..4)							    -->
+	<!-- 									 -->
+	<!--Please refer to EBTS 11.0 spec for further FRR biometric requirements -->
+	<!--******************************************************************-->
+	
+	<!--******************************************************************-->
+	<!--Type-10 Record (Facial And SMTImage Record with Facial Image Record)-->
+	<!--******************************************************************-->
+	<itl:PackagePhotographicBodyPartImageRecord>
+		<!-- IDC 10.002-->
+		<biom:ImageReferenceID>01</biom:ImageReferenceID>
+		<biom:FaceImage>
+			<!-- DAT 10.999-->
+			<nc:Base64BinaryObject>mrHbPdrko3u1s7ahtgPBjtmO1s85tfG2U7bpofY9
+				4Czu2SbY7d7wF9fQ7ZptgGrtkO2a2dsJ7wZbe 8BlzvAmQ7xq+Y94GoHeEsR3ikWd4DIGhzmp3k42
+				d4DRmzs94DKveDTB3hqw6PeBLrtpPep0H/+h</nc:Base64BinaryObject>
+			<biom:ImageCaptureDetail>
+				<!-- PHD 10.005-->
+				<biom:CaptureDate>
+					<nc:Date>2007-01-01</nc:Date>
+				</biom:CaptureDate>
+				<biom:CaptureOrganization>
+					<!-- 10.004 SRC -->
+					<nc:OrganizationIdentification>
+						<nc:IdentificationID>WI013415Y</nc:IdentificationID>
+					</nc:OrganizationIdentification>
+					<!-- 10.993 SAN -->
+					<nc:OrganizationName>WI CRIME INFORMATION BUREAU</nc:OrganizationName>
+				</biom:CaptureOrganization>
+				<!--SHPS 10.016, Optional-->
+				<biom:CaptureHorizontalPixelDensityValue>1200</biom:CaptureHorizontalPixelDensityValue>
+				<!-- SVPS 10.017, Optional -->
+				<biom:CaptureVerticalPixelDensityValue>1200</biom:CaptureVerticalPixelDensityValue>
+				<!-- DMM 10.030, Optional -->
+				<biom:CaptureDeviceMonitoringModeCode>ASSISTED</biom:CaptureDeviceMonitoringModeCode>
+			</biom:ImageCaptureDetail>
+			<!-- CSP 10.012-->
+			<biom:ImageColorSpaceCode>YCC</biom:ImageColorSpaceCode>
+			<!-- COM 10.038, Optional-->
+			<biom:ImageCommentText>Comment</biom:ImageCommentText>
+			<!-- CGA 10.011-->
+			<biom:ImageCompressionAlgorithmCode>2</biom:ImageCompressionAlgorithmCode>
+			<!-- HLL 10.006-->
+			<biom:HorizontalLineLengthPixelQuantity>65535</biom:HorizontalLineLengthPixelQuantity>
+			<!-- THPS 10.009-->
+			<biom:ImageHorizontalPixelDensityValue>1200</biom:ImageHorizontalPixelDensityValue>
+			<!-- SQS 10.024 (0..9) -->
+			<biom:ImageQuality>
+				<!--QAP-->  
+				<biom:QualityAlgorithmProductID>28495</biom:QualityAlgorithmProductID>
+				<!--QAV-->
+				<biom:QualityAlgorithmVendorID>FFFF</biom:QualityAlgorithmVendorID>
+				<!--QVU-->
+				<biom:QualityValue>100</biom:QualityValue>
+			</biom:ImageQuality>
+			<!-- SLC 10.008-->
+			<biom:ImageScaleUnitsCode>1</biom:ImageScaleUnitsCode>
+			<!-- IMT 10.003-->
+			<biom:ImageCategoryCode>FACE</biom:ImageCategoryCode>
+			<!-- VLL 10.007-->
+			<biom:VerticalLineLengthPixelQuantity>65535</biom:VerticalLineLengthPixelQuantity>
+			<!-- TVPS 10.010-->
+			<biom:ImageVerticalPixelDensityValue>1200</biom:ImageVerticalPixelDensityValue>
+			<!-- DIST 10.018, Optional-->
+			<biom:ImageDistortion>
+				<!-- IDK-->
+				<biom:ImageDistortionCategoryCode>Pincushion</biom:ImageDistortionCategoryCode>
+				<!-- IDM-->
+				<biom:ImageDistortionMeasurementCode>E</biom:ImageDistortionMeasurementCode>
+				<!--DSC -->
+				<biom:ImageDistortionSeverityCode>Mild</biom:ImageDistortionSeverityCode>
+			</biom:ImageDistortion>
+			<!-- SPA 10.025, Conditional. See POS 10.020 and SAP 10.013-->
+			<biom:FaceImage3DPoseAngle>
+				<!-- PIT -->
+				<biom:PosePitchAngleMeasure>-45</biom:PosePitchAngleMeasure>
+				<!-- PITU -->
+				<biom:PosePitchUncertaintyValue>35</biom:PosePitchUncertaintyValue>
+				<!-- ROL -->
+				<biom:PoseRollAngleMeasure>0</biom:PoseRollAngleMeasure>
+				<!-- ROLU -->
+				<biom:PoseRollUncertaintyValue>90</biom:PoseRollUncertaintyValue>
+				<!-- YAW -->
+				<biom:PoseYawAngleMeasure>0</biom:PoseYawAngleMeasure>
+				<!-- YAWU -->
+				<biom:PoseYawUncertaintyValue>0</biom:PoseYawUncertaintyValue>
+			</biom:FaceImage3DPoseAngle>
+			<!-- SAP 10.013, Conditional. Mandatory when IMT 1.003 = 'FACE'. The PAS, SPA, SXS, SEC, and SHC fields are mandatory if the SAP value is "40" or greater.-->
+			<biom:FaceImageAcquisitionProfileCode>20</biom:FaceImageAcquisitionProfileCode>
+			<!-- PXS 10.022 (0..9) Legacy Only-->
+			<biom:FaceImageAttribute>
+				<biom:FaceImageAttributeCode>GLASSES</biom:FaceImageAttributeCode>
+			</biom:FaceImageAttribute>
+			<biom:FaceImageAttribute>
+				<biom:FaceImageAttributeCode>OTHER</biom:FaceImageAttributeCode>
+				<biom:FaceImageAttributeText>SKI MASK</biom:FaceImageAttributeText>
+			</biom:FaceImageAttribute>
+			<biom:FaceImageAttribute>
+				<biom:FaceImageAttributeCode>PHYSICAL</biom:FaceImageAttributeCode>
+				<biom:FaceImageAttributeText>ART EYE</biom:FaceImageAttributeText>
+			</biom:FaceImageAttribute>
+			<!-- SXS 10.026, Conditional (0..50). Mandatory if the SAP entry (Field 10.013) is "40" or greater.-->
+			<biom:FaceImageDescriptionCode>MOUTH OPEN</biom:FaceImageDescriptionCode>
+			<biom:FaceImageDescriptionCode>TEETH VISIBLE</biom:FaceImageDescriptionCode>
+			<biom:FaceImageDescriptionCode>NO EAR</biom:FaceImageDescriptionCode>
+			<!-- POS 10.020, Optional. For value"A", POA(10.021)  is mandatory. For  value "D", SPA(10.025) is mandatory.-->
+			<biom:FaceImageSubjectPoseCode>A</biom:FaceImageSubjectPoseCode>
+			<!--  FIP 10.014, Optional -->
+			<biom:FaceImageBoundingSquare>
+				<!-- BBC -->
+				<biom:FaceImageBoundingCategoryCode>H</biom:FaceImageBoundingCategoryCode>
+				<!-- BVC -->
+				<biom:SegmentBottomVerticalCoordinateValue>85</biom:SegmentBottomVerticalCoordinateValue>
+				<!-- LHC -->
+				<biom:SegmentLeftHorizontalCoordinateValue>115</biom:SegmentLeftHorizontalCoordinateValue>
+				<!-- RHC -->
+				<biom:SegmentRightHorizontalCoordinateValue>188</biom:SegmentRightHorizontalCoordinateValue>
+				<!-- TVC -->
+				<biom:SegmentTopVerticalCoordinateValue>55</biom:SegmentTopVerticalCoordinateValue>
+			</biom:FaceImageBoundingSquare>
+			<!-- FPFI 10.015, Optional  -->
+			<biom:FaceImageBoundary>
+				<!-- BYC -->
+				<biom:FaceImageBoundaryShapeCode>P</biom:FaceImageBoundaryShapeCode>
+				<!-- NOP -->
+				<biom:PositionPolygonVertexQuantity>4</biom:PositionPolygonVertexQuantity>
+				<biom:PositionPolygonVertex>
+					<!-- HPO -->
+					<biom:PositionHorizontalCoordinateValue>100</biom:PositionHorizontalCoordinateValue>
+					<!-- VPO -->
+					<biom:PositionVerticalCoordinateValue>15</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+				<biom:PositionPolygonVertex>
+					<biom:PositionHorizontalCoordinateValue>150</biom:PositionHorizontalCoordinateValue>
+					<biom:PositionVerticalCoordinateValue>15</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+				<biom:PositionPolygonVertex>
+					<biom:PositionHorizontalCoordinateValue>150</biom:PositionHorizontalCoordinateValue>
+					<biom:PositionVerticalCoordinateValue>85</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+				<biom:PositionPolygonVertex>
+					<biom:PositionHorizontalCoordinateValue>100</biom:PositionHorizontalCoordinateValue>
+					<biom:PositionVerticalCoordinateValue>85</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+			</biom:FaceImageBoundary>
+			<!-- LAF 10.019, Optional  -->
+			<biom:FaceImageLightingArtifactsCode>F</biom:FaceImageLightingArtifactsCode>
+			<biom:FaceImageLightingArtifactsCode>H</biom:FaceImageLightingArtifactsCode>
+			<!-- SEC 10.027, Conditional. Mandatory if the SAP entry (Field 10.013) is "40" or greater.-->
+			<ebts:PersonEyeColorCode>HAZ</ebts:PersonEyeColorCode>
+			<!--SHC 10.028, Conditional (0..2). Mandatory if the SAP entry (Field 10.013) is "40" or greater.-->
+			<biom:HairColorCode>BAL</biom:HairColorCode>
+			<biom:HairColorCode>GRN</biom:HairColorCode>
+			<!--SFP 10.029 (0..88)-->
+			<biom:FaceImage2DFeaturePoint>
+				<!-- HCX -->
+				<biom:FeaturePointHorizontalCoordinateValue>258</biom:FeaturePointHorizontalCoordinateValue>
+				<!-- FPC -->
+				<biom:FeaturePointID>11.5</biom:FeaturePointID>
+				<!-- FPT -->
+				<biom:FeaturePointCategoryCode>1</biom:FeaturePointCategoryCode>
+				<!-- HCY -->
+				<biom:FeaturePointVerticalCoordinateValue>55</biom:FeaturePointVerticalCoordinateValue>
+			</biom:FaceImage2DFeaturePoint>
+			<biom:FaceImage2DFeaturePoint>
+				<!-- HCX -->
+				<biom:FeaturePointHorizontalCoordinateValue>256</biom:FeaturePointHorizontalCoordinateValue>
+				<!-- FPC -->
+				<biom:FeaturePointID>2.1</biom:FeaturePointID>
+				<!-- FPT -->
+				<biom:FeaturePointCategoryCode>1</biom:FeaturePointCategoryCode>
+				<!-- HCY -->
+				<biom:FeaturePointVerticalCoordinateValue>212</biom:FeaturePointVerticalCoordinateValue>
+			</biom:FaceImage2DFeaturePoint>
+			<!-- TMC 10.031, Optional  -->
+			<biom:FaceImageFeaturePointTierCode>3</biom:FaceImageFeaturePointTierCode>
+			<!-- AFF 10.032, Optional  -->
+			<biom:FaceImage3DFeaturePoint>
+				<!-- HCX -->
+				<biom:FeaturePointHorizontalCoordinateValue>85</biom:FeaturePointHorizontalCoordinateValue>
+				<!-- FPC -->
+				<biom:FeaturePointID>sba</biom:FeaturePointID>
+				<!-- FPT -->
+				<biom:FeaturePointCategoryCode>2</biom:FeaturePointCategoryCode>
+				<!-- HCY -->
+				<biom:FeaturePointVerticalCoordinateValue>119</biom:FeaturePointVerticalCoordinateValue>
+				<!-- HCZ -->
+				<biom:FeaturePointZCoordinateValue>6</biom:FeaturePointZCoordinateValue>
+			</biom:FaceImage3DFeaturePoint>
+			<biom:FaceImage3DFeaturePoint>
+				<!-- HCX -->
+				<biom:FeaturePointHorizontalCoordinateValue>115</biom:FeaturePointHorizontalCoordinateValue>
+				<!-- FPC -->
+				<biom:FeaturePointID>sba</biom:FeaturePointID>
+				<!-- FPT -->
+				<biom:FeaturePointCategoryCode>1</biom:FeaturePointCategoryCode>
+				<!-- HCY -->
+				<biom:FeaturePointVerticalCoordinateValue>85</biom:FeaturePointVerticalCoordinateValue>
+				<!-- HCZ -->
+				<biom:FeaturePointZCoordinateValue>6</biom:FeaturePointZCoordinateValue>
+			</biom:FaceImage3DFeaturePoint>
+			<!-- FEC 10.033 Optional  -->
+			<biom:FaceImageContour>
+				<!-- FCC -->
+				<biom:FaceImageContourCategoryCode>chin</biom:FaceImageContourCategoryCode>
+				<!-- NOP -->
+				<biom:PositionPolygonVertexQuantity>3</biom:PositionPolygonVertexQuantity>
+				<biom:PositionPolygonVertex>
+					<!-- HPO -->
+					<biom:PositionHorizontalCoordinateValue>225</biom:PositionHorizontalCoordinateValue>
+					<!-- VPO -->
+					<biom:PositionVerticalCoordinateValue>313</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+				<biom:PositionPolygonVertex>
+					<biom:PositionHorizontalCoordinateValue>425</biom:PositionHorizontalCoordinateValue>
+					<biom:PositionVerticalCoordinateValue>300</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+				<biom:PositionPolygonVertex>
+					<biom:PositionHorizontalCoordinateValue>625</biom:PositionHorizontalCoordinateValue>
+					<biom:PositionVerticalCoordinateValue>313</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+			</biom:FaceImageContour>
+			<biom:FaceImageContour>
+				<!-- FCC -->
+				<biom:FaceImageContourCategoryCode>eyetop</biom:FaceImageContourCategoryCode>
+				<!-- NOP -->
+				<biom:PositionPolygonVertexQuantity>3</biom:PositionPolygonVertexQuantity>
+				<biom:PositionPolygonVertex>
+					<!-- HPO -->
+					<biom:PositionHorizontalCoordinateValue>225</biom:PositionHorizontalCoordinateValue>
+					<!-- VPO -->
+					<biom:PositionVerticalCoordinateValue>10</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+				<biom:PositionPolygonVertex>
+					<biom:PositionHorizontalCoordinateValue>230</biom:PositionHorizontalCoordinateValue>
+					<biom:PositionVerticalCoordinateValue>6</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+				<biom:PositionPolygonVertex>
+					<biom:PositionHorizontalCoordinateValue>240</biom:PositionHorizontalCoordinateValue>
+					<biom:PositionVerticalCoordinateValue>10</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+			</biom:FaceImageContour>
+			<!--OCC 10.045, Optional  -->
+			<biom:FaceImageOcclusion>
+				<!-- OCY -->
+				<biom:FaceImageOcclusionOpacityCode>L</biom:FaceImageOcclusionOpacityCode>
+				<!-- OCT -->
+				<biom:FaceImageOcclusionCategoryCode>S</biom:FaceImageOcclusionCategoryCode>
+				<!-- NOP -->
+				<biom:PositionPolygonVertexQuantity>3</biom:PositionPolygonVertexQuantity>
+				<biom:PositionPolygonVertex>
+					<!-- HPO -->
+					<biom:PositionHorizontalCoordinateValue>225</biom:PositionHorizontalCoordinateValue>
+					<!-- VPO -->
+					<biom:PositionVerticalCoordinateValue>313</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+				<biom:PositionPolygonVertex>
+					<biom:PositionHorizontalCoordinateValue>425</biom:PositionHorizontalCoordinateValue>
+					<biom:PositionVerticalCoordinateValue>300</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+				<biom:PositionPolygonVertex>
+					<biom:PositionHorizontalCoordinateValue>625</biom:PositionHorizontalCoordinateValue>
+					<biom:PositionVerticalCoordinateValue>313</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+			</biom:FaceImageOcclusion>
+			<biom:FaceImageOcclusion>
+				<!-- OCY -->
+				<biom:FaceImageOcclusionOpacityCode>S</biom:FaceImageOcclusionOpacityCode>
+				<!-- OCT -->
+				<biom:FaceImageOcclusionCategoryCode>O</biom:FaceImageOcclusionCategoryCode>
+				<!-- NOP -->
+				<biom:PositionPolygonVertexQuantity>3</biom:PositionPolygonVertexQuantity>
+				<biom:PositionPolygonVertex>
+					<!-- HPO -->
+					<biom:PositionHorizontalCoordinateValue>225</biom:PositionHorizontalCoordinateValue>
+					<!-- VPO -->
+					<biom:PositionVerticalCoordinateValue>313</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+				<biom:PositionPolygonVertex>
+					<biom:PositionHorizontalCoordinateValue>425</biom:PositionHorizontalCoordinateValue>
+					<biom:PositionVerticalCoordinateValue>300</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+				<biom:PositionPolygonVertex>
+					<biom:PositionHorizontalCoordinateValue>625</biom:PositionHorizontalCoordinateValue>
+					<biom:PositionVerticalCoordinateValue>313</biom:PositionVerticalCoordinateValue>
+				</biom:PositionPolygonVertex>
+			</biom:FaceImageOcclusion>
+			<!-- POA 10.021, Conditional. See POS 10.020-->
+			<biom:FaceImagePoseOffsetAngleMeasure>-45</biom:FaceImagePoseOffsetAngleMeasure>
+			<!-- PAS 10.023, Conditional. Mandatory if the SAP entry (Field 10.013) is "40" or greater.-->
+			<biom:FaceImageAcquisitionSource>
+				<biom:FaceImageAcquisitionCode>DIGITAL CAMERA</biom:FaceImageAcquisitionCode>
+			</biom:FaceImageAcquisitionSource>
+			<!-- Also allowable:  ansi-nist:FaceImageFeaturePointTierNumeric -->
+			<!--ITX 10.044, Optional  -->
+			<biom:ImageTransformationCode>CROP</biom:ImageTransformationCode>
+			<biom:ImageTransformationCode>DOWNSAMPLE</biom:ImageTransformationCode>
+		</biom:FaceImage>
+	</itl:PackagePhotographicBodyPartImageRecord>
+	
+	<!--******************************************************************-->
+	<!--Type-10 Record (Facial And SMTImage Record with SMT Image Record)-->
+	<!--******************************************************************-->
+	<itl:PackagePhotographicBodyPartImageRecord>
+		<!--IDC 10.002  -->
+		<biom:ImageReferenceID>02</biom:ImageReferenceID>
+		<biom:PhysicalFeatureImage>
+			<!--DATA  10.999  -->
+			<nc:Base64BinaryObject>mrHbPdrko3u1s7ahtgPBjtmO1s85tfG2U7bpofY9
+				4Czu2SbY7d7wF9fQ7ZptgGrtkO2a2dsJ7wZbe 8BlzvAmQ7xq+Y94GoHeEsR3ikWd4DIGhzmp3k42
+				d4DRmzs94DKveDTB3hqw6PeBLrtpPep0H/+h</nc:Base64BinaryObject>
+			<biom:ImageCaptureDetail>
+				<!-- PHD 10.005  -->
+				<biom:CaptureDate>
+					<nc:Date>1953-04-23</nc:Date>
+				</biom:CaptureDate>
+				<!-- SRC 10.004-->
+				<biom:CaptureOrganization>
+					<nc:OrganizationIdentification>
+						<nc:IdentificationID>WI013415Y</nc:IdentificationID>
+					</nc:OrganizationIdentification>
+					<nc:OrganizationName>WI CRIME INFORMATION BUREAU</nc:OrganizationName>
+				</biom:CaptureOrganization>
+				<!-- SHPS 10.016  -->
+				<biom:CaptureHorizontalPixelDensityValue>500</biom:CaptureHorizontalPixelDensityValue>
+				<!-- SVPS 10.017  -->
+				<biom:CaptureVerticalPixelDensityValue>500</biom:CaptureVerticalPixelDensityValue>
+			</biom:ImageCaptureDetail>
+			<!-- CSP 10.012  -->
+			<biom:ImageColorSpaceCode>YCC</biom:ImageColorSpaceCode>
+			<!--COM  10.038  -->
+			<biom:ImageCommentText>Comment</biom:ImageCommentText>
+			<!--  CGA 10.011  -->
+			<biom:ImageCompressionAlgorithmCode>2</biom:ImageCompressionAlgorithmCode>
+			<!--HLL  10.006  -->
+			<biom:HorizontalLineLengthPixelQuantity>65535</biom:HorizontalLineLengthPixelQuantity>
+			<!-- THPS 10.009  -->
+			<biom:ImageHorizontalPixelDensityValue>1200</biom:ImageHorizontalPixelDensityValue>
+			<!--SLC  10.008  -->
+			<biom:ImageScaleUnitsCode>1</biom:ImageScaleUnitsCode>
+			<!-- IMT 10.003  -->
+			<biom:ImageCategoryCode>TATTOO</biom:ImageCategoryCode>
+			<!--VLL  10.007  -->
+			<biom:VerticalLineLengthPixelQuantity>65535</biom:VerticalLineLengthPixelQuantity>
+			<!-- TVPS 10.010  -->
+			<biom:ImageVerticalPixelDensityValue>1200</biom:ImageVerticalPixelDensityValue>
+			<!-- SMS 10.041  -->
+			<biom:PhysicalFeatureSize>
+				<!--  HGT -->
+				<biom:PhysicalFeatureHeightMeasure>112</biom:PhysicalFeatureHeightMeasure>
+				<!--  WID -->
+				<biom:PhysicalFeatureWidthMeasure>15</biom:PhysicalFeatureWidthMeasure>
+			</biom:PhysicalFeatureSize>
+			<!--T10  10.039  -->
+			<biom:Type10CrossReferenceID>0</biom:Type10CrossReferenceID>
+			<!--  ITX 10.044  -->
+			<biom:ImageTransformationCode>CROP</biom:ImageTransformationCode>
+			<biom:ImageTransformationCode>DOWNSAMPLE</biom:ImageTransformationCode>
+			<!-- SMT 10.040  -->
+			<biom:PhysicalFeatureNCICCode>TAT L T0E</biom:PhysicalFeatureNCICCode>
+			<biom:PhysicalFeatureNCICCode>TAT FARM</biom:PhysicalFeatureNCICCode>
+			<biom:PhysicalFeatureDescriptionDetail>
+				<!-- COL 10.043  -->
+				<biom:PhysicalFeatureColorDetail>
+					<!--  TC1 -->
+					<biom:PhysicalFeaturePrimaryColorCode>ORANGE</biom:PhysicalFeaturePrimaryColorCode>
+					<!--  TC2 -->
+					<biom:PhysicalFeatureSecondaryColorCode>BLACK</biom:PhysicalFeatureSecondaryColorCode>
+					<!--  TC3 -->
+					<biom:PhysicalFeatureSecondaryColorCode>RED</biom:PhysicalFeatureSecondaryColorCode>
+				</biom:PhysicalFeatureColorDetail>
+				<!-- SMD 10.042  -->
+				<!--  SMI -->
+				<biom:PhysicalFeatureCategoryCode>TATTOO</biom:PhysicalFeatureCategoryCode>
+				<!--  TAC -->
+				<biom:PhysicalFeatureClassCode>ANIMAL</biom:PhysicalFeatureClassCode>
+				<!--  TSC -->
+				<biom:PhysicalFeatureSubClassCode>DOG</biom:PhysicalFeatureSubClassCode>
+				<!--  TDS -->
+				<biom:PhysicalFeatureDescriptionText>Golden retriever with an overbite</biom:PhysicalFeatureDescriptionText>
+			</biom:PhysicalFeatureDescriptionDetail>
+			<biom:PhysicalFeatureDescriptionDetail>
+				<!-- COL 10.043  -->
+				<biom:PhysicalFeatureColorDetail>
+					<!--  TC1 -->
+					<biom:PhysicalFeaturePrimaryColorCode>YELLOW</biom:PhysicalFeaturePrimaryColorCode>
+					<!--  TC2 -->
+					<biom:PhysicalFeatureSecondaryColorCode>MULTI</biom:PhysicalFeatureSecondaryColorCode>
+				</biom:PhysicalFeatureColorDetail>
+				<!-- SMD 10.042  -->
+				<!--  SMI -->
+				<biom:PhysicalFeatureCategoryCode>TATTOO</biom:PhysicalFeatureCategoryCode>
+				<!--  TAC -->
+				<biom:PhysicalFeatureClassCode>HUMAN</biom:PhysicalFeatureClassCode>
+				<!--  TSC -->
+				<biom:PhysicalFeatureSubClassCode>MBPART</biom:PhysicalFeatureSubClassCode>
+				<!--  TDS -->
+				<biom:PhysicalFeatureDescriptionText>Fist</biom:PhysicalFeatureDescriptionText>
+			</biom:PhysicalFeatureDescriptionDetail>
+		</biom:PhysicalFeatureImage>
+	</itl:PackagePhotographicBodyPartImageRecord>
+
+</itl:NISTBiometricInformationExchangePackage>

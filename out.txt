@@ -1,0 +1,7378 @@
+==> Configuring nxsd (Linux)...
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/noah/Desktop/Projects/NXSD/build-linux
+==> Building nxsd for Linux...
+[1/4] Building CXX object nxsd/CMakeFiles/nxsd.dir/src/SchemaLoader.cpp.o
+[2/4] Linking CXX static library nxsd/libnxsd.a
+[3/4] Linking CXX executable examples/minimal_app/minimal_app
+[4/4] Linking CXX executable nxsd/tests/nxsd_tests
+==> Running unit tests for nxsd (Linux)...
+[38;2;0;255;255mNTest Framework
+[0m[38;2;0;255;255mRunning Tests....
+[0m[38;2;0;255;0m[PASS] NXSD_Load_IncludeCycleSafe[0m
+[38;2;0;255;0m[PASS] NXSD_Load_SimpleTypeRestriction[0m
+[38;2;0;255;0m[PASS] NXSD_Load_Enumeration[0m
+[38;2;0;255;0m[PASS] NXSD_Load_UnionType[0m
+[38;2;0;255;0m[PASS] NXSD_Load_ComplexSequence[0m
+[38;2;0;255;0m[PASS] NXSD_Load_Extension[0m
+[38;2;0;255;0m[PASS] NXSD_Load_FileFromTestDir[0m
+EBTS types loaded: 602
+=== NXSD TypeRegistry ===
+Type count: 602
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:UserDefinedFrictionRidgeInformationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageSourceCode : {}: [1, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:UserDefinedFaceInformationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - BiometricNCICOffenseCode : {}: [1, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:UserDefinedFieldsType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - OrganizationName : {}: [1, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:UserDefinedElementType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - UserDefinedElementName : {}: [1, 1]
+    - UserDefinedElementText : {}: [1, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TSRCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TSRCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - C
+    - H
+    - P
+    - V
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TransactionHitCategoryCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TransactionCandidateListType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - Candidate : {}: [1, 99]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TOTCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - AMN
+    - BATQ
+    - BATR
+    - BDEC
+    - BDECR
+    - BDEL
+    - BDELR
+    - CAR
+    - CDEL
+    - CDELR
+    - CNA
+    - CPD
+    - CPDR
+    - CPNU
+    - CPR
+    - CVSO
+    - DEK
+    - DEU
+    - DOCE
+    - DSPE
+    - DSPR
+    - EHRR
+    - EMUF
+    - EQER
+    - EQHR
+    - EQRR
+    - ERRA
+    - ERRB
+    - ERRI
+    - ERRL
+    - ERRR
+    - ERRT
+    - FANC
+    - FAUF
+    - FDSP
+    - FIDR
+    - FIS
+    - FISR
+    - FNDR
+    - FRS
+    - FVR
+    - IIDS
+    - IRQ
+    - IRR
+    - ISR
+    - LFFS
+    - LFIS
+    - LFS
+    - LPNQ
+    - LPNR
+    - LRSQ
+    - LRSR
+    - LSR
+    - MAP
+    - MAPC
+    - MPR
+    - NFUE
+    - NFUF
+    - NNDR
+    - PDR
+    - PRR
+    - RBIHS
+    - RBIHSR
+    - RBMNT
+    - RBMNTR
+    - RBN
+    - RBRN
+    - RBRPT
+    - RBRPTR
+    - RBSCRM
+    - RBSCVL
+    - RBSR
+    - RPIS
+    - RPISR
+    - SPMNT
+    - SPMNTR
+    - SPN
+    - SRB
+    - SRE
+    - SRL
+    - SRNR
+    - SRNRR
+    - SRT
+    - TPIS
+    - TPRR
+    - TPRS
+    - TXTSRCH
+    - UBM
+    - UHN
+    - ULD
+    - ULDR
+    - ULM
+    - UUBD
+    - UULD
+    - XACT
+    - XACTR
+    - XMNT
+    - XMNTR
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TLICodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:SupervisionStatusType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - StatusText : {}: [0, 1]
+    - SupervisionStatusCode : {}: [0, 8]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:SupervisionStatusCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - BLS
+    - CDR
+    - MAN
+    - PAR
+    - PRO
+    - PTD
+    - SPT
+    - SUR
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:SupervisedReleaseActionCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:SupervisedReleaseActionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - EAS
+    - CAS
+    - TAS
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:SMTCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RecordTransactionDataType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - TransactionSubmissionMilitaryCode : {}: [0, 1]
+    - TransactionMaintenanceActionCode : {}: [0, 1]
+    - TransactionDescriptionText : {}: [0, 1]
+    - TransactionFingerprintImagesRequested : {}: [0, 1]
+    - TransactionFingerprintImagesUpdated : {}: [0, 1]
+    - TransactionImagesRequestedQuantity : {}: [0, 1]
+    - TransactionBiometricImagesRequested : {}: [0, 1]
+    - TransactionResponseData : {}: [0, 1]
+    - TransactionSearchAreaCode : {}: [0, 5]
+    - TransactionSearchRequestCategoryCode : {}: [0, 1]
+    - TransactionUnsolvedLatentFileIndicator : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RecordRapBackDataType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - RecordRapBackActivityNotificationFormatCode : {}: [0, 1]
+    - RecordRapBackActivityNotificationID : {}: [0, 10]
+    - RecordRapBackAttentionText : {}: [0, 1]
+    - RecordRapBackCategoryCode : {}: [0, 1]
+    - RecordRapBackDisclosureIndicator : {}: [0, 1]
+    - RecordRapBackExpirationDate : {}: [0, 1]
+    - RapBackDateRange : {}: [0, 1]
+    - RecordRapBackInStateOptOutIndicator : {}: [0, 1]
+    - RecordForwardOrganizations : {}: [0, 1]
+    - ReturnAllRecordsIndicator : {}: [0, 1]
+    - RecordRapBackSubscriptionDate : {}: [0, 1]
+    - RecordRapBackSubscriptionID : {}: [0, 1]
+    - RecordRapBackSubscriptionListText : {}: [0, 1]
+    - RecordRapBackSubscriptionTerm : {}: [0, 1]
+    - RecordRapBackTermDate : {}: [0, 1]
+    - RecordRapBackTriggeringEventCode : {}: [0, 40]
+    - RecordRapBackUserDefinedElement : {}: [0, 10]
+    - TransactionRapBackMaintenanceCode : {}: [0, 1]
+    - TransactionRapBackTriggeringEvent : {}: [0, 10]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RBTCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RBTCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RapBackTriggeringEventType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - RapBackEventDate : {}: [1, 1]
+    - RapBackTriggeringEventCode : {}: [0, 1]
+    - RapBackEventText : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RBSubscriptionTermCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RBMICodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - R
+    - D
+    - A
+    - C
+    - N
+    - U
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RBCCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RBCCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - I
+    - J
+    - CI
+    - CS
+    - S
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RatioType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RatioSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:decimal
+  Primitive: 2
+  Facets:
+    minInclusive = 0
+    maxInclusive = 1
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RapSheetFormatRequestCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RapSheetFormatRequestCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - Y
+    - N
+    - X
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:PTDCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:POBUnionCodeSimpleType
+  Union:
+    - {http://cjis.fbi.gov/fbi_ebts/11.2}:POBCodeSimpleType
+    - {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:CountryCodeSimpleType
+    - {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:CanadianCodeSimpleType
+    - {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:IndianCodeSimpleType
+    - {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:ReferenceCodeSimpleType
+    - {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:MexicanCodeSimpleType
+    - {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:UnitedStatesCodeSimpleType
+    - {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:USTerritoriesCodeSimpleType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:POBCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 1A
+    - 1B
+    - 1C
+    - 1D
+    - 1E
+    - 1F
+    - 1G
+    - 1H
+    - 1K
+    - 1L
+    - 1M
+    - 1N
+    - 1P
+    - 1Q
+    - 1R
+    - 1S
+    - 1T
+    - 1X
+    - 1Z
+    - 2A
+    - 2B
+    - 2C
+    - 2D
+    - 2E
+    - 2F
+    - 2H
+    - 2J
+    - 2K
+    - 2N
+    - 2P
+    - 2Q
+    - 2R
+    - 2S
+    - 2T
+    - 2X
+    - 2Z
+    - 3A
+    - 3B
+    - 3D
+    - 3E
+    - 3H
+    - 3J
+    - 3K
+    - 3M
+    - 3N
+    - 3P
+    - 3Q
+    - 3R
+    - 3S
+    - 3T
+    - 3X
+    - 3Z
+    - 4A
+    - 4B
+    - 4C
+    - 4E
+    - 4J
+    - 4K
+    - 4M
+    - 4N
+    - 4P
+    - 4Q
+    - 4R
+    - 4S
+    - 4T
+    - 4X
+    - 4Z
+    - 5A
+    - 5B
+    - 5C
+    - 5E
+    - 5J
+    - 5K
+    - 5M
+    - 5N
+    - 5P
+    - 5Q
+    - 5R
+    - 5S
+    - 5T
+    - 5Z
+    - 6A
+    - 6B
+    - 6C
+    - 6J
+    - 6K
+    - 6M
+    - 6N
+    - 6P
+    - 6Q
+    - 6S
+    - 6T
+    - 7A
+    - 7B
+    - 7C
+    - 7J
+    - 7K
+    - 7M
+    - 7N
+    - 7P
+    - 7Q
+    - 7S
+    - 7T
+    - 8A
+    - 8B
+    - 8C
+    - 8J
+    - 8K
+    - 8M
+    - 8N
+    - 8P
+    - 8Q
+    - 8S
+    - 8T
+    - 9C
+    - 9K
+    - 9N
+    - 9P
+    - 9S
+    - 9T
+    - A1
+    - A2
+    - A3
+    - A4
+    - A5
+    - A6
+    - A7
+    - A8
+    - A9
+    - AC
+    - AW
+    - AY
+    - B1
+    - B2
+    - B3
+    - B4
+    - B5
+    - B6
+    - B7
+    - B8
+    - B9
+    - C1
+    - C2
+    - C3
+    - C4
+    - C5
+    - C6
+    - C7
+    - C8
+    - C9
+    - CK
+    - CN
+    - CX
+    - D1
+    - D2
+    - D3
+    - D4
+    - D5
+    - D6
+    - D7
+    - D8
+    - D9
+    - DQ
+    - DU
+    - DX
+    - DY
+    - DZ
+    - E1
+    - E2
+    - E3
+    - E4
+    - E5
+    - E6
+    - E7
+    - E8
+    - E9
+    - EA
+    - EB
+    - EC
+    - ED
+    - EF
+    - EG
+    - EH
+    - EI
+    - EJ
+    - EM
+    - EP
+    - EQ
+    - EV
+    - EW
+    - EX
+    - F1
+    - F2
+    - F4
+    - F5
+    - F6
+    - F7
+    - F8
+    - F9
+    - FB
+    - FE
+    - FF
+    - FH
+    - FK
+    - FM
+    - FQ
+    - FT
+    - FU
+    - FV
+    - FW
+    - FY
+    - FZ
+    - G1
+    - G2
+    - G3
+    - G4
+    - G5
+    - G6
+    - G7
+    - G8
+    - G9
+    - GL
+    - GQ
+    - GV
+    - GW
+    - GX
+    - H1
+    - H2
+    - H3
+    - H4
+    - H5
+    - H6
+    - H7
+    - H8
+    - H9
+    - HA
+    - HB
+    - HC
+    - HF
+    - HG
+    - HJ
+    - HM
+    - HP
+    - HQ
+    - HW
+    - HX
+    - HZ
+    - I3
+    - I4
+    - I5
+    - I6
+    - I7
+    - I8
+    - I9
+    - IF
+    - IG
+    - IH
+    - IK
+    - IV
+    - IZ
+    - J1
+    - J2
+    - J3
+    - J4
+    - J5
+    - J6
+    - J7
+    - J8
+    - JB
+    - JD
+    - JF
+    - JG
+    - JH
+    - JJ
+    - JK
+    - JP
+    - JQ
+    - JS
+    - JT
+    - JV
+    - JW
+    - JX
+    - JY
+    - JZ
+    - K1
+    - K2
+    - K3
+    - K4
+    - K5
+    - K6
+    - K7
+    - K8
+    - K9
+    - KA
+    - KD
+    - KF
+    - KG
+    - KJ
+    - KL
+    - KM
+    - KQ
+    - KR
+    - KV
+    - KX
+    - L1
+    - L2
+    - L3
+    - L4
+    - L5
+    - L6
+    - L7
+    - L8
+    - L9
+    - LG
+    - LJ
+    - LK
+    - LM
+    - LQ
+    - LR
+    - LV
+    - LW
+    - LZ
+    - M1
+    - M2
+    - M3
+    - M4
+    - M5
+    - M6
+    - M7
+    - M8
+    - M9
+    - N1
+    - N2
+    - N3
+    - N4
+    - N5
+    - N6
+    - N7
+    - N8
+    - N9
+    - OB
+    - OD
+    - OE
+    - OJ
+    - OL
+    - OP
+    - OQ
+    - OU
+    - OV
+    - OW
+    - OX
+    - OY
+    - OZ
+    - P1
+    - P2
+    - P3
+    - P4
+    - P5
+    - P6
+    - P7
+    - P8
+    - P9
+    - PH
+    - PJ
+    - PP
+    - PX
+    - PY
+    - PZ
+    - Q2
+    - Q3
+    - Q4
+    - Q5
+    - Q6
+    - Q7
+    - Q8
+    - Q9
+    - QB
+    - QC
+    - QD
+    - QE
+    - QF
+    - QG
+    - QH
+    - QI
+    - QJ
+    - QK
+    - QL
+    - QM
+    - QN
+    - QO
+    - QP
+    - QQ
+    - QS
+    - QT
+    - QV
+    - QW
+    - QX
+    - QY
+    - QZ
+    - R1
+    - R2
+    - R3
+    - R4
+    - R5
+    - R6
+    - R7
+    - R8
+    - R9
+    - RD
+    - RJ
+    - RK
+    - RM
+    - RN
+    - RO
+    - RP
+    - RQ
+    - RT
+    - RX
+    - RZ
+    - S1
+    - S2
+    - S3
+    - S4
+    - S5
+    - S6
+    - S7
+    - S8
+    - S9
+    - ST
+    - SX
+    - T2
+    - T3
+    - T4
+    - T5
+    - T6
+    - T7
+    - T8
+    - T9
+    - TI
+    - TQ
+    - U1
+    - U2
+    - U3
+    - U4
+    - UA
+    - UB
+    - UD
+    - UE
+    - UF
+    - UH
+    - UI
+    - UJ
+    - UK
+    - UL
+    - UN
+    - UO
+    - UP
+    - UQ
+    - UU
+    - UW
+    - UX
+    - V1
+    - VD
+    - VF
+    - VG
+    - VH
+    - VJ
+    - VK
+    - VM
+    - VN
+    - VO
+    - VP
+    - VQ
+    - VR
+    - VS
+    - VU
+    - VW
+    - VX
+    - W1
+    - W2
+    - W3
+    - W4
+    - W5
+    - W6
+    - WC
+    - WG
+    - WH
+    - WJ
+    - WM
+    - WO
+    - WP
+    - WQ
+    - WR
+    - WU
+    - WX
+    - WZ
+    - X1
+    - X2
+    - X3
+    - X4
+    - X5
+    - X6
+    - X7
+    - X8
+    - X9
+    - XA
+    - XB
+    - XC
+    - XD
+    - XE
+    - XF
+    - XG
+    - XH
+    - XI
+    - XJ
+    - XK
+    - XL
+    - XM
+    - XN
+    - XO
+    - XP
+    - XQ
+    - XR
+    - XS
+    - XS
+    - XT
+    - XU
+    - XV
+    - XW
+    - XZ
+    - Y1
+    - Y2
+    - Y3
+    - Y4
+    - Y5
+    - YB
+    - YD
+    - YE
+    - YF
+    - YH
+    - YI
+    - YJ
+    - YK
+    - YL
+    - YM
+    - YN
+    - YP
+    - YQ
+    - YR
+    - YS
+    - YV
+    - YW
+    - YX
+    - YZ
+    - Z1
+    - Z2
+    - Z3
+    - Z4
+    - Z5
+    - Z6
+    - Z7
+    - Z8
+    - Z9
+    - ZE
+    - ZF
+    - ON
+    - OC
+    - OF
+    - OI
+    - OM
+    - AO
+    - BO
+    - EO
+    - FO
+    - GO
+    - IO
+    - JO
+    - KO
+    - LO
+    - NO
+    - PO
+    - TO
+    - YO
+    - ZO
+    - OO
+    - OB
+    - OD
+    - OE
+    - OG
+    - OJ
+    - OL
+    - OP
+    - OQ
+    - OS
+    - OT
+    - OU
+    - OV
+    - OW
+    - OX
+    - OY
+    - OZ
+    - QO
+    - RO
+    - UO
+    - VO
+    - WO
+    - XO
+    - OA
+    - DO
+    - SO
+    - HO
+    - OH
+    - OK
+    - OR
+    - CO
+    - MO
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:PhysicalFeatureType
+  Bases:
+    - {http://release.niem.gov/niem/niem-core/4.0/}:PhysicalFeatureType
+  Elements:
+    - PhysicalFeatureDescriptionDetail : {}: [0, 9]
+    - PhysicalFeatureSize : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:PersonOtherIdentificationType
+  Bases:
+    - {http://release.niem.gov/niem/niem-core/4.0/}:IdentificationType
+  Elements:
+    - PersonIDCategoryCode : {}: [1, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:PersonFingerprintSetType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FingerprintImageFingerMissing : {}: [0, 13]
+    - FingerprintImageFinger : {}: [0, 10]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:PersonEmploymentType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - EmployeeOccupationText : {}: [0, 1]
+    - OrganizationName : {}: [0, 1]
+    - Address : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer0to999SimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 999
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PalmPrintImageMissingAreaType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PalmPositionCode : {}: [1, 1]
+    - PalmMissingAreaReasonCode : {}: [1, 1]
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackageLegacyFingerprintImageRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - FingerprintLegacyImageData : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer0to99999Type
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer0to50000Type
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:USTerritoriesCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - AM
+    - H0
+    - MH
+    - PR
+    - BK
+    - JI
+    - MK
+    - VI
+    - CG
+    - JR
+    - MW
+    - VL
+    - GM
+    - KI
+    - PL
+    - WK
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackagePlantarImageRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - UserDefinedFields : {}: [0, unbounded]
+    - ProcessAnnotation : {}: [0, unbounded]
+    - AssociatedContext : {}: [0, 255]
+    - ImageHashValue : {}: [0, 1]
+    - SourceInformation : {}: [0, 255]
+    - Base64BinaryObject : {}: [1, 1]
+    - PlantarImageDetail : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer0to100SimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 100
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:CBEFFCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:hexBinary
+  Primitive: 6
+  Enum:
+    - 00010000
+    - 00000800
+    - 00000080
+    - 00000001
+    - 00040000
+    - 00000004
+    - 00001000
+    - 00000100
+    - 00002000
+    - 00000020
+    - 00000200
+    - 00000040
+    - 00000000
+    - 00000400
+    - 00008000
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:INCITSRidgeCountAlgorithmCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 2
+    - 0
+    - 1
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TransactionRepositoryResponseRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - RepositoryParameterText : {}: [1, 1]
+    - RepositoryParameterValueText : {}: [1, 1]
+    - RepositoryCriminalParameterRatio : {}: [1, 1]
+    - RepositoryCivilParameterRatio : {}: [1, 1]
+    - RepositoryCombinedParameterRatio : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImpressionCaptureCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageAcquisitionProfileCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageType
+  Bases:
+    - {http://release.niem.gov/niem/niem-core/4.0/}:BinaryType
+  Elements:
+    - ImageBitsPerPixelQuantity : {}: [0, 1]
+    - ImageCaptureDetail : {}: [0, 1]
+    - ImageColorSpaceAbstract : {}: [0, 1]
+    - ImageCommentText : {}: [0, 1]
+    - ImageCompressionAlgorithmAbstract : {}: [0, 1]
+    - HorizontalLineLengthPixelQuantity : {}: [0, 1]
+    - ImageHorizontalPixelDensityValue : {}: [0, 1]
+    - ImageQuality : {}: [0, 9]
+    - ImageScaleUnitsCode : {}: [0, 1]
+    - ImageCategoryCode : {}: [0, 1]
+    - VerticalLineLengthPixelQuantity : {}: [0, 1]
+    - ImageVerticalPixelDensityValue : {}: [0, 1]
+    - ImageDistortion : {}: [0, 1]
+    - ScanningResolutionCategoryCode : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFraudEvidenceCategoryCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:PersonMeasurementType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MeasureUnitText : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageTransformationCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:LegacyExemplarFingerPositionCodeSimpleType
+  Union:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SlapFingerPositionCodeSimpleType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:PrintPositionDescriptorsType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FingerPositionCode : {}: [1, 1]
+    - MajorCasePrintCode : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageSegmentType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageSegmentID : {}: [1, 1]
+    - ImageSegmentInternalFileLocationText : {}: [1, 1]
+    - PositionPolygonVertexQuantity : {}: [0, 1]
+    - PositionPolygonVertex : {}: [0, 99]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageScanCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 0
+    - 1
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FrictionRidgeImageRegionOfInterestType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageSegmentWidthMeasure : {}: [1, 1]
+    - ImageSegmentHeightMeasure : {}: [1, 1]
+    - ImageSegmentHorizontalOffsetMeasure : {}: [0, 1]
+    - ImageSegmentVerticalOffsetMeasure : {}: [0, 1]
+    - ImageSegmentPolygon : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PlantarImageMissingAreaType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PlantarPositionCode : {}: [1, 1]
+    - PlantarMissingAreaReasonCode : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageOcclusionOpacityCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - L
+    - T
+    - I
+    - S
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageDistortionType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageDistortionCategoryCode : {}: [1, 1]
+    - ImageDistortionMeasurementCode : {}: [1, 1]
+    - ImageDistortionSeverityCode : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageDistortionSeverityCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageDistortionMeasurementCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - E
+    - C
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageOcclusionCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageCaptureType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:BiometricCaptureType
+  Elements:
+    - CaptureHorizontalPixelDensityValue : {}: [0, 1]
+    - CaptureVerticalPixelDensityValue : {}: [0, 1]
+    - CaptureDeviceMonitoringModeAbstract : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:HexDoubleByteType
+
+Type: {http://biometrics.nist.gov/standard/2011}:TransactionDomainType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - DomainVersionNumberID : {}: [1, 1]
+    - TransactionDomainName : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:CBEFFCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeCountType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - INCITSRidgeCountAlgorithmCode : {}: [1, 1]
+    - MinutiaeRidgeCountItem : {}: [1, unbounded]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FrictionRidgeImageTonalReversalCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - P
+    - N
+    - U
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFraudEvidenceCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - EVA
+    - FOR
+    - SPO
+    - FAB
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TLICodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:FrictionRidgeInformationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - CaptureDate : {}: [0, 1]
+    - FrictionRidgePositionCode : {}: [0, 10]
+    - PrintPositionDescriptors : {}: [0, 10]
+    - NCICFingerprintClassificationCodeText : {}: [0, 1]
+    - PersonFingerprintSet : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageDistortionCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FrictionRidgeImageCenterType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageSegmentVertexType
+  Elements:
+    - FrictionRidgeImageCenterLocationMethodCode : {}: [1, 1]
+    - ImageLocationUncertaintyRadiusMeasure : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SourceRecordCardinalityCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageDescriptionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - BLINK
+    - SMILE
+    - FROWNING
+    - RIGHT EYE PATCH
+    - SCARF
+    - EYES AWAY
+    - MOUTH OPEN
+    - DISTORTING CONDITION
+    - CLEAR GLASSES
+    - MOUSTACHE
+    - TEETH VISIBLE
+    - DARK GLASSES
+    - UNKNOWN
+    - BEARD
+    - SQUINTING
+    - HAT
+    - RAISED BROWS
+    - NO EAR
+    - LEFT EYE PATCH
+    - NEUTRAL
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FrictionRidgeImageCenterLocationMethodCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 1
+    - L
+    - 0
+    - H
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FrictionRidgeImageAreaOfCorrespondenceType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - ImageSegmentPolygon : {}: [1, 1]
+    - MinutiaeCommentText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerViewCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:AuditTrailRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - RecordReceivingAgency : {}: [1, 1]
+    - RecordDisseminationDate : {}: [1, 1]
+    - RecordTransactionCategoryCode : {}: [1, 1]
+    - BiometricSetID : {}: [0, 1]
+    - BiometricImageCategoryCode : {}: [0, 1]
+    - FrictionRidgePositionCode : {}: [0, 1]
+    - PrintPositionDescriptors : {}: [0, 1]
+    - FaceImageSubjectPoseCode : {}: [0, 1]
+    - PhysicalFeatureCategoryCode : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:DispositionCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - CONVICTED
+    - ACQUITTED
+    - DISMISSED
+    - CHARGES DROPPED
+    - NOT PROSECUTED
+    - MENTAL HEALTH ADJUDICATION
+    - DIVERSION
+    - CONDITIONAL
+    - JUVENILE ADJUDICATION
+    - REVOCATION
+    - EXTRADITED
+    - TRANSFERRED
+    - DEPORTED
+    - DECEASED
+    - CONSOLIDATED
+    - BAIL/BOND FORFEITURE
+    - DEFERRED
+    - UNAVAILABLE
+    - DESTROYED
+    - OTHER
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintPatternWhorlDeltaRelationshipCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - I
+    - O
+    - M
+
+Type: {http://biometrics.nist.gov/standard/2011}:MinutiaeNISTStandardType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaDetail : {}: [1, unbounded]
+    - MinutiaeQuantity : {}: [1, 1]
+    - MinutiaeReadingSystem : {}: [0, 1]
+    - MinutiaeRidgeCountIndicator : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageBoundingSquareType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FaceImageBoundingCategoryCode : {}: [0, 1]
+    - SegmentBottomVerticalCoordinateValue : {}: [1, 1]
+    - SegmentLeftHorizontalCoordinateValue : {}: [1, 1]
+    - SegmentRightHorizontalCoordinateValue : {}: [1, 1]
+    - SegmentTopVerticalCoordinateValue : {}: [1, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MNTCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer0to99SimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 99
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintPatternGeneralClassCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - DR
+    - RS
+    - UC
+    - WU
+    - LS
+    - AU
+    - SR
+    - UP
+    - XX
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PlantarImageQualityType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PlantarPositionAbstract : {}: [1, 1]
+    - QualityAlgorithmProductID : {}: [1, 1]
+    - QualityAlgorithmVendorID : {}: [1, 1]
+    - QualityValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintPatternClassificationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FingerprintPatternGeneralClassCode : {}: [1, 1]
+    - FingerprintPatternSubClassCode : {}: [0, 1]
+    - FingerprintPatternWhorlDeltaRelationshipCode : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintOffCenterCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:HypothenarPositionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 36
+    - 33
+
+Type: {http://release.niem.gov/niem/appinfo/4.0/}:NonemptyStringSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:string
+  Primitive: 0
+  Facets:
+    minLength    = 1
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintImageNISTQualityType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FingerPositionCode : {}: [1, 1]
+    - NISTQualityMeasure : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SmallLineLengthPixelQuantitySimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Facets:
+    minInclusive = 10
+    maxInclusive = 65535
+
+Type: {http://biometrics.nist.gov/standard/2011}:PCSCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - T
+    - U
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintImageMajorCasePrintType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FingerPositionCode : {}: [1, 9]
+    - MajorCasePrintCode : {}: [1, 9]
+    - MajorCasePrintSegmentOffset : {}: [0, 12]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageLightingArtifactsCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintImageFingerprintOrientationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - OrientationAngleValue : {}: [1, 1]
+    - OrientationAngleUncertaintyValue : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintImageAcquisitionProfileCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintImageAcquisitionProfileCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 30
+    - 45
+    - 60
+    - 10
+    - 20
+    - 40
+    - 50
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:INCITSMinutiaCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 1
+    - 0
+    - 2
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:nonNegativeInteger
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageContourCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - lefteyebrow
+    - chin
+    - eyetop
+    - lowerlipbottom
+    - righteyebrow
+    - upperlipbottom
+    - lowerliptop
+    - eyebottom
+    - faceoutline
+    - leftnostril
+    - rightnostril
+    - upperliptop
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FrictionRidgeDetailType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageType
+  Elements:
+    - FrictionRidgeImageImpressionCaptureCategoryAbstract : {}: [1, 1]
+    - LatentFrictionRidgePositionCode : {}: [0, 6]
+    - FingerprintImageMajorCasePrint : {}: [0, 1]
+    - FrictionRidgeImageQuality : {}: [0, 9]
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackageDescriptiveTextRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - UserDefinedFields : {}: [0, unbounded]
+    - UserDefinedDescriptiveDetail : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintCoordinateType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - SegmentTopVerticalCoordinateValue : {}: [1, 1]
+    - SegmentLeftHorizontalCoordinateValue : {}: [1, 1]
+    - SegmentRightHorizontalCoordinateValue : {}: [1, 1]
+    - SegmentBottomVerticalCoordinateValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageLightingArtifactsCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - H
+    - F
+    - R
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerPositionCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageBoundaryType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FaceImageBoundaryShapeCode : {}: [1, 1]
+    - PositionPolygonVertexQuantity : {}: [1, 1]
+    - PositionPolygonVertex : {}: [2, 99]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MinutiaCoordinateOffsetsType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - OffsetUpperLeftCoordinates : {}: [1, 1]
+    - OffsetCenterOfRotation : {}: [0, 1]
+    - PositionThetaAngleMeasure : {}: [0, 1]
+    - OffsetTranslatedCenterOfRotation : {}: [0, 1]
+    - OffsetTranslatedUpperLeftCoordinates : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerPositionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 17
+    - 0
+    - 4
+    - 8
+    - 9
+    - 1
+    - 5
+    - 10
+    - 2
+    - 6
+    - 16
+    - 3
+    - 7
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:DateType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - DateRepresentation : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerPatternCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - RS
+    - LS
+    - UN
+    - AW
+    - PA
+    - SR
+    - UP
+    - WN
+    - TA
+    - CP
+    - PW
+    - RL
+    - XX
+    - UL
+    - DL
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerImpressionImageDetailType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageType
+  Elements:
+    - FrictionRidgeImageImpressionCaptureCategoryAbstract : {}: [1, 1]
+    - ExemplarFingerPositionCode : {}: [1, 1]
+    - FingerprintImageMajorCasePrint : {}: [0, 1]
+    - FingerprintImageFingerMissing : {}: [0, 5]
+    - FingerprintImageSegmentPositionSquare : {}: [0, 5]
+    - FingerprintImageNISTQuality : {}: [0, 5]
+    - FingerprintImageQuality : {}: [0, 5]
+    - FingerprintImageSegmentationQuality : {}: [0, 5]
+    - FingerprintSimultaneousCaptureID : {}: [0, 1]
+    - FingerprintImageStitchedIndicator : {}: [0, 1]
+    - FingerprintImageSegmentPositionPolygon : {}: [0, 5]
+    - FingerprintImageAcquisitionProfileAbstract : {}: [0, 1]
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:AngularSecondSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:decimal
+  Primitive: 2
+  Facets:
+    minInclusive = 0
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageType
+  Elements:
+    - FaceImage3DPoseAngle : {}: [0, 1]
+    - FaceImageAcquisitionProfileAbstract : {}: [0, 1]
+    - FaceImageAttribute : {}: [0, 9]
+    - FaceImageDescriptionAbstract : {}: [0, 50]
+    - FaceImageSubjectPoseAbstract : {}: [0, 1]
+    - FaceImageBoundingSquare : {}: [0, 1]
+    - FaceImageBoundary : {}: [0, 1]
+    - FaceImageLightingArtifactsCode : {}: [0, 3]
+    - PersonEyeColorAbstract : {}: [0, 1]
+    - PersonHairColorAbstract : {}: [0, 2]
+    - FaceImage2DFeaturePoint : {}: [0, 88]
+    - FaceImageFeaturePointTierAbstract : {}: [0, 1]
+    - FaceImage3DFeaturePoint : {}: [0, 88]
+    - FaceImageContour : {}: [0, 12]
+    - FaceImageOcclusion : {}: [0, 16]
+    - Type10CrossReferenceID : {}: [0, 1]
+    - FaceImagePoseOffsetAngleMeasure : {}: [0, 1]
+    - FaceImageAcquisitionSource : {}: [0, 1]
+    - ImageTransformationCode : {}: [0, 18]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageOcclusionOpacityCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageFeaturePointType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FeaturePointHorizontalCoordinateValue : {}: [1, 1]
+    - FeaturePointID : {}: [1, 1]
+    - FeaturePointCategoryAbstract : {}: [1, 1]
+    - FeaturePointVerticalCoordinateValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer1to50000Type
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageDescriptionCodeType
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:SMTCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - RTAT R LEG
+    - CRIP R HND
+    - TAT CHEST
+    - MISS L VRT
+    - ART EAR
+    - RTAT R HIP
+    - TUBE R EAR
+    - UTAT RBRST
+    - NM L HND
+    - DENT UP L0
+    - DISC ELB0W
+    - HFR RIBS
+    - PRCD CHIN
+    - HFR LR ARM
+    - TAT R CALF
+    - SC BREAST
+    - FRC R WRST
+    - UTAT ANKL
+    - M0LE CALF
+    - BLND EYE
+    - SC L ARM
+    - M0LE LBRST
+    - RTAT L FGR
+    - EXTR FGR
+    - TAT L HND
+    - MISS PANCR
+    - ART R EAR
+    - RTAT L CHK
+    - EAR TUBES
+    - TD ANTBTCS
+    - FRC R KNEE
+    - SC ANKL
+    - UTAT L ELB
+    - M0LE ELB0W
+    - AMBL R EYE
+    - SC R LEG
+    - M0LE L ELB
+    - RTAT EYE
+    - EXTR TTH
+    - TAT UL ARM
+    - MISS EAR
+    - ART EYE
+    - RTAT LANKL
+    - 0RTH NAIL
+    - UTAT R HIP
+    - NM L THIGH
+    - ART R HND
+    - DISC L LIP
+    - HFR LEG
+    - PRCD EAR
+    - HFR BACK
+    - TAT WRS
+    - SC GR0IN
+    - FRC HIP
+    - UTAT WRS
+    - M0LE KNEE
+    - SC THGH
+    - BLIND
+    - M0LE F00T
+    - NM ARM
+    - ART ELB0W
+    - DISC ARM
+    - HFR UL LEG
+    - STUTTERS
+    - HFR NECK
+    - TAT L T0E
+    - FRC R HIP
+    - SC L ANKL
+    - UTAT BUTTK
+    - M0LE R EYE
+    - BLND R EYE
+    - DISC LKNEE
+    - M0LE FACE
+    - RTAT SHLD
+    - CRIP L FT
+    - TAT R CHK
+    - MISS L FJT
+    - CANE
+    - RTAT R ARM
+    - WIRE SUTUR
+    - UTAT FHD
+    - NM CALF
+    - GLASSES
+    - DISC EYE
+    - HFR L LEG
+    - PRCD R NIP
+    - HFR FGR
+    - TAT R KNEE
+    - RTAT RF00T
+    - CRIP HAND
+    - TAT L ANKL
+    - MISS R HND
+    - RTAT BACK
+    - ART R ELB
+    - 0RTH PLATE
+    - UTAT KNEE
+    - NM L ARM
+    - ART LEG
+    - DISC L EAR
+    - MC ALLERGY
+    - PRCD BACK
+    - HFR CLAVIC
+    - TAT T0E
+    - SC R ARM
+    - FRC L FGR
+    - UTAT RF00T
+    - M0LE LEG
+    - CATARACT
+    - DISC BUTTK
+    - M0LE FGR
+    - RTAT F00T
+    - CRIP LEG
+    - TAT HAND
+    - MISS R EYE
+    - ART R LEG
+    - RTAT KNEE
+    - SHUNT CERB
+    - UTAT L FGR
+    - SC F00T
+    - FRC L ELB
+    - UTAT LWLIP
+    - M0LE R HND
+    - DISC SHLD
+    - FRC RPELVI
+    - M0LE N0SE
+    - RTAT LTHGH
+    - EXTR C VRT
+    - TAT LELB0W
+    - MISS FJT
+    - RTAT PENIS
+    - ART F00T
+    - MISS PR0ST
+    - UTAT R FGR
+    - NM L LEG
+    - ART L FT
+    - DISC R ARM
+    - MC BEHAVI0
+    - DIMP L CHK
+    - HFR L ELB
+    - TAT LIP
+    - SC R THGH
+    - FRC LEG
+    - UTAT HEAD
+    - M0LE FHD
+    - DISC ABD0M
+    - FRC L ARM
+    - M0LE LFARM
+    - NM L WRIST
+    - ART R SHLD
+    - DISC CHIN
+    - MC SKIN
+    - PRCD R EYE
+    - HFR LCLAVI
+    - TAT HIP
+    - SC FHD
+    - FRC F00T
+    - M0LE L ANK
+    - UTAT BRST
+    - DISC R T0E
+    - FRC CLAVIC
+    - M0LE L FT
+    - RTAT LF00T
+    - HUMPBACKED
+    - TAT L EYE
+    - MISS LRLEG
+    - DEAF
+    - RTAT L HND
+    - MISS L ARM
+    - UTAT FACE
+    - NM R HIP
+    - ART HIP
+    - DISC L WRS
+    - MC CANCER
+    - PRCD T0NGU
+    - HFR SPINE
+    - TAT RELB0W
+    - RTAT RFARM
+    - CRIP L HND
+    - TAT L THGH
+    - MISS R FJT
+    - SC ELB0W
+    - EXTR LBRST
+    - UTAT L HND
+    - MISS LRYNX
+    - NM L ELB
+    - BRA LR LEG
+    - DISC L ELB
+    - MC NERV0US
+    - PRCD FACE
+    - HFR UR JAW
+    - TAT L LEG
+    - SC L FGR
+    - FRC UL JAW
+    - M0LE HIP
+    - UTAT L CHK
+    - DISC R LEG
+    - FRC RIBS
+    - M0LE R LEG
+    - RTAT FLB0D
+    - CRIP T0E
+    - TAT L BRST
+    - MISS ADND
+    - DEAF L EAR
+    - SC NECK
+    - MISS EYE
+    - UTAT HIP
+    - SC UL ARM
+    - FRC R SHLD
+    - UTAT ABDM
+    - M0LE L ARM
+    - FRC LL ARM
+    - DISC L T0E
+    - M0LE RCALF
+    - RTAT URARM
+    - SHRT L LEG
+    - TAT NECK
+    - MISS BRSTS
+    - SC R BRST
+    - EXTR BRST
+    - UTAT L HIP
+    - MISS LUNG
+    - NM R THIGH
+    - ART L LEG
+    - DISC T0E
+    - MC PLMNARY
+    - TRANSSXL
+    - HFR STERN
+    - TAT R HIP
+    - SC PENIS
+    - FRC FGR
+    - UTAT LBRST
+    - M0LE LIP
+    - DISC L LEG
+    - FRC ANKL
+    - M0LE L WRS
+    - NM FGR
+    - ART L SHLD
+    - DISC THGH
+    - MC D0WNSYN
+    - RTAT RCALF
+    - HFR RCLAVI
+    - TAT FLB0DY
+    - SC L0W LIP
+    - FRC R RIB
+    - UTAT ARM
+    - M0LE R ARM
+    - DISC CALF
+    - FRC ARM
+    - M0LE EYE
+    - RTAT L EYE
+    - MUTE
+    - TAT R T0E
+    - MISS BRST
+    - EXTR T0E
+    - SC WRIST
+    - UTAT L LEG
+    - MISS L T0E
+    - NM L FGR
+    - ART LARYNX
+    - DISC HIP
+    - MC PASTPRE
+    - HAIR IMPL
+    - HFR L F00T
+    - TAT R F00T
+    - RTAT L LEG
+    - EXTR NIP
+    - TAT LEG
+    - MISS L HND
+    - CRIP R FGR
+    - SC R WRIST
+    - MISS L LEG
+    - UTAT CHIN
+    - NM L F00T
+    - ART R ARM
+    - DISC L FT
+    - MC KIDNEY
+    - RTAT T0E
+    - HFR L KNEE
+    - TAT FACE
+    - SC L SHLD
+    - FRC LL JAW
+    - UTAT GR0IN
+    - M0LE PENIS
+    - FRC R FGR
+    - DISC L BUT
+    - M0LE F ARM
+    - CRIP R ARM
+    - RTAT BRST
+    - TAT EYE
+    - MISS R KID
+    - SC UP LIP
+    - EXTR R FGR
+    - UTAT LANKL
+    - MISS T0NSL
+    - SC L EYE
+    - FRC L HIP
+    - UTAT LFARM
+    - NM T0E
+    - FRC R F00T
+    - DISC L ARM
+    - M0LE R WRS
+    - DA HALLUCI
+    - RTAT RANKL
+    - MISS LBRST
+    - TAT ANKL
+    - PR0T JAW
+    - SC T0E
+    - MISS LLUNG
+    - UTAT THGH
+    - NM HIP
+    - BRAC R ARM
+    - DISC R HIP
+    - MC HEART
+    - RTAT RWRS
+    - HFR F00T
+    - TAT HEAD
+    - SC L HIP
+    - FRC NECK
+    - UTAT ULAR
+    - NM R SHLD
+    - FRC JAW
+    - DISC RCALF
+    - M0LE CHK
+    - NM R LEG
+    - ART L BRST
+    - DISC F ARM
+    - MC EATDIS
+    - RTAT RSHLD
+    - HFR L ANKL
+    - TAT FHD
+    - SC KNEE
+    - HFR UL JAW
+    - NM L KNE
+    - FRC WRIST
+    - DISC L CHK
+    - M0LE ARM
+    - DA RITALIN
+    - RTAT HAND
+    - TAT R EYE
+    - MISS SPLEN
+    - CRIP F00T
+    - SC R ELB
+    - MISS R EAR
+    - UTAT R CHK
+    - NM L ANKL
+    - BRA LR ARM
+    - DISC R CHK
+    - MC BL00D
+    - RTAT LBUTK
+    - HFR T0E
+    - TAT L F00T
+    - RTAT ANKL
+    - DA C0CAINE
+    - TD BRNCHDL
+    - MISS RBRST
+    - SC BACK
+    - EXTR L NIP
+    - UTAT URARM
+    - MISS HAND
+    - NM L SHLD
+    - ART BRST
+    - DISC WRIST
+    - MC DIABTIC
+    - RTAT R EYE
+    - HFR LL LEG
+    - TAT L ARM
+    - SC R KNEE
+    - HFR LL JAW
+    - NM KNEE
+    - FRC SPINE
+    - DISC R FT
+    - M0LE ANKL
+    - RTAT FARM
+    - DA GLUE
+    - MISS L KID
+    - TD ANALGES
+    - SC R ANKL
+    - CRIP R FT
+    - UTAT RSHLD
+    - MISS F00T
+    - SC L BUTTK
+    - HFR L ARM
+    - NM L BUTTK
+    - FRC STERN
+    - DISC FHD
+    - M0LE L BUT
+    - RTAT L ARM
+    - DA AMPHETA
+    - M0LE L THG
+    - TD AC0NVUL
+    - SC ABD0M
+    - EXTR L VRT
+    - MISS INTES
+    - UTAT LEG
+    - HERMAPHR
+    - ART R HIP
+    - DISC CHEST
+    - MC ADD
+    - RTAT ELB0W
+    - TAT LW LIP
+    - HFR LL ARM
+    - SC R FGR
+    - HFR WRIST
+    - NM UR ARM
+    - FRC LR LEG
+    - DISC R ANK
+    - M0LE LCALF
+    - PRCD EARS
+    - BRAC TEETH
+    - DISC RFARM
+    - TUBE L EAR
+    - RTAT EAR
+    - HFR R F00T
+    - TAT L BUTK
+    - SC L CHK
+    - HFR L FGR
+    - NM R ARM
+    - FRC R T0E
+    - DISC LTHGH
+    - M0LE L KNE
+    - RTAT LEG
+    - DA NARC0TI
+    - TD HYPN0TI
+    - M0LE RFARM
+    - EXTR U TTH
+    - SC HEAD
+    - UTAT LBUTK
+    - MISS FGR
+    - PRCD ABDMN
+    - ART L ELB
+    - DISC HAND
+    - IUD
+    - RTAT R FGR
+    - TAT ABD0M
+    - HFR LR LEG
+    - RTAT ARM
+    - BLND L EYE
+    - TD ANTINFL
+    - M0LE L EAR
+    - SC CALF
+    - EXTR L FGR
+    - MISS R FGR
+    - UTAT LTHGH
+    - PRCD L EAR
+    - BRACE NECK
+    - TAT BUTTK
+    - STAPLES
+    - RTAT THGH
+    - BRAC LEG
+    - HFR UL ARM
+    - TAT L CHK
+    - SC L LEG
+    - HFR L HIP
+    - NM ANKL
+    - FRC UR ARM
+    - DISC LCALF
+    - M0LE URARM
+    - RTAT LWLIP
+    - CATA L EYE
+    - TD ADEPRES
+    - M0LE EAR
+    - SC L ELB
+    - EXTR L T0E
+    - UTAT CHEEK
+    - MISS R0VAR
+    - SC EYE
+    - HFR R HIP
+    - NM L CALF
+    - FRC SHLD
+    - DISC R EYE
+    - M0LE SHLD
+    - RTAT R CHK
+    - AMBL EYE
+    - UTAT RWRS
+    - M0LE BUTTK
+    - SC R T0E
+    - CRIP FGR
+    - UTAT LIP
+    - MISS 0VARY
+    - ART L EAR
+    - PRCD N0SE
+    - TAT R WRS
+    - SKL PLATE
+    - RTAT R EAR
+    - CRUTCHES
+    - HFR PELVIS
+    - TAT BREAST
+    - SC F ARM
+    - HFR HIP
+    - NM LR ARM
+    - FRC LL LEG
+    - DISC R BRS
+    - M0LE L T0E
+    - DENT UP
+    - DIMP CHEEK
+    - TAT FNGR
+    - INTRA R0D
+    - RTAT FACE
+    - ART HAND
+    - HFR UR LEG
+    - TAT L WRS
+    - SC UR ARM
+    - HFR R T0E
+    - NM R FGR
+    - FRC L SHLD
+    - DISC N0SE
+    - M0LE T0E
+    - RTAT L EAR
+    - CR0SSEYED
+    - UTAT LWRS
+    - M0LE R SHD
+    - DEV SEPTUM
+    - SC L THGH
+    - UTAT ELB0W
+    - MISS C VRT
+    - SLVR T00TH
+    - FRECKLES
+    - TAT LF ARM
+    - CARD PACEM
+    - G0LD T00TH
+    - RTAT NECK
+    - HFR R RIB
+    - TAT R HND
+    - RTAT LKNEE
+    - CATA R EYE
+    - UTAT CHEST
+    - M0LE L EYE
+    - CAUL L EAR
+    - SC R HND
+    - MISS L EAR
+    - UTAT R EAR
+    - ART R FT
+    - PRCD L NIP
+    - 0RTH SCREW
+    - TAT R SHLD
+    - RTAT UPLIP
+    - WHEELCHAIR
+    - TAT RF ARM
+    - HFR L RIB
+    - SC FGR
+    - HFR ELB0W
+    - NM R ELB
+    - FRC R LEG
+    - DISC URARM
+    - M0LE L CHK
+    - RTAT CHEST
+    - GLAUC0MA
+    - UTAT EAR
+    - M0LE GR0IN
+    - PR0T L JAW
+    - SC L T0E
+    - UTAT RANKL
+    - MISS R ARM
+    - DISC RKNEE
+    - HFR L HAND
+    - NM ELB0W
+    - FRC R ELB
+    - DISC HEAD
+    - M0LE L HIP
+    - RTAT LSHLD
+    - FRC RCLAVI
+    - UTAT UPLIP
+    - M0LE R HIP
+    - SHRT LEG
+    - SC L FT
+    - MISS 0VARS
+    - UTAT F00T
+    - BALD
+    - ART R EYE
+    - TAT SHLD
+    - VASC PR0TH
+    - RTAT R T0E
+    - DENT L0W
+    - HFR L SHLD
+    - TAT L EAR
+    - DISC FACE
+    - HFR R ARM
+    - NM R ANKL
+    - FRC L LEG
+    - DISC L FGR
+    - M0LE CHEST
+    - PRCD LIP
+    - DEAF R EAR
+    - MISS R T0E
+    - TAT R ANKL
+    - HEAR AID
+    - RTAT FHD
+    - MC ACNE
+    - TAT R EAR
+    - DISC U LIP
+    - HFR HAND
+    - NM R BUTTK
+    - FRC L T0E
+    - DISC FGR
+    - M0LE U LIP
+    - RTAT CHIN
+    - FRC BACK
+    - UTAT R ARM
+    - M0LE HAND
+    - CAUL R EAR
+    - SC LIP
+    - MISS L EYE
+    - UTAT RTHGH
+    - PRCD LLIP
+    - BRAC R LEG
+    - TAT R BUTK
+    - SHUNT ART
+    - RTAT RBUTK
+    - ART ARM
+    - MC THYR0ID
+    - TAT GR0IN
+    - SC R EAR
+    - FRC PELVIS
+    - UTAT PENIS
+    - M0LE L SHD
+    - CLEFT CHIN
+    - SC BUTTK
+    - MISS LEG
+    - UTAT R ELB
+    - PRCD GNTLS
+    - DEAF MUTE
+    - MISS T0E
+    - TAT PENIS
+    - RTAT R HND
+    - ART L HIP
+    - MC PREGNAN
+    - TAT UR ARM
+    - DISC L ANK
+    - HFR R HAND
+    - NM PENIS
+    - DISC L HND
+    - FRC T0E
+    - M0LE R FGR
+    - RTAT RBRST
+    - FRC LPELVI
+    - UTAT L EAR
+    - M0LE THGH
+    - EXTR L TTH
+    - SC R BUTTK
+    - MISS R TES
+    - UTAT RBUTK
+    - DISC LEG
+    - HFR R ELB
+    - NM L HIP
+    - DISC R WRS
+    - FRC L F00T
+    - M0LE R ANK
+    - SC LF ARM
+    - FRC R ANKL
+    - UTAT SHLD
+    - M0LE BACK
+    - CRIP R T0E
+    - SC SHLD
+    - MISS L TES
+    - UTAT HAND
+    - PRCD L EYE
+    - DEAF EAR
+    - TAT R LEG
+    - MISS VRT
+    - RTAT ABDM
+    - ART L HND
+    - MC ALZHMRS
+    - TAT EAR
+    - DISC ULARM
+    - HFR R WRST
+    - NM R KNE
+    - FRC KNEE
+    - DISC RSHLD
+    - M0LE R CHK
+    - DIMP FACE
+    - EXTR R T0E
+    - TAT KNEE
+    - MISS R FT
+    - ART R KNE
+    - RTAT GR0IN
+    - MC 0THER
+    - TAT BACK
+    - M0LE CHIN
+    - DISC CHEEK
+    - HFR SKULL
+    - NM SHLD
+    - DISC RTHGH
+    - FRC R ARM
+    - SC CHEST
+    - FRC ELB0W
+    - UTAT FLB0D
+    - M0LE WRS
+    - EXTR C NIP
+    - SC L HND
+    - MISS TES
+    - UTAT RFARM
+    - DIMP CHIN
+    - PR0T U JAW
+    - TAT R FGR
+    - MISS RLUNG
+    - RTAT LIP
+    - BRAC L LEG
+    - MC TB
+    - TAT R BRST
+    - SC CHIN
+    - FRC L KNEE
+    - UTAT R LEG
+    - M0LE R T0E
+    - CRIP L LEG
+    - SC ARM
+    - MISS KID
+    - UTAT LF00T
+    - TRANSVST
+    - EXTR CBRST
+    - TAT L KNEE
+    - MISS PENIS
+    - ART L KNE
+    - RTAT LFARM
+    - TAT N0SE
+    - MC DRUGAB
+    - M0LE R FT
+    - DISC R BUT
+    - HFR L T0E
+    - NM GR0IN
+    - FRC HAND
+    - DISC R HND
+    - SC HAND
+    - FRC L HAND
+    - UTAT LSHLD
+    - M0LE HEAD
+    - EXTR R NIP
+    - P0CKMARKS
+    - MISS LLARM
+    - UTAT BACK
+    - NM THIGH
+    - HFR JAW
+    - DISC L BRS
+    - NM L T0E
+    - DISC NECK
+    - FRC LCLAVI
+    - SC L KNEE
+    - FRC UL ARM
+    - UTAT NECK
+    - M0LE NECK
+    - CRIP ARM
+    - SC FACE
+    - MISS LRARM
+    - UTAT L ARM
+    - RTAT WRS
+    - CRIP L ARM
+    - TAT L SHLD
+    - MISS L FT
+    - BRAC ARM
+    - RTAT HIP
+    - MC PARPLGC
+    - TAT CHIN
+    - M0LE R EAR
+    - DISC ANKL
+    - HFR ANKL
+    - NM LL ARM
+    - DISC GR0IN
+    - FRC L WRST
+    - RTAT LWRS
+    - CL LIP
+    - TAT R ARM
+    - MISS GALL
+    - BRACE BACK
+    - RTAT HEAD
+    - MC NRLGCAL
+    - TAT CHEEK
+    - NM F00T
+    - DISC LIP
+    - HFR ARM
+    - NM R T0E
+    - DISC R ELB
+    - FRC R HAND
+    - SC L BRST
+    - FRC LR ARM
+    - UTAT LKNEE
+    - M0LE R BUT
+    - CLEFT PAL
+    - SC HIP
+    - MISS THYRD
+    - UTAT RCALF
+    - RTAT L T0E
+    - EXTR RBRST
+    - TAT L HIP
+    - MISS APPNX
+    - BRAC L ARM
+    - RTAT LBRST
+    - TAT FARM
+    - MC T0URETE
+    - SC EAR
+    - FRC N0SE
+    - UTAT CALF
+    - M0LE R THG
+    - DA PAINT
+    - SC LEG
+    - MISS T0NG
+    - RTAT L HIP
+    - SHRT R LEG
+    - TAT UP LIP
+    - MISS L0VAR
+    - ART R BRST
+    - RTAT N0SE
+    - MC ALC0H0L
+    - TAT CALF
+    - NM R WRIST
+    - HFR R SHLD
+    - DISC LFARM
+    - NM R F00T
+    - DISC R FGR
+    - FRC L RIB
+    - SC R CHK
+    - FRC UR LEG
+    - UTAT R HND
+    - M0LE R ELB
+    - DA R0HYPNL
+    - SC R HIP
+    - MISS ST0MA
+    - NM LEG
+    - DISC KNEE
+    - HFR R KNEE
+    - PRCD EYE
+    - HFR LR JAW
+    - DISC EAR
+    - SC R SHLD
+    - FRC UR JAW
+    - UTAT LCALF
+    - M0LE L LEG
+    - SC R FT
+    - DA MARIJUA
+    - MISS N0SE
+    - RTAT CALF
+    - CRIP R LEG
+    - TAT L FGR
+    - MISS UTRUS
+    - ART BRSTS
+    - RTAT FNGR
+    - MC QUADPLG
+    - TD CARDIAC
+    - NM R HND
+    - HFR R LEG
+    - DISC F00T
+    - NM HAND
+    - DISC R EAR
+    - HFR N0SE
+    - RTAT L ELB
+    - CAUL EAR
+    - TAT ELB0W
+    - MISS ARM
+    - ART L ARM
+    - RTAT R ELB
+    - MC ARTHRTS
+    - TD 0THER
+    - NM UL ARM
+    - DISC LSHLD
+    - HFR SHLD
+    - PRCD NIPPL
+    - DISC L EYE
+    - HFR R FGR
+    - SC N0SE
+    - FRC SKULL
+    - UTAT RKNEE
+    - M0LE L HND
+    - DA 0THER
+    - SC R EYE
+    - M0LE RBRST
+    - RTAT LCALF
+    - EXTR VRT
+    - TAT ARM
+    - MISS R LEG
+    - ART KNEE
+    - RTAT RKNEE
+    - MC LIVER
+    - TD RITALIN
+    - SC L WRIST
+    - FRC L ANKL
+    - UTAT FNGR
+    - M0LE ABD0M
+    - SC RF ARM
+    - DA BARBITU
+    - M0LE L FGR
+    - RTAT BUTTK
+    - CRIP L T0E
+    - TAT R THGH
+    - MISS LLLEG
+    - ART SHLD
+    - RTAT ULARM
+    - IMPL PENIS
+    - TD INSULIN
+    - NM R CALF
+    - DISC BACK
+    - HFR RPELVI
+    - PRCD R EAR
+    - HFR L WRST
+    - DISC L HIP
+    - SC L EAR
+    - FRC UL LEG
+    - UTAT FARM
+    - M0LE ULARM
+    - DA ALC0H0L
+    - SC L CALF
+    - M0LE R KNE
+    - NM BUTTK
+    - C0N LENSES
+    - DISC BRST
+    - HFR LPELVI
+    - PRCD ULIP
+    - TAT THGH
+    - HFR R ANKL
+    - SC CHK
+    - FRC LR JAW
+    - UTAT N0SE
+    - M0LE L LIP
+    - AMBL L EYE
+    - SC R CALF
+    - M0LE BRST
+    - RTAT RTHGH
+    - CRIP L FGR
+    - TAT F00T
+    - MISS L FGR
+    - ART L EYE
+    - RTAT CHEEK
+    - C0L0ST APP
+    - TD TRANQUI
+    - NM WRIST
+    - DISC PENIS
+    - HFR KNEE
+    - DIMP R CHK
+    - HFR UR ARM
+    - TAT L CALF
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageContourType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FaceImageContourCategoryCode : {}: [1, 1]
+    - PositionPolygonVertexQuantity : {}: [1, 1]
+    - PositionPolygonVertex : {}: [3, 99]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageContourCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageDistortionSeverityCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - Moderate
+    - Mild
+    - Severe
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:CBEFFImageType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageType
+  Elements:
+    - CBEFFFormatOwnerID : {}: [1, 1]
+    - CBEFFFormatCategoryID : {}: [1, 1]
+    - CBEFFVersionID : {}: [1, 1]
+    - CBEFFCategoryCode : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FrictionRidgeImageTonalReversalCodeType
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:LocationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - LocationAddressAbstract : {}: [0, 1]
+    - LocationDescriptionText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:DeltaDirectionMeasureType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhysicalFeatureColorCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:CSPCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:PercentageType
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:BinaryType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - BinaryObjectAbstract : {}: [0, 1]
+    - BinaryDescriptionText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeDistinctiveFeatureType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeDistinctiveFeatureCategoryCode : {}: [1, 1]
+    - ImageSegmentPolygon : {}: [0, 1]
+    - MinutiaeCommentText : {}: [0, 1]
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:IndianCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - M1
+    - 0B
+    - VG
+    - 8S
+    - HP
+    - RX
+    - 2K
+    - Z3
+    - D8
+    - JZ
+    - Q8
+    - XE
+    - 5E
+    - F9
+    - LZ
+    - 0D
+    - VF
+    - 8T
+    - HQ
+    - RT
+    - Z2
+    - 2N
+    - D9
+    - K1
+    - Q7
+    - XD
+    - 5J
+    - FB
+    - LW
+    - VD
+    - 0E
+    - 9C
+    - HW
+    - RQ
+    - Z1
+    - 2P
+    - DA
+    - K2
+    - S2
+    - Z6
+    - 2F
+    - D5
+    - JW
+    - QC
+    - XH
+    - 5A
+    - F6
+    - M3
+    - VJ
+    - 8P
+    - HJ
+    - S1
+    - Z5
+    - 2H
+    - D6
+    - JX
+    - QB
+    - XG
+    - 5B
+    - F7
+    - M2
+    - VH
+    - 00
+    - 8Q
+    - HM
+    - RZ
+    - 2J
+    - Z4
+    - D7
+    - JY
+    - Q9
+    - XF
+    - 5C
+    - F8
+    - RM
+    - YW
+    - 4T
+    - F2
+    - LQ
+    - Q3
+    - X7
+    - 8K
+    - HB
+    - UW
+    - 2D
+    - D3
+    - JT
+    - RL
+    - YV
+    - 4X
+    - F4
+    - Q2
+    - X6
+    - 8M
+    - HF
+    - UU
+    - 2E
+    - D4
+    - JV
+    - RK
+    - YS
+    - 4Z
+    - F5
+    - Q0
+    - X5
+    - 8N
+    - HG
+    - Q6
+    - XC
+    - 8B
+    - H7
+    - LV
+    - V1
+    - 2A
+    - C9
+    - JP
+    - RP
+    - YZ
+    - 4R
+    - EX
+    - LM
+    - Q5
+    - X9
+    - 8C
+    - H8
+    - LR
+    - V0
+    - 2B
+    - D1
+    - JQ
+    - RN
+    - YX
+    - 4S
+    - F1
+    - LP
+    - Q4
+    - X8
+    - 8J
+    - H9
+    - UX
+    - 2C
+    - D2
+    - JS
+    - PX
+    - X2
+    - 1T
+    - C6
+    - JH
+    - UJ
+    - 4N
+    - EQ
+    - LJ
+    - R8
+    - YN
+    - 7T
+    - H5
+    - PW
+    - X1
+    - 1X
+    - C7
+    - JJ
+    - UI
+    - 4P
+    - EV
+    - LK
+    - R7
+    - YM
+    - 8A
+    - H6
+    - PP
+    - X0
+    - 1Z
+    - C8
+    - JK
+    - UH
+    - 4Q
+    - EW
+    - LL
+    - UQ
+    - 4J
+    - EI
+    - L9
+    - RJ
+    - YR
+    - 7P
+    - H2
+    - PZ
+    - X4
+    - 1R
+    - C4
+    - JF
+    - UP
+    - 4K
+    - EJ
+    - LC
+    - RD
+    - YQ
+    - 7Q
+    - H3
+    - PY
+    - X3
+    - 1S
+    - C5
+    - JG
+    - UL
+    - 4M
+    - EP
+    - LG
+    - R9
+    - YP
+    - 7S
+    - H4
+    - UD
+    - 7K
+    - GV
+    - R3
+    - YI
+    - 1N
+    - C1
+    - J8
+    - P9
+    - WT
+    - 4C
+    - EG
+    - L7
+    - UC
+    - 7M
+    - GX
+    - R2
+    - 1P
+    - YH
+    - C2
+    - JB
+    - P8
+    - WR
+    - 4E
+    - EH
+    - L8
+    - UB
+    - 7N
+    - H1
+    - R1
+    - YF
+    - 1Q
+    - C3
+    - JD
+    - R6
+    - 1K
+    - YL
+    - B7
+    - J5
+    - PN
+    - WZ
+    - 3Z
+    - ED
+    - L4
+    - UF
+    - 7C
+    - G9
+    - R5
+    - 1L
+    - YK
+    - B8
+    - J6
+    - PJ
+    - WX
+    - 4A
+    - EE
+    - L5
+    - UE
+    - 7J
+    - GQ
+    - R4
+    - 1M
+    - YJ
+    - B9
+    - J7
+    - PH
+    - WU
+    - 4B
+    - EF
+    - L6
+    - QY
+    - 3S
+    - Y5
+    - EA
+    - L1
+    - P4
+    - WJ
+    - 6T
+    - G6
+    - U1
+    - 1G
+    - B5
+    - J3
+    - QX
+    - Y4
+    - 3T
+    - EB
+    - L2
+    - P3
+    - WH
+    - 7A
+    - G7
+    - U0
+    - 1H
+    - B6
+    - J4
+    - QW
+    - Y3
+    - 3X
+    - EC
+    - L3
+    - P2
+    - WE
+    - 7B
+    - G8
+    - P7
+    - WQ
+    - 6P
+    - G3
+    - U4
+    - 1D
+    - B2
+    - IZ
+    - R0
+    - YD
+    - 3Q
+    - E8
+    - KW
+    - P6
+    - WP
+    - 6Q
+    - G4
+    - U3
+    - 1E
+    - B3
+    - J1
+    - QZ
+    - 3R
+    - YB
+    - E9
+    - KX
+    - P5
+    - WM
+    - 6S
+    - G5
+    - U2
+    - 1F
+    - B4
+    - J2
+    - N8
+    - W6
+    - 1A
+    - A9
+    - IV
+    - T6
+    - 3M
+    - E5
+    - KM
+    - QQ
+    - XW
+    - 6M
+    - G1
+    - N7
+    - W5
+    - 1B
+    - AX
+    - IW
+    - T5
+    - 3N
+    - E6
+    - KP
+    - QP
+    - XV
+    - 6N
+    - G2
+    - N6
+    - W4
+    - 1C
+    - B1
+    - IX
+    - T4
+    - 3P
+    - E7
+    - KQ
+    - T9
+    - 3H
+    - E2
+    - KJ
+    - QV
+    - Y2
+    - 6C
+    - FX
+    - P1
+    - WD
+    - 0Y
+    - A7
+    - IH
+    - T8
+    - 3J
+    - E3
+    - KK
+    - QT
+    - Y1
+    - 6J
+    - FY
+    - N9
+    - WC
+    - 0Z
+    - A8
+    - IK
+    - T7
+    - 3K
+    - E4
+    - KL
+    - QS
+    - XZ
+    - 6K
+    - FZ
+    - SK
+    - 5Z
+    - FU
+    - QK
+    - XR
+    - 0V
+    - A4
+    - I9
+    - N2
+    - W0
+    - 3D
+    - DZ
+    - KF
+    - S9
+    - 6A
+    - FV
+    - QJ
+    - XQ
+    - 0W
+    - A5
+    - IF
+    - N1
+    - VX
+    - 3E
+    - E1
+    - KG
+    - S8
+    - 6B
+    - FW
+    - QI
+    - XP
+    - 0X
+    - A6
+    - IG
+    - QN
+    - 0S
+    - XU
+    - A1
+    - I6
+    - N5
+    - W3
+    - 2Z
+    - DW
+    - K8
+    - T3
+    - 5S
+    - FQ
+    - QM
+    - XT
+    - 0T
+    - A2
+    - I7
+    - N4
+    - W2
+    - 3A
+    - DX
+    - K9
+    - T2
+    - 5T
+    - FT
+    - QL
+    - XS
+    - 0U
+    - A3
+    - I8
+    - N3
+    - W1
+    - 3B
+    - DY
+    - KD
+    - QF
+    - XK
+    - 2S
+    - DS
+    - K5
+    - M6
+    - VQ
+    - 5P
+    - FH
+    - S4
+    - 0P
+    - Z8
+    - 9S
+    - I4
+    - QE
+    - XJ
+    - 2T
+    - DT
+    - K6
+    - M5
+    - VP
+    - 5Q
+    - FK
+    - S3
+    - 0Q
+    - Z7
+    - 9T
+    - I5
+    - QD
+    - XI
+    - 2X
+    - DV
+    - K7
+    - M4
+    - VK
+    - 5R
+    - FM
+    - M9
+    - VW
+    - 5K
+    - FC
+    - S7
+    - 0G
+    - 9K
+    - HX
+    - QH
+    - XM
+    - 2Q
+    - DP
+    - K3
+    - M8
+    - VU
+    - 5M
+    - FE
+    - S6
+    - 0J
+    - ZE
+    - 9N
+    - HZ
+    - QG
+    - XL
+    - 2R
+    - DQ
+    - K4
+    - M7
+    - VR
+    - 5N
+    - FF
+    - S5
+    - 0L
+    - Z9
+    - 9P
+    - I3
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerViewNumericType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RBSubscriptionTermCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 2
+    - 5
+    - L
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:date
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackageSourceRepresentationRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - UserDefinedFields : {}: [0, unbounded]
+    - ProcessAnnotation : {}: [0, unbounded]
+    - AssociatedContext : {}: [0, 255]
+    - ImageHashValue : {}: [0, 1]
+    - SourceRecordCardinalityCode : {}: [1, 1]
+    - SourceAcquisition : {}: [1, 9]
+    - SourceFileFormat : {}: [1, 1]
+    - SourceCommentText : {}: [0, 1]
+    - SourceID : {}: [1, 1]
+    - Base64BinaryObject : {}: [1, 1]
+    - SourceMediaDetail : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ScaleUnitsCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 1
+    - 0
+    - 2
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:GeographicSampleAcquisitionLocationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - CaptureUTCDateTime : {}: [0, 1]
+    - Location3DGeospatialCoordinate : {}: [0, 1]
+    - LocationUTMCoordinateValue : {}: [0, 1]
+    - GeographicLocationText : {}: [0, 1]
+    - GeographicLocationSystemName : {}: [0, 1]
+    - LocationDescriptionText : {}: [0, 1]
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:Location2DGeospatialCoordinateType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - GeographicDatumAbstract : {}: [0, 1]
+    - GeographicCoordinateLatitude : {}: [1, 1]
+    - GeographicCoordinateLongitude : {}: [1, 1]
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:LatitudeDegreeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:decimal
+  Primitive: 2
+  Facets:
+    minInclusive = -90
+    maxInclusive = 90
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintPatternSubClassCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - AW
+    - DL
+    - PW
+    - CP
+    - PA
+    - TA
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:LocationHeightMeasureType
+  Bases:
+    - {http://release.niem.gov/niem/niem-core/4.0/}:MeasureType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer0to99999SimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 99999
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:AngularMinuteSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:decimal
+  Primitive: 2
+  Facets:
+    minInclusive = 0
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer1to255Type
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SourceInformationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - SourceID : {}: [1, 1]
+    - ImageSegmentID : {}: [0, 1]
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:TimeMeasureType
+  Bases:
+    - {http://release.niem.gov/niem/niem-core/4.0/}:MeasureType
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:FullTelephoneNumberType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - TelephoneNumberFullID : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TransactionRepositoryResponseType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - TransactionRepositoryResponseRecord : {}: [1, unbounded]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FrictionRidgeImageLateralReversalCodeType
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:gYearMonth
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageTransformationCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - MULTCOMP
+    - SNIR
+    - COLORSHIFT
+    - DOWNSAMPLE
+    - INTERPOLATE
+    - ROTATE
+    - CONTRAST
+    - GRAY
+    - IMGFUSE
+    - POSE
+    - WHITE
+    - AGE
+    - CROP
+    - ILLUM
+    - MULTIVIEW
+    - SUPERRES
+    - AXIS
+    - DIST
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:PersonNameType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PersonGivenName : {}: [0, 1]
+    - PersonMiddleName : {}: [0, 1]
+    - PersonSurName : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:GeodeticDatumCoordinateSystemCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - FIS60M
+    - AUST
+    - CLK80
+    - HOUG
+    - WGS60
+    - INT
+    - BES
+    - WGS66
+    - EVER
+    - FIS68
+    - AIRY
+    - BESN
+    - WGS72
+    - EVERM
+    - GRS67
+    - KRAS
+    - AIRYM
+    - CLK66
+    - FIS60
+    - HELM
+    - SA69
+    - WGS84
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageFeaturePointTierNumericType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:DeviceType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - DeviceID : {}: [0, 1]
+    - DeviceName : {}: [0, 1]
+    - DeviceCategoryText : {}: [0, 1]
+    - DeviceManufacturerText : {}: [0, 1]
+    - DeviceDescriptionText : {}: [0, 1]
+    - DeviceMakeText : {}: [0, 1]
+    - DeviceModelText : {}: [0, 1]
+    - DeviceSerialNumberText : {}: [0, 1]
+    - DeviceVersionText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer1to50000SimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:positiveInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 50000
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:SMTCodeType
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:IdentificationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - IdentificationID : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeFlowMapFormatCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - UNC
+    - B64
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:AngularSecondType
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:AddressType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - AddressDeliveryPointAbstract : {}: [0, 1]
+    - LocationCityName : {}: [0, 1]
+    - LocationState : {}: [0, 1]
+    - LocationPostalCode : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer1To5SimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:positiveInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 5
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeCountMethodCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - M
+    - T
+    - A
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RidgeCoreDeltaType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FingerprintPatternClassificationCode : {}: [1, 1]
+    - RidgeCountValue : {}: [0, 2]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:OpenPathSegmentType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageFeatureVertex : {}: [2, unbounded]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:SMTSupplementalSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - ART ELBOW
+    - ART FOOT
+    - BODY MOD
+    - COLOST APP
+    - CON LENSES
+    - CRIP FOOT
+    - CRIP L TOE
+    - CRIP R TOE
+    - CRIP TOE
+    - CROSSEYED
+    - DA ALCOHOL
+    - DA COCAINE
+    - DA NARCOTI
+    - DA OTHER
+    - DA RITALIN
+    - DA ROHYPNL
+    - DENT LOW
+    - DENT UP LO
+    - DISC ABDOM
+    - DISC ELBOW
+    - DISC FACE
+    - DISC FGR
+    - DISC FHD
+    - DISC FOOT
+    - DISC GROIN
+    - DISC L TOE
+    - DISC NOSE
+    - DISC R TOE
+    - DISC TOE
+    - EXTR L TOE
+    - EXTR R TOE
+    - EXTR TOE
+    - EYE DISORD
+    - FRC ELBOW
+    - FRC FGR
+    - FRC FOOT
+    - FRC L FOOT
+    - FRC L TOE
+    - FRC NOSE
+    - FRC R FOOT
+    - FRC R TOE
+    - FRC TOE
+    - GAUGING
+    - GLAUCOMA
+    - GOLD TOOTH
+    - GRILL
+    - HFR ELBOW
+    - HFR FOOT
+    - HFR L FOOT
+    - HFR L TOE
+    - HFR NOSE
+    - HFR R FOOT
+    - HFR R TOE
+    - HFR TOE
+    - IDENT TWIN
+    - IMPLANT
+    - INTRA ROD
+    - MC ALCOHOL
+    - MC BEHAVIO
+    - MC BLOOD
+    - MC DOWNSYN
+    - MC NERVOUS
+    - MC OTHER
+    - MC THYROID
+    - MC TOURETE
+    - MED PUMP
+    - MISS FOOT
+    - MISS L TOE
+    - MISS LOVAR
+    - MISS NOSE
+    - MISS OVARS
+    - MISS OVARY
+    - MISS PROST
+    - MISS R TOE
+    - MISS ROVAR
+    - MISS STOMA
+    - MISS TEETH
+    - MISS TOE
+    - MISS TONG
+    - MISS TONSL
+    - MOLE ABDOM
+    - MOLE ANKL
+    - MOLE ARM
+    - MOLE BACK
+    - MOLE BRST
+    - MOLE BUTTK
+    - MOLE CALF
+    - MOLE CHEST
+    - MOLE CHIN
+    - MOLE CHK
+    - MOLE EAR
+    - MOLE ELBOW
+    - MOLE EYE
+    - MOLE F ARM
+    - MOLE FACE
+    - MOLE FGR
+    - MOLE FHD
+    - MOLE FOOT
+    - MOLE GROIN
+    - MOLE HAND
+    - MOLE HEAD
+    - MOLE HIP
+    - MOLE KNEE
+    - MOLE L ANK
+    - MOLE L ARM
+    - MOLE L BUT
+    - MOLE L CHK
+    - MOLE L EAR
+    - MOLE L ELB
+    - MOLE L EYE
+    - MOLE L FGR
+    - MOLE L FT
+    - MOLE L HIP
+    - MOLE L HND
+    - MOLE L KNE
+    - MOLE L LEG
+    - MOLE L LIP
+    - MOLE L SHD
+    - MOLE L THG
+    - MOLE L TOE
+    - MOLE L WRS
+    - MOLE LBRST
+    - MOLE LCALF
+    - MOLE LEG
+    - MOLE LFARM
+    - MOLE LIP
+    - MOLE NECK
+    - MOLE NOSE
+    - MOLE PENIS
+    - MOLE R ANK
+    - MOLE R ARM
+    - MOLE R BUT
+    - MOLE R CHK
+    - MOLE R EAR
+    - MOLE R ELB
+    - MOLE R EYE
+    - MOLE R FGR
+    - MOLE R FT
+    - MOLE R HIP
+    - MOLE R HND
+    - MOLE R KNE
+    - MOLE R LEG
+    - MOLE R SHD
+    - MOLE R THG
+    - MOLE R TOE
+    - MOLE R WRS
+    - MOLE RBRST
+    - MOLE RCALF
+    - MOLE RFARM
+    - MOLE SHLD
+    - MOLE THGH
+    - MOLE TOE
+    - MOLE U LIP
+    - MOLE ULARM
+    - MOLE URARM
+    - MOLE WRS
+    - MULT BIRTH
+    - NM ELBOW
+    - NM FOOT
+    - NM GROIN
+    - NM L FOOT
+    - NM L TOE
+    - NM R FOOT
+    - NM R TOE
+    - NM TOE
+    - NO TEETH
+    - ORTH NAIL
+    - ORTH PLATE
+    - ORTH SCREW
+    - POCKMARKS
+    - PRCD BODY
+    - PRCD NOSE
+    - PRCD TONGU
+    - PROT JAW
+    - PROT L JAW
+    - PROT U JAW
+    - RTAT ELBOW
+    - RTAT FLBOD
+    - RTAT FOOT
+    - RTAT GROIN
+    - RTAT L TOE
+    - RTAT LFOOT
+    - RTAT NOSE
+    - RTAT R TOE
+    - RTAT RFOOT
+    - RTAT TOE
+    - SC ABDOM
+    - SC ELBOW
+    - SC FOOT
+    - SC GROIN
+    - SC L TOE
+    - SC LOW LIP
+    - SC NOSE
+    - SC R TOE
+    - SC TOE
+    - SLVR TOOTH
+    - TAT ABDOM
+    - TAT ELBOW
+    - TAT FLBODY
+    - TAT FOOT
+    - TAT GROIN
+    - TAT L FOOT
+    - TAT L TOE
+    - TAT LELBOW
+    - TAT NOSE
+    - TAT R FOOT
+    - TAT R TOE
+    - TAT RELBOW
+    - TAT TOE
+    - TD ACONVUL
+    - TD HYPNOTI
+    - TD OTHER
+    - TWIN
+    - UTAT ELBOW
+    - UTAT FLBOD
+    - UTAT FOOT
+    - UTAT GROIN
+    - UTAT LFOOT
+    - UTAT NOSE
+    - UTAT RFOOT
+    - VASC PROTH
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:LongitudeCoordinateType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - LongitudeDegreeValue : {}: [1, 1]
+    - LongitudeMinuteValue : {}: [0, 1]
+    - LongitudeSecondValue : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageBoundingCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - H
+    - S
+    - F
+    - N
+    - X
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:LegacyExemplarFingerPositionCodeType
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:unsignedShort
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:AcquisitionSourceCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 1
+    - 17
+    - 24
+    - 31
+    - 12
+    - 2
+    - 27
+    - 6
+    - 19
+    - 11
+    - 26
+    - 5
+    - 14
+    - 21
+    - 29
+    - 8
+    - 13
+    - 20
+    - 28
+    - 7
+    - 23
+    - 0
+    - 16
+    - 30
+    - MS
+    - 15
+    - 22
+    - 3
+    - 9
+    - 10
+    - 18
+    - 25
+    - 4
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImage3DFeaturePointType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageFeaturePointType
+  Elements:
+    - FeaturePointZCoordinateValue : {}: [1, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:SRFCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeFlowMapType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeRidgeFlowMapSamplingFrequencyValue : {}: [0, 1]
+    - MinutiaeRidgeFlowMapFormatCode : {}: [0, 1]
+    - MinutiaeRidgeFlowMapRowText : {}: [1, unbounded]
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:Degree360Type
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhysicalFeatureColorDetailType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PhysicalFeaturePrimaryColorCode : {}: [1, 1]
+    - PhysicalFeatureSecondaryColorCode : {}: [0, 5]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer1to99SimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:positiveInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 99
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeLatentSubstrateType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeLatentSubstrateCategoryCode : {}: [1, 1]
+    - MinutiaeLatentSubstrateDescriptionText : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MNUCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - IO
+    - BF
+    - OA
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:integer
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MajorCasePrintCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageBoundingCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:CSPCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - GRAY
+    - YCC
+    - UNK
+    - RGB
+    - SRGB
+    - SYCC
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintOffCenterCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - T
+    - L
+    - R
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhotoDescriptorCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:EYECodeType
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:MNUCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - PP
+    - CG
+    - AF
+    - MD
+    - NA
+    - PS
+    - AS
+    - MC
+    - NS
+    - SS
+    - AR
+    - FN
+    - PI
+    - VA
+    - AN
+    - CI
+    - MP
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintDeltaLocationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageFeatureVertex : {}: [1, 1]
+    - SmallThetaAngleMeasure : {}: [3, 3]
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:decimal
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintImageSegmentPositionPolygonType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FingerPositionCode : {}: [1, 1]
+    - PositionPolygonVertexQuantity : {}: [1, 1]
+    - PositionPolygonVertex : {}: [3, 99]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:BiometricImageDescriptionType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PersonFBIIdentification : {}: [1, 1]
+    - BiometricImageCategoryCode : {}: [0, 1]
+    - BiometricSetID : {}: [0, 1]
+    - FrictionRidgePositionCode : {}: [0, 1]
+    - PrintPositionDescriptors : {}: [0, 1]
+    - FaceImageSubjectPoseCode : {}: [0, 1]
+    - PhysicalFeatureCategoryCode : {}: [0, 1]
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:ZuluDateTimeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:dateTime
+  Primitive: 5
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:CanadianCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - YT
+    - 0N
+    - NF
+    - PE
+    - NK
+    - AB
+    - PQ
+    - NS
+    - BC
+    - SN
+    - MB
+    - NT
+    - XN
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MobileFingerPositionCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImpressionCaptureCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 13
+    - 24
+    - 31
+    - 39
+    - 0
+    - 2
+    - 27
+    - 34
+    - 6
+    - 11
+    - 22
+    - 3
+    - 37
+    - 25
+    - 14
+    - 32
+    - 4
+    - 1
+    - 20
+    - 28
+    - 35
+    - 7
+    - 12
+    - 23
+    - 30
+    - 38
+    - 15
+    - 26
+    - 33
+    - 5
+    - 10
+    - 21
+    - 29
+    - 36
+    - 8
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:SEXCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - M
+    - F
+    - U
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:BoundaryShapeCodeType
+
+Type: {http://release.niem.gov/niem/structures/4.0/}:MetadataType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MaintenanceActionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - REPLACE
+    - DELETE
+    - ADD
+    - APPEND
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:INCITSMinutiaCategoryCodeType
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:EntityType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - EntityRepresentation : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageOrientationCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 1
+    - 2
+    - 0
+
+Type: {http://biometrics.nist.gov/standard/2011}:PenPressureType
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:ZuluDateTimeType
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:boolean
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:AngularMinuteType
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:ReferenceCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - TI
+    - AW
+    - VS
+    - EM
+    - KA
+    - CX
+    - AC
+    - SX
+    - HA
+    - DU
+    - CN
+    - VN
+    - DL
+    - GW
+    - YE
+    - VM
+    - ST
+    - CK
+    - AY
+    - GL
+    - WG
+    - KR
+    - CZ
+    - UA
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintFeatureLocationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PositionPolygonVertex : {}: [1, 1]
+    - SmallThetaAngleMeasure : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFrictionRidgeLocationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - LatentFrictionRidgePositionCode : {}: [1, 1]
+    - SegmentLocationCode : {}: [0, 1]
+    - FingerprintOffCenterCode : {}: [0, 1]
+    - ImageSegmentPolygon : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhysicalFeatureSubClassCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - PARTS
+    - VEHICLE
+    - MBODY
+    - DRAGON
+    - BRIT
+    - HORSE
+    - SPORT
+    - NARCOTICS
+    - ANKLET
+    - FIRE
+    - MISC
+    - ROSE
+    - DRAW
+    - PLANE
+    - VESSEL
+    - MBPART
+    - ABFACE
+    - REDFL
+    - WILD
+    - MHUMAN
+    - FFACE
+    - YELFL
+    - USA
+    - NECKLC
+    - MANIMAL
+    - DOMESTIC
+    - SNAKE
+    - HEDBND
+    - MYTH
+    - BRACE
+    - WORDING
+    - FIGURE
+    - ROLES
+    - ABSTRACT
+    - MILITARY
+    - BLUEFL
+    - MPLANT
+    - SKULL
+    - FREEFRM
+    - ABBPART
+    - MFLAG
+    - FBPART
+    - WEAP
+    - PROFESS
+    - DOG
+    - NAZI
+    - MABSTRACT
+    - TULIP
+    - GANG
+    - BODBND
+    - SLEEVE
+    - MSYMBOLS
+    - STATE
+    - INSECT
+    - NATION
+    - CAT
+    - FRATERNAL
+    - SHIRT
+    - BIRD
+    - MOBJECTS
+    - ABBODY
+    - POLITIC
+    - MFACE
+    - VICIOUS
+    - FBODY
+    - NATURE
+    - TRAIN
+    - LILY
+    - CONFED
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintImageQualityType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FingerPositionCode : {}: [1, 1]
+    - QualityAlgorithmProductID : {}: [1, 1]
+    - QualityAlgorithmVendorID : {}: [1, 1]
+    - QualityValue : {}: [1, 1]
+
+Type: {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ObjectAugmentationPoint : {}: [0, unbounded]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FrictionRidgeImageSegmentPositionSquareType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FingerPositionCode : {}: [1, 1]
+    - SegmentBottomVerticalCoordinateValue : {}: [1, 1]
+    - SegmentLeftHorizontalCoordinateValue : {}: [1, 1]
+    - SegmentRightHorizontalCoordinateValue : {}: [1, 1]
+    - SegmentTopVerticalCoordinateValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:IrisImageAcquisitionProfileCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 11
+    - 20
+    - 40
+    - 10
+    - 12
+    - 30
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:MeasureType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MeasureValueAbstract : {}: [1, 1]
+    - MeasureUnitAbstract : {}: [0, 1]
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:time
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeLocalQualityIssuesType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeLocalQualityIssuesCategoryCode : {}: [1, 1]
+    - ImageSegmentPolygon : {}: [0, 1]
+    - MinutiaeCommentText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:UncertaintyValueSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 180
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:CountryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - NN
+    - TS
+    - AS
+    - FN
+    - LN
+    - SQ
+    - BV
+    - HD
+    - JE
+    - RB
+    - WL
+    - BW
+    - HE
+    - NP
+    - TT
+    - DI
+    - LS
+    - SR
+    - DJ
+    - JM
+    - RC
+    - WN
+    - AT
+    - FP
+    - NQ
+    - TU
+    - AU
+    - FR
+    - LT
+    - SS
+    - BX
+    - HK
+    - LF
+    - SJ
+    - DD
+    - IY
+    - PV
+    - VZ
+    - AN
+    - FD
+    - NG
+    - TQ
+    - AP
+    - FG
+    - LH
+    - SM
+    - BT
+    - GZ
+    - J0
+    - QA
+    - WB
+    - BU
+    - HC
+    - NI
+    - TR
+    - DG
+    - LI
+    - SP
+    - DH
+    - JA
+    - RA
+    - WF
+    - AQ
+    - FJ
+    - IS
+    - PS
+    - VB
+    - BQ
+    - GS
+    - MZ
+    - TK
+    - CW
+    - LD
+    - SG
+    - ZR
+    - CY
+    - IT
+    - PT
+    - VV
+    - AI
+    - F0
+    - N0
+    - TM
+    - AJ
+    - FA
+    - LE
+    - SH
+    - BR
+    - GT
+    - IU
+    - PU
+    - VY
+    - BS
+    - GY
+    - NE
+    - TP
+    - DB
+    - MU
+    - TG
+    - AE
+    - EU
+    - KZ
+    - SB
+    - ZF
+    - BM
+    - GK
+    - IQ
+    - PK
+    - UY
+    - BN
+    - GN
+    - MV
+    - TH
+    - CS
+    - L0
+    - SE
+    - ZI
+    - CV
+    - IR
+    - PM
+    - UZ
+    - AF
+    - EY
+    - MY
+    - TJ
+    - AH
+    - EZ
+    - LB
+    - SF
+    - ZM
+    - BP
+    - GP
+    - KT
+    - RW
+    - ZB
+    - CP
+    - IE
+    - PF
+    - UR
+    - A0
+    - ER
+    - MP
+    - TE
+    - AA
+    - ES
+    - KU
+    - RY
+    - ZC
+    - BI
+    - GI
+    - II
+    - PG
+    - US
+    - BL
+    - GJ
+    - MQ
+    - TF
+    - CQ
+    - KV
+    - SA
+    - ZD
+    - CR
+    - IM
+    - PI
+    - UV
+    - AD
+    - ET
+    - I0
+    - P0
+    - UK
+    - BF
+    - GE
+    - MJ
+    - T0
+    - CF
+    - KH
+    - RU
+    - YY
+    - CJ
+    - IB
+    - PC
+    - UM
+    - 0I
+    - EL
+    - ML
+    - TC
+    - 0M
+    - EN
+    - KN
+    - RV
+    - Z0
+    - BG
+    - GF
+    - IC
+    - PD
+    - UN
+    - BH
+    - GG
+    - MM
+    - TD
+    - CM
+    - LY
+    - SW
+    - DR
+    - KB
+    - RH
+    - XX
+    - BB
+    - GB
+    - HT
+    - TZ
+    - NX
+    - BD
+    - GC
+    - MF
+    - SY
+    - CC
+    - KC
+    - RR
+    - Y0
+    - CD
+    - HU
+    - NZ
+    - UG
+    - 0C
+    - E0
+    - MG
+    - SZ
+    - 0F
+    - EK
+    - KE
+    - RS
+    - YG
+    - BE
+    - GD
+    - JN
+    - RE
+    - WS
+    - HN
+    - BY
+    - NR
+    - TV
+    - DK
+    - LU
+    - SU
+    - DM
+    - JU
+    - RF
+    - XA
+    - AV
+    - FS
+    - NU
+    - TW
+    - B0
+    - G0
+    - LX
+    - SV
+    - HR
+    - BZ
+    - K0
+    - RG
+    - XB
+    - CB
+    - HS
+    - NW
+    - TY
+    - DN
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageOrientationCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageAcquisitionCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:CourtDispositionDataType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - DispositionDate : {}: [0, 1]
+    - ChargeText : {}: [1, 1]
+    - DispositionText : {}: [1, 1]
+    - DispositionCategoryCode : {}: [1, 1]
+    - CourtCountNumber : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageFeaturePointTierCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:EyePositionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 2
+    - 1
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:IrisImageMissingReasonCodeType
+
+Type: {http://release.niem.gov/niem/structures/4.0/}:AugmentationType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:OtherMinutiaeType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeAlgorithmOwnerText : {}: [1, 1]
+    - MinutiaeAlgorithm : {}: [1, 1]
+    - CaptureDevice : {}: [0, 1]
+    - ContactInformationDescriptionText : {}: [1, 1]
+    - MinutiaAbstract : {}: [0, 1]
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:positiveInteger
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:SupervisionStatusCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintImageMissingAreaReasonCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - XX
+    - UP
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:AcquisitionLightingSpectrumCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TransactionHitCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - FSI
+    - RISC
+    - SUPV REL
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:BiometricCaptureType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - GeographicSampleAcquisitionLocation : {}: [0, 1]
+    - CaptureDate : {}: [0, 1]
+    - CaptureDevice : {}: [0, 1]
+    - CaptureOrganization : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PersonImageCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ExemplarFingerPositionCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageHashValueType
+
+Type: {http://biometrics.nist.gov/standard/2011}:MinutiaType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PositionHorizontalCoordinateValue : {}: [1, 1]
+    - PositionVerticalCoordinateValue : {}: [1, 1]
+    - MinutiaID : {}: [1, 1]
+    - PositionThetaAngleMeasure : {}: [1, 1]
+    - MinutiaLegacyQualityValue : {}: [0, 1]
+    - MinutiaCategoryCode : {}: [0, 1]
+    - MinutiaRidgeCount : {}: [0, unbounded]
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:UnitedStatesCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - AK
+    - KS
+    - NM
+    - CA
+    - MD
+    - SC
+    - GA
+    - MT
+    - VA
+    - 0R
+    - IN
+    - WY
+    - NJ
+    - RI
+    - C0
+    - MA
+    - MS
+    - FL
+    - UT
+    - 0K
+    - WV
+    - IL
+    - NH
+    - PA
+    - M0
+    - AZ
+    - TX
+    - DE
+    - MN
+    - 0H
+    - WI
+    - ID
+    - ND
+    - AR
+    - LA
+    - NY
+    - DC
+    - MI
+    - TN
+    - WA
+    - IA
+    - NC
+    - AL
+    - KY
+    - NV
+    - SD
+    - CT
+    - ME
+    - VT
+    - HI
+    - NB
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:ArrestDateSuffixType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerViewCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - NA
+    - FV3
+    - FV1
+    - EJI
+    - FV2
+    - TIP
+    - FV4
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:LatitudeDegreeType
+
+Type: {http://biometrics.nist.gov/standard/2011}:MinorVersionNumberType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:CaptureDeviceMonitoringModeCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - ASSISTED
+    - OBSERVED
+    - UNKNOWN
+    - CONTROLLED
+    - UNATTENDED
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:FPatternCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintPatternWhorlDeltaRelationshipCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ExtendedFeatureSetProfileCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 31
+    - 1
+    - 11
+    - 21
+    - 3
+    - 10
+    - 2
+    - 20
+    - 30
+    - 90
+
+Type: {http://biometrics.nist.gov/standard/2011}:TransactionApplicationProfileType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ApplicationProfileOrganizationName : {}: [1, 1]
+    - ApplicationProfileName : {}: [1, 1]
+    - ApplicationProfileVersionNumberID : {}: [1, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:IFSCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - D
+    - X
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:NDRReservedCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageCompressionAlgorithmCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 1
+    - 3
+    - 5
+    - 2
+    - 6
+    - 0
+    - 4
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintPatternGeneralClassCodeType
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:RACECodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - A
+    - I
+    - W
+    - U
+    - B
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:RACECodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:INCITSMinutiaType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaID : {}: [1, 1]
+    - INCITSMinutiaLocation : {}: [1, 1]
+    - INCITSMinutiaCategoryCode : {}: [1, 1]
+    - MinutiaQualityValue : {}: [1, 1]
+
+Type: {http://biometrics.nist.gov/standard/2011}:UserDefinedDescriptiveDetailType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - DomainDefinedDescriptiveDetail : {}: [1, 1]
+    - OtherDescriptiveDetail : {}: [0, unbounded]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageDistortionMeasurementCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:FBIStandardMinutiaeType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaDetail : {}: [1, 254]
+    - MinutiaeQuantity : {}: [0, 1]
+    - MinutiaeReadingSystem : {}: [0, 1]
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:dateTime
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:HairColorCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - BAL
+    - PLE
+    - STR
+    - BRO
+    - WHI
+    - BLK
+    - GRN
+    - PNK
+    - RED
+    - BLN
+    - XXX
+    - GRY
+    - BLU
+    - ONG
+    - SDY
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:CaptureDeviceMonitoringModeCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer1to255SimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:positiveInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 255
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:DirectionMeasureType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Decimal2DigitPrecisionSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:decimal
+  Primitive: 2
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RecordTransactionActivityType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ActivityReasonText : {}: [0, 1]
+    - EnrollmentEventID : {}: [0, 1]
+    - SubjectOffenderNoticeText : {}: [0, 1]
+    - ArrestDate : {}: [0, 1]
+    - ArrestDateSuffixCode : {}: [0, 1]
+    - CaseTrackingID : {}: [0, 1]
+    - OffenseCategoryCode : {}: [0, 1]
+    - CriminalCycle : {}: [0, 999]
+    - CustodySupervisoryData : {}: [0, 1]
+    - RecordControllingAgencyID : {}: [0, 3]
+    - AFISSegmentControlID : {}: [0, 1]
+    - BiometricSetID : {}: [0, 1000]
+    - CaseTitleText : {}: [0, 1]
+    - ContributorCaseIdentificationNumber : {}: [0, 5]
+    - FBIFileNumberID : {}: [0, 1]
+    - FBILatentCaseIdentification : {}: [0, 1]
+    - ContributorAssignedNumberID : {}: [0, 1]
+    - ForeignInformationText : {}: [0, 999]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer0to99Type
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:OrganizationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - OrganizationIdentification : {}: [0, 1]
+    - OrganizationName : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFeatureDetectionType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeFeatureDetectionFieldListText : {}: [1, 1]
+    - MinutiaeFeatureDetectionMethodCode : {}: [1, 1]
+    - MinutiaeAlgorithmVendorID : {}: [0, 1]
+    - MinutiaeAlgorithmID : {}: [0, 1]
+    - MinutiaeExaminerName : {}: [0, 1]
+    - OrganizationName : {}: [0, 1]
+    - MinutiaeFeatureDetectionDateTime : {}: [0, 1]
+    - MinutiaeCommentText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeImageRidgePathType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeRidgePathSegment : {}: [1, unbounded]
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:PersonType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PersonBirthDate : {}: [0, 5]
+    - PersonCitizenshipAbstract : {}: [0, 10]
+    - PersonEyeColorAbstract : {}: [0, 1]
+    - PersonHairColorAbstract : {}: [0, 1]
+    - PersonName : {}: [0, 1]
+    - PersonPhysicalFeature : {}: [0, 1]
+    - PersonRaceAbstract : {}: [0, 1]
+    - PersonSexAbstract : {}: [0, 1]
+    - PersonSSNIdentification : {}: [0, 4]
+    - PersonStateIdentification : {}: [0, 1000]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerViewNumericSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 15
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:IrisImageAcquisitionProfileCodeType
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:PhysicalFeatureType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PhysicalFeatureCategoryAbstract : {}: [0, 10]
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:ProperNameTextType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageScanCategoryCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RecordSubjectType
+  Bases:
+    - {http://release.niem.gov/niem/niem-core/4.0/}:PersonType
+  Elements:
+    - PersonHeightMeasure : {}: [0, 1]
+    - PersonWeightMeasure : {}: [0, 1]
+    - PersonAlternateName : {}: [0, 10]
+    - PersonAgeRange : {}: [0, 1]
+    - PersonBirthPlaceCode : {}: [0, 1]
+    - PersonSubmittedBirthDate : {}: [0, 1]
+    - PersonSubmittedName : {}: [0, 1]
+    - PersonFBIIdentification : {}: [0, 1000]
+    - PersonOtherIdentification : {}: [0, 4]
+    - PersonFirearmSalesDisqualifiedCode : {}: [0, 1]
+    - ExternalSubjectID : {}: [0, 1000]
+    - PersonResidenceLocation : {}: [0, 1]
+    - PersonEmployment : {}: [0, 1]
+    - PersonAdultTreatmentIndicator : {}: [0, 1]
+    - PersonDigitalImageAvailableIndicator : {}: [0, 1]
+    - PersonPalmPrintAvailableIndicator : {}: [0, 1]
+    - BiometricImageAvailableCode : {}: [0, 6]
+    - PersonDNAAvailableIndicator : {}: [0, 1]
+    - DNALocationORIID : {}: [0, 1]
+    - BinaryCODISAvailableIndicator : {}: [0, 1]
+    - FrictionRidgeInformation : {}: [0, 1]
+    - FaceImageSubjectPoseCode : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerPatternCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Decimal2DigitPrecisionType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageHashValueSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:string
+  Primitive: 0
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:QuantityType
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:StateType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - StateRepresentation : {}: [0, 1]
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:StreetType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - StreetNumberText : {}: [0, 1]
+    - StreetName : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeDeltaCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - I02
+    - I07
+    - I16
+    - I00
+    - I05
+    - I10
+    - R
+    - C
+    - I09
+    - I04
+    - L
+    - I03
+    - I08
+    - I17
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:TextType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:LatentFrictionRidgePositionCodeSimpleType
+  Union:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PalmPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PlantarPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SupplementalFingerPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:UnknownPositionCodeSimpleType
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:UTMCoordinateSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MapSamplingFrequencyValueType
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:Degree360SimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:decimal
+  Primitive: 2
+  Facets:
+    minInclusive = 0
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SmallAngleMeasureType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer1to9999Type
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:IrisImageIrisBoundaryType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - IrisBoundaryShapeCode : {}: [1, 1]
+    - ImageFeatureVertexQuantity : {}: [1, 1]
+    - ImageFeatureVertex : {}: [2, 99]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:POCType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PointOfContactName : {}: [1, 1]
+    - TelephoneNumberFullID : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:IrisImageCaptureType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - IrisImageHorizontalOrientationAbstract : {}: [1, 1]
+    - IrisImageScanCategoryAbstract : {}: [1, 1]
+    - IrisImageVerticalOrientationAbstract : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageFeaturePointTierNumericSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    minInclusive = 100
+    maxInclusive = 999
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:AcquisitionLightingSpectrumCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - DEFINED
+    - RED
+    - VIS
+    - NIR
+    - UNDEFINED
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ProcessAnnotationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ProcessUTCDate : {}: [1, 1]
+    - ProcessName : {}: [1, 1]
+    - ProcessOwnerText : {}: [1, 1]
+    - ProcessDescriptionText : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:EFSFieldNumberCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 324
+    - 373
+    - 321
+    - 340
+    - 342
+    - 345
+    - 341
+    - 357
+    - 320
+    - 323
+    - 331
+    - 343
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FeaturePointCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 1
+    - 2
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeCountResidualCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TransactionCandidateImageListType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - CandidateImage : {}: [1, 1000]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageFeatureVertexQuantityType
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:ContactInformationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ContactMeansAbstract : {}: [1, 1]
+    - ContactInformationDescriptionText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FrictionRidgeImageLateralReversalCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - U
+    - L
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:AcquisitionLightingSpectrumType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - AcquisitionLightingSpectrumCode : {}: [1, 1]
+    - AcquisitionLightingSpectrumLowerMeasure : {}: [0, 1]
+    - AcquisitionLightingSpectrumUpperMeasure : {}: [0, 1]
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:PersonNameTextType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFeatureDetectionMethodCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - REV
+    - EDIT
+    - AUTO
+    - MAN
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:EFSRidgeCountAlgorithmCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - OCTANT
+    - QUADRANT
+    - EFTS7
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:OrganizationIdentificationListType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - OrganizationIdentification : {}: [1, 9]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageOcclusionCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - H
+    - O
+    - S
+    - C
+    - L
+    - R
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:LongitudeDegreeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer1to9SimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:positiveInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 9
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:BoundaryShapeCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - C
+    - P
+    - E
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ExtendedFeatureSetMinutiaeType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ExtendedFeatureSetProfileCode : {}: [0, 9]
+    - FrictionRidgeImageRegionOfInterest : {}: [1, 1]
+    - FingerprintImageFingerprintOrientation : {}: [0, 1]
+    - MinutiaeFrictionRidgeLocation : {}: [1, 20]
+    - FingerprintPatternClassification : {}: [0, 7]
+    - MinutiaeRidgeQualityMap : {}: [0, 1]
+    - MinutiaeRidgeFlowMap : {}: [0, 1]
+    - MinutiaeRidgeWavelengthMap : {}: [0, 1]
+    - FrictionRidgeImageTonalReversalCode : {}: [0, 1]
+    - FrictionRidgeImageLateralReversalCode : {}: [0, 1]
+    - ImageQuality : {}: [0, 9]
+    - MinutiaeGrowthOrShrinkage : {}: [0, 1]
+    - MinutiaeNoCoresPresentIndicator : {}: [0, 1]
+    - MinutiaeCore : {}: [0, unbounded]
+    - MinutiaeNoDeltasPresentIndicator : {}: [0, 1]
+    - MinutiaeDelta : {}: [0, unbounded]
+    - MinutiaeRidgeCountCoreToDelta : {}: [0, unbounded]
+    - FrictionRidgeImageCenter : {}: [0, 3]
+    - MinutiaeNoDistinctiveFeaturesPresentIndicator : {}: [0, 1]
+    - MinutiaeDistinctiveFeature : {}: [0, 99]
+    - MinutiaeNoMinutiaePresentIndicator : {}: [0, 1]
+    - MinutiaeRidgeCountConfidence : {}: [0, 7992]
+    - MinutiaeNoDotsPresentIndicator : {}: [0, 1]
+    - MinutiaeDot : {}: [0, 999]
+    - MinutiaeNoIncipientRidgesPresentIndicator : {}: [0, 1]
+    - MinutiaeIncipientRidge : {}: [0, 999]
+    - MinutiaeNoCreasesPresentIndicator : {}: [0, 1]
+    - MinutiaeFlexionCrease : {}: [0, 999]
+    - MinutiaeNoRidgeEdgeFeaturesPresentIndicator : {}: [0, 1]
+    - MinutiaeRidgeEdgeOrDiscontinuity : {}: [0, 999]
+    - MinutiaeNoPoresPresentIndicator : {}: [0, 1]
+    - MinutiaePore : {}: [0, 9999]
+    - MinutiaeFeatureDetection : {}: [0, 99]
+    - MinutiaeCommentText : {}: [0, 1]
+    - LatentProcessingCategoryCode : {}: [0, 9]
+    - MinutiaeValueAssessment : {}: [0, 1]
+    - MinutiaeFraudEvidence : {}: [0, 4]
+    - MinutiaeLatentSubstrate : {}: [0, 3]
+    - MinutiaeLatentMatrix : {}: [0, 3]
+    - MinutiaeLocalQualityIssues : {}: [0, unbounded]
+    - FrictionRidgeImageAreaOfCorrespondence : {}: [0, unbounded]
+    - MinutiaeFeatureCorrespondence : {}: [0, unbounded]
+    - MinutiaeExaminerComparisonDetermination : {}: [0, unbounded]
+    - FrictionRidgeImageRelativeRotation : {}: [0, unbounded]
+    - FrictionRidgeSkeletonizedImageBinaryObject : {}: [0, 1]
+    - MinutiaeImageRidgePath : {}: [0, 1]
+    - EFSMinutia : {}: [0, 999]
+    - EFSRidgeCountAlgorithmCode : {}: [0, 1]
+    - EFSRidgeCountItem : {}: [0, unbounded]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageDistortionCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - Barrel
+    - Pincushion
+    - Inflated
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageAttributeType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FaceImageAttributeCode : {}: [0, 1]
+    - FaceImageAttributeText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageSegmentVertexType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageLocationHorizontalCoordinateMeasure : {}: [0, 1]
+    - ImageLocationVerticalCoordinateMeasure : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:ContributorCaseIdentificationNumberType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ContributorCasePrefixText : {}: [1, 1]
+    - ContributorCaseID : {}: [1, 1]
+    - ContributorCaseExtensionID : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PersonImageCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - SCAR
+    - FACE
+    - MARK
+    - TATTOO
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:BNOCategoryCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MinutiaeType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeFingerPositionCode : {}: [0, 1]
+    - MinutiaeFBIStandard : {}: [0, 1]
+    - MinutiaCoordinateOffsets : {}: [0, 1]
+    - MinutiaPolygonalVerticesPositions : {}: [0, 1]
+    - MinutiaeFingerCoreAttributePosition : {}: [0, 2]
+    - MinutiaeFingerDeltaAttributePosition : {}: [0, 2]
+    - MinutiaeFingerPattern : {}: [0, 3]
+    - MinutiaCharacterizationQualityValue : {}: [0, 1]
+    - MinutiaClassifierQualityValue : {}: [0, 1]
+    - PositionUncertaintyValue : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ContextFileFormatType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ContextFileCategoryText : {}: [1, 1]
+    - ContextFileDecodingInstructionsText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ContextMediaDetailType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - BiometricCapture : {}: [1, 1]
+    - ImageSegment : {}: [0, 99]
+    - TimeSegment : {}: [0, 99]
+
+Type: {http://release.niem.gov/niem/structures/4.0/}:AssociationType
+  Elements:
+    - AssociationAugmentationPoint : {}: [0, unbounded]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeCountItemType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaID : {}: [1, 1]
+    - MinutiaReferenceID : {}: [1, 1]
+    - RidgeCountValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageOcclusionType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FaceImageOcclusionOpacityCode : {}: [1, 1]
+    - FaceImageOcclusionCategoryCode : {}: [1, 1]
+    - PositionPolygonVertexQuantity : {}: [1, 1]
+    - PositionPolygonVertex : {}: [3, 99]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageAcquisitionProfileCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 11
+    - 40
+    - 52
+    - 15
+    - 0
+    - 12
+    - 20
+    - 42
+    - 1
+    - 13
+    - 30
+    - 50
+    - 10
+    - 51
+    - 14
+    - 32
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FrictionRidgeImageRelativeRotationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - ImageRelativeOverallRotationValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeEdgeOrDiscontinuityCategoryCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:FingerprintImageFingerMissingType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ExemplarFingerPositionCode : {}: [1, 1]
+    - FingerMissingCode : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:DeviceCertificationCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - NONE
+    - APPF
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:string
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:DirectionMeasureSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 359
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:INCITSMinutiaeType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - CBEFFProductID : {}: [1, 1]
+    - DeviceCertificationCode : {}: [1, 1]
+    - DeviceID : {}: [1, 1]
+    - HorizontalLineLengthPixelQuantity : {}: [1, 1]
+    - VerticalLineLengthPixelQuantity : {}: [1, 1]
+    - ImageScaleUnitsCode : {}: [1, 1]
+    - ImageHorizontalPixelDensityValue : {}: [1, 1]
+    - ImageVerticalPixelDensityValue : {}: [1, 1]
+    - FingerViewNumeric : {}: [1, 1]
+    - FingerPositionCode : {}: [1, 1]
+    - MinutiaeQuality : {}: [1, 9]
+    - MinutiaeQuantity : {}: [1, 1]
+    - INCITSMinutia : {}: [1, 9999]
+    - MinutiaeRidgeCountDetail : {}: [0, 1]
+    - FingerprintPatternCoreLocation : {}: [0, 9]
+    - FingerprintPatternDeltaLocation : {}: [0, 9]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageFeatureVertexQuantitySimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    minInclusive = 2
+    maxInclusive = 99
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFlexionCreaseCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:EFSRidgeCountAlgorithmCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer1to9999SimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:positiveInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 9999
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintPatternSubClassCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ExtendedFeatureSetProfileCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SourceRecordCardinalityCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - M
+    - S
+    - D
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:CSFCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RBMICodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageAcquisitionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - UNKNOWN PHOTO
+    - OTHER
+    - ANALOG VIDEO
+    - SCANNER
+    - VENDOR
+    - DIGITAL VIDEO
+    - TYPE20
+    - DIGITAL CAMERA
+    - UNKNOWN VIDEO
+    - UNSPECIFIED
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageFeaturePointTierCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 1
+    - 3
+    - 5
+    - 2
+    - 4
+
+Type: {http://biometrics.nist.gov/standard/2011}:ReadingSystemCodingMethodCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - A
+    - E
+    - M
+    - U
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:gYear
+
+Type: {http://biometrics.nist.gov/standard/2011}:TransactionContentSummaryType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ContentRecordQuantity : {}: [1, 1]
+    - ContentRecordSummary : {}: [1, 999]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:IrisImageMissingReasonCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - MA
+    - UC
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:IrisImageOcclusionType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - IrisImageOcclusionOpacityCode : {}: [1, 1]
+    - IrisImageOcclusionCategoryCode : {}: [1, 1]
+    - ImageFeatureVertexQuantity : {}: [1, 1]
+    - ImageFeatureVertex : {}: [3, 99]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:IrisImageStorageFormatCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 2
+    - 7
+    - 3
+    - 1
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeWavelengthMapFormatCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - UNC
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:PTDCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - E
+    - O
+    - S
+    - V
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:IntegerRangeType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - RangeMaximumIntegerValue : {}: [1, 1]
+    - RangeMinimumIntegerValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:IrisImageStorageFormatCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TransactionFingerprintImagesType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TOTCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:LargeLineLengthPixelQuantitySimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Facets:
+    minInclusive = 10
+    maxInclusive = 99999
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:LatentProcessingCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - DFO
+    - WHP
+    - BLE
+    - LAS
+    - MRM
+    - SDB
+    - ADX
+    - GRP
+    - BRY
+    - LQD
+    - PDV
+    - SSP
+    - COG
+    - AY7
+    - IOD
+    - MGP
+    - RUV
+    - TID
+    - FLP
+    - BLP
+    - LCV
+    - NIN
+    - SGF
+    - ZIC
+    - ALS
+    - CBB
+    - GTV
+    - MBD
+    - R6G
+    - SVN
+    - MPD
+    - ISR
+    - BAR
+    - DAB
+    - SAO
+    - VIS
+    - OTH
+    - SPR
+    - 12I
+    - BPA
+    - GEN
+    - LIQ
+    - AMB
+    - RAM
+    - CDS
+    - HCA
+    - MBP
+    - TEC
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:LatentProcessingCategoryCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:POBCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:LegacyExemplarCaptureCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 2
+    - 21
+    - 25
+    - 29
+    - 1
+    - 20
+    - 24
+    - 28
+    - 0
+    - 23
+    - 27
+    - 42
+    - 8
+    - 26
+    - 22
+    - 3
+    - 41
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SmallLineLengthPixelQuantityType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:LegacyExemplarCaptureCategoryCodeType
+
+Type: {http://biometrics.nist.gov/standard/2011}:CharacterSetIndexCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MajorCasePrintCodeSimpleType
+  Union:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SegmentLocationCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerViewCodeSimpleType
+
+Type: {http://biometrics.nist.gov/standard/2011}:CharacterSetCommonNameCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - ASCII
+    - UTF-16
+    - UTF-32
+    - UTF-8
+    - ASCII 8-bit
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MajorCasePrintSegmentOffsetType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FingerprintCoordinate : {}: [1, 1]
+    - SegmentLocationCode : {}: [1, 1]
+    - SegmentFingerViewCode : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MapSamplingFrequencyValueSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    minInclusive = 1
+    maxInclusive = 41
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:CandidateType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PersonFBIIdentification : {}: [1, 1]
+    - PersonName : {}: [0, 1]
+    - BiometricSetID : {}: [0, 1]
+    - RecordBiometricImageCategoryCode : {}: [0, 1]
+    - FrictionRidgePositionCode : {}: [0, 1]
+    - PrintPositionDescriptors : {}: [0, 1]
+    - CandidateMatchScoreValue : {}: [0, 1]
+    - BiometricImageAvailableCode : {}: [0, 6]
+    - RecordFBIRepositoryCode : {}: [0, 100]
+    - ImageReferenceID : {}: [0, 1]
+    - ORIPointOfContactText : {}: [0, 1]
+    - FaceImageSubjectPoseCode : {}: [0, 1]
+    - PhysicalFeatureCategoryCode : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:NDRCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:FBILatentCaseIdentificationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FBILatentCaseNumberID : {}: [1, 1]
+    - FBILatentCaseNumberExtensionID : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - E
+    - B
+    - C
+    - X
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeAlgorithmType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeAlgorithmName : {}: [1, 1]
+    - MinutiaeAlgorithmVersionText : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:TransactionResponseDataType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - BiometricImageList : {}: [0, 1]
+    - TransactionHitCategoryCode : {}: [0, 1]
+    - TransactionReasonText : {}: [0, 1]
+    - TransactionActionText : {}: [0, 1]
+    - TransactionAuditTrailRecordList : {}: [0, 1]
+    - TransactionCandidateList : {}: [0, 3]
+    - TransactionPenetrationQueryResponsePercent : {}: [0, 1]
+    - TransactionRepositoryResponse : {}: [0, 1]
+    - TransactionResponseIndicator : {}: [0, 1]
+    - TransactionSearchResultsCode : {}: [0, 1]
+    - TransactionStatusText : {}: [0, 1000]
+    - TransactionSupplementaryIdentityInformationText : {}: [0, 1]
+    - TransactionElectronicRapSheetText : {}: [0, 1]
+    - TransactionElectronicRapSheetXML : {}: [0, 1]
+    - TransactionBiometricImageEnrollmentRecordList : {}: [0, 1]
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:LongitudeDegreeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:decimal
+  Primitive: 2
+  Facets:
+    minInclusive = -180
+    maxInclusive = 180
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:NDRCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:CriminalCycleType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ArrestOffenseData : {}: [0, 1]
+    - CourtDispositionData : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeAnalysisComplexityCodeType
+
+Type: {http://biometrics.nist.gov/standard/2011}:FingerprintLegacyImageDataType
+  Bases:
+    - {http://biometrics.nist.gov/standard/2011}:FingerprintLegacyImageType
+  Elements:
+    - ImageHorizontalLineLengthPixelQuantity : {}: [1, 1]
+    - ImageVerticalLineLengthPixelQuantity : {}: [1, 1]
+    - LegacyExemplarFingerPositionCode : {}: [1, 6]
+    - FingerprintLegacyImageImpressionCaptureCategoryCode : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeCoreType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageFeatureVertex : {}: [1, 1]
+    - MinutiaeCoreDirectionMeasure : {}: [0, 1]
+    - ImageLocationUncertaintyRadiusMeasure : {}: [0, 1]
+    - MinutiaeCoreDirectionUncertaintyValue : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:IIRCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 0
+    - 1
+    - 2
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeDeltaCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ExemplarFingerPositionCodeSimpleType
+  Union:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:HypothenarPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MobileFingerPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SupplementalFingerPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SlapFingerPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:UnknownPositionCodeSimpleType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeGrowthOrShrinkageType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeGrowthOrShrinkageCode : {}: [1, 1]
+    - MinutiaeCommentText : {}: [0, unbounded]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhysicalFeatureClassCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - ABSTRACT
+    - FLAG
+    - OBJECT
+    - PLANT
+    - HUMAN
+    - ANIMAL
+    - OTHER
+    - SYMBOL
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeDistinctiveFeatureCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - CREASE
+    - CLEAR
+    - SCAR
+    - MINUTIA
+    - DYSPLASIA
+    - CORE
+    - WART
+    - OTHERFEAT
+    - DELTA
+    - MINGROUP
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeDistinctiveFeatureCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeDotType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageFeatureVertex : {}: [1, 1]
+    - MinutiaeDotLengthMeasure : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeExaminerComparisonDeterminationResultCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - EX_SRC
+    - INC_I
+    - INDIV
+    - INC_C
+    - INC_D
+    - EX_SUB
+    - INC_N
+    - NONE
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeQualityMapType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeRidgeQualityMapCellSizeValue : {}: [1, 1]
+    - MinutiaeRidgeQualityMapFormatCode : {}: [1, 1]
+    - MinutiaeRidgeQualityMapRowText : {}: [0, unbounded]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeExaminerComparisonDeterminationType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - MinutiaeExaminerComparisonDeterminationResultCode : {}: [1, 1]
+    - MinutiaeExaminerProgressCode : {}: [1, 1]
+    - MinutiaeExaminerName : {}: [1, 1]
+    - OrganizationName : {}: [1, 1]
+    - MinutiaeExaminerComparisonDeterminationDateTime : {}: [1, 1]
+    - MinutiaeComparisonComplexityCode : {}: [0, 1]
+    - MinutiaeCommentText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeExaminerProgressCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - FINAL
+    - PRELIMINARY
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFeatureCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 324
+    - 345
+    - 340
+    - 320
+    - 342
+    - 373
+    - 331
+    - 321
+    - 341
+    - 343
+
+Type: {http://biometrics.nist.gov/standard/2011}:ContentRecordSummaryType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - RecordCategoryCode : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeExaminerComparisonDeterminationResultCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFeatureCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:VertexType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PositionHorizontalCoordinateValue : {}: [1, 1]
+    - PositionVerticalCoordinateValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFeatureCorrespondenceCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - R
+    - X
+    - F
+    - DF
+    - DP
+    - P
+    - U
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:RelativeRotationMeasureType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFeatureCorrespondenceCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFeatureDetectionMethodCodeType
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:FPatternCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - LS
+    - SR
+    - UP
+    - XX
+    - AU
+    - RS
+    - UC
+    - WU
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFlexionCreaseCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - PDC05
+    - PDC09
+    - PDC01
+    - PIP
+    - PDC04
+    - PDC00
+    - PDC17
+    - PDC08
+    - WC
+    - PDC16
+    - PDC07
+    - DTC
+    - PDC03
+    - RLC
+    - PDC10
+    - DIP
+    - PDC06
+    - PDC02
+    - PTC
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeAnalysisComplexityCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - COMPLEX
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:EYECodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - XXX
+    - BLK
+    - BLU
+    - BRO
+    - GRN
+    - GRY
+    - HAZ
+    - MAR
+    - MUL
+    - PNK
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFlexionCreaseType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageFeatureVertex : {}: [2, 2]
+    - MinutiaeFlexionCreaseCategoryCode : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFraudEvidenceType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeFraudEvidenceCategoryCode : {}: [1, 1]
+    - MinutiaeCommentText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:LatentFrictionRidgePositionCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeLatentSubstrateCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 3G
+    - 3C
+    - 2D
+    - 1D
+    - 2H
+    - 2G
+    - 3F
+    - 3B
+    - 2C
+    - 1C
+    - 1B
+    - 3E
+    - 2B
+    - 3A
+    - 4B
+    - 2F
+    - 4A
+    - 2I
+    - 3D
+    - 1A
+    - 2A
+    - 2E
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeGrowthOrShrinkageCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeIncipientRidgeType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageFeatureVertex : {}: [2, 2]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:CCTCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:EyePositionCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeLatentMatrixCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 7
+    - 9
+    - 10
+    - 3
+    - 5
+    - 8
+    - 4
+    - 2
+    - 1
+    - 6
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeCountConfidenceType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageFeatureVertex : {}: [2, 2]
+    - MinutiaeRidgeCountMethodCode : {}: [1, 1]
+    - MinutiaeRidgeCountConfidenceValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeLatentMatrixCategoryCodeType
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackagePalmPrintImageRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - UserDefinedFields : {}: [0, unbounded]
+    - ProcessAnnotation : {}: [0, unbounded]
+    - AssociatedContext : {}: [0, 255]
+    - ImageHashValue : {}: [0, 1]
+    - SourceInformation : {}: [0, 255]
+    - Base64BinaryObject : {}: [0, 1]
+    - PalmPrintImageDetail : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintImageMissingAreaReasonCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeLatentMatrixType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeLatentMatrixCategoryCode : {}: [1, 1]
+    - MinutiaeCommentText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PlantarImageDetailType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageType
+  Elements:
+    - FrictionRidgeImageImpressionCaptureCategoryAbstract : {}: [1, 1]
+    - PlantarPositionAbstract : {}: [1, 1]
+    - PlantarImageMissingArea : {}: [0, 8]
+    - PlantarImageQuality : {}: [0, 9]
+    - PlantarImageSegmentToePositionPolygon : {}: [0, 5]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer1to99Type
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:DomainDefinedDescriptiveFieldsType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - RecordRetentionIndicator : {}: [0, 1]
+    - RecordForwardOrganizations : {}: [0, 1]
+    - RecordRapSheetFormatRequestCode : {}: [0, 1]
+    - HitNotificationRequestIndicator : {}: [0, 1]
+    - CaveatText : {}: [0, 1]
+    - RecordPointOfContact : {}: [0, 1]
+    - TierLevelCode : {}: [0, 1]
+    - RecordBiometricImageCategoryCode : {}: [0, 1000]
+    - RecordImageCaptureDetail : {}: [0, 1]
+    - RecordFBIRepositoryCode : {}: [0, 10]
+    - RecordImagesRequestedQuantity : {}: [0, 1]
+    - RecordFeaturesRequestIndicator : {}: [0, 1]
+    - RecordPhotoRequestIndicator : {}: [0, 1]
+    - RecordRapBackData : {}: [0, 1]
+    - RecordTransactionData : {}: [0, 1]
+    - RecordTransactionActivity : {}: [0, 1]
+    - RecordSubject : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeLatentSubstrateCategoryCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:SMTUnionSimpleType
+  Union:
+    - {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:SMTCodeSimpleType
+    - {http://cjis.fbi.gov/fbi_ebts/11.2}:SMTSupplementalSimpleType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhysicalFeatureColorCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - GREEN
+    - BLACK
+    - BROWN
+    - ORANGE
+    - PURPLE
+    - WHITE
+    - MULTI
+    - GRAY
+    - OUTLINE
+    - BLUE
+    - RED
+    - YELLOW
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ThetaAngleMeasureType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeLocalQualityIssuesCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - OTHER
+    - BACKGROUND
+    - DISTORT
+    - OVERLAP
+    - STRETCHED
+    - SMEAR
+    - ARTIFACT
+    - COMPRESSED
+    - NEGATIVE
+    - OVERDEV
+    - TAPE
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FeaturePointCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer0to100Type
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeLocalQualityIssuesCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerprintImageFingerMissingType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FingerPositionCode : {}: [1, 1]
+    - FingerMissingCode : {}: [1, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:CCTCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Facets:
+    minInclusive = 1
+    maxInclusive = 999
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeCountConfidenceValueType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PlantarImageSegmentToePositionPolygonType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PlantarPositionCode : {}: [1, 1]
+    - PositionPolygonVertexQuantity : {}: [1, 1]
+    - PositionPolygonVertex : {}: [3, 99]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeEdgeOrDiscontinuityCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - D
+    - P
+    - I
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MinutiaPolygonalVerticesPositionsType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PositionPolygonVertex : {}: [3, 20]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeCountMethodCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeFlowMapFormatCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeQualityMapFormatCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - UNC
+    - RLE
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:BiometricImageCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - NOU
+    - FP
+    - PP
+    - SP
+    - LFR
+    - CFP
+    - PHF
+    - PSMT
+    - IRIS
+    - FFPC
+    - FBPC
+    - UFP
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeQualityMapFormatCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:LargeLineLengthPixelQuantityType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeWavelengthMapType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeRidgeWavelengthMapSamplingFrequencyValue : {}: [0, 1]
+    - MinutiaeRidgeWavelengthMapFormatCode : {}: [0, 1]
+    - MinutiaeRidgeWavelengthMapRowText : {}: [1, unbounded]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:GeodeticDatumCoordinateSystemCodeType
+
+Type: {http://biometrics.nist.gov/standard/2011}:FingerprintLegacyImageType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeValueAssessmentResultCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - LIMITED
+    - NOVALUE
+    - NONPRINT
+    - VALUE
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeValueAssessmentResultCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SupplementalFingerPositionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 19
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeValueAssessmentType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeValueAssessmentResultCode : {}: [1, 1]
+    - MinutiaeExaminerName : {}: [1, 1]
+    - OrganizationName : {}: [1, 1]
+    - MinutiaeValueAssessmentDateTime : {}: [1, 1]
+    - MinutiaeAnalysisComplexityCode : {}: [0, 1]
+    - MinutiaeCommentText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:IrisImageDetailType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageType
+  Elements:
+    - IrisEyePositionAbstract : {}: [1, 1]
+    - IrisImageMissingAbstract : {}: [0, 1]
+    - IrisEyeRotationAngleValue : {}: [0, 1]
+    - IrisEyeRotationUncertaintyValue : {}: [0, 1]
+    - IrisImageCapture : {}: [0, 1]
+    - PersonEyeColorAbstract : {}: [0, 1]
+    - IrisImageAcquisitionLightingSpectrum : {}: [0, 1]
+    - IrisDiameterPixelQuantity : {}: [0, 1]
+    - IrisImageAcquisitionProfileAbstract : {}: [0, 1]
+    - IrisImageStorageFormatCode : {}: [0, 1]
+    - IrisImageIrisPupilBoundary : {}: [0, 1]
+    - IrisImageIrisScleraBoundary : {}: [0, 1]
+    - IrisImageIrisUpperEyelidBoundary : {}: [0, 1]
+    - IrisImageIrisLowerEyelidBoundary : {}: [0, 1]
+    - IrisImageOcclusion : {}: [0, unbounded]
+    - IrisImageRangeMeasure : {}: [0, 1]
+    - IrisImageGazeAngleMeasure : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaRidgeCountType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - RidgeCountReferenceID : {}: [1, 1]
+    - RidgeCountValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:EFSMinutiaType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageFeatureVertex : {}: [1, 1]
+    - ImageLocationThetaAngleMeasure : {}: [1, 1]
+    - MinutiaCategoryCode : {}: [1, 1]
+    - ImageLocationUncertaintyRadiusMeasure : {}: [0, 1]
+    - MinutiaDirectionUncertaintyValue : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:ImageSourceCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MobileFingerPositionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 40
+    - 44
+    - 48
+    - 52
+    - 43
+    - 47
+    - 51
+    - 42
+    - 46
+    - 50
+    - 54
+    - 41
+    - 45
+    - 49
+    - 53
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:NISTQualityMeasureSimpleType
+  Union:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer1To5SimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:QualityScoreFailureCodeSimpleType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PlantarPositionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 74
+    - 70
+    - 62
+    - 66
+    - 78
+    - 63
+    - 67
+    - 71
+    - 75
+    - 79
+    - 60
+    - 64
+    - 68
+    - 72
+    - 76
+    - 73
+    - 61
+    - 65
+    - 69
+    - 77
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MilitaryBranchCodeType
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackageIrisImageRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - UserDefinedFields : {}: [0, unbounded]
+    - ProcessAnnotation : {}: [0, unbounded]
+    - AssociatedContext : {}: [0, 255]
+    - ImageHashValue : {}: [0, 1]
+    - SourceInformation : {}: [0, 255]
+    - Base64BinaryObject : {}: [0, 1]
+    - IrisImageDetail : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:NISTQualityMeasureType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:OctantNumericSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 7
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:OctantNumericType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PalmPositionCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PalmPrintImageDetailType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageType
+  Elements:
+    - FrictionRidgeImageImpressionCaptureCategoryAbstract : {}: [1, 1]
+    - PalmPositionAbstract : {}: [1, 1]
+    - PalmPrintImageMissingArea : {}: [0, 9]
+    - PalmPrintImageQuality : {}: [0, 9]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SourceMediaDetailType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageType
+  Elements:
+    - ImageSegment : {}: [0, 99]
+    - TimeSegment : {}: [0, 99]
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackageUserDefinedTestingImageRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - UserDefinedFields : {}: [0, unbounded]
+    - ProcessAnnotation : {}: [0, unbounded]
+    - AssociatedContext : {}: [0, 255]
+    - ImageHashValue : {}: [0, 1]
+    - SourceInformation : {}: [0, 255]
+    - Base64BinaryObject : {}: [1, 1]
+    - TestImageDetail : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer0to999Type
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PalmPrintImageQualityType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PalmPositionAbstract : {}: [1, 1]
+    - QualityAlgorithmProductID : {}: [1, 1]
+    - QualityAlgorithmVendorID : {}: [1, 1]
+    - QualityValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:TimeSegmentType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - TimeSegmentStartTime : {}: [1, 1]
+    - TimeSegmentEndTime : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhotoDescriptorCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - OTHER
+    - SCARF
+    - GLASSES
+    - HAT
+    - PHYSICAL
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageResolutionType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - NativeScanningResolutionValue : {}: [1, 1]
+    - NominalTransmittingResolutionValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhysicalFeatureCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - MARK
+    - BRANDED
+    - CUT
+    - TATTOO
+    - PIERCING
+    - SCAR
+    - CHEMICAL
+
+Type: {http://biometrics.nist.gov/standard/2011}:PriorityValueType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:NDRUnionCodeSimpleType
+  Union:
+    - {http://cjis.fbi.gov/fbi_ebts/11.2}:NDRReservedCodeSimpleType
+    - {http://cjis.fbi.gov/fbi_ebts/11.2}:NDRCodeSimpleType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FrictionRidgeImageCenterLocationMethodCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:DeviceCertificationCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhysicalFeatureCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhysicalFeatureClassCodeType
+
+Type: {http://biometrics.nist.gov/standard/2011}:MinutiaeFingerPatternType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FingerPatternCodeSourceCode : {}: [1, 1]
+    - FingerPattern : {}: [1, unbounded]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhysicalFeatureDescriptionType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PhysicalFeatureColorDetail : {}: [0, 1]
+    - PhysicalFeatureCategoryAbstract : {}: [1, 1]
+    - PhysicalFeatureClassCode : {}: [0, 1]
+    - PhysicalFeatureSubClassCode : {}: [0, 1]
+    - PhysicalFeatureDescriptionText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhysicalFeatureImageType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageType
+  Elements:
+    - PhysicalFeatureSize : {}: [0, 1]
+    - Type10CrossReferenceID : {}: [0, 1]
+    - ImageTransformationCode : {}: [0, 18]
+    - PhysicalFeatureNCICCode : {}: [0, 3]
+    - PhysicalFeatureDescriptionDetail : {}: [1, 9]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhysicalFeatureSizeType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PhysicalFeatureHeightMeasure : {}: [1, 1]
+    - PhysicalFeatureWidthMeasure : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PhysicalFeatureSubClassCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PoseAngleType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PosePitchAngleMeasure : {}: [1, 1]
+    - PosePitchUncertaintyValue : {}: [0, 1]
+    - PoseRollAngleMeasure : {}: [1, 1]
+    - PoseRollUncertaintyValue : {}: [0, 1]
+    - PoseYawAngleMeasure : {}: [1, 1]
+    - PoseYawUncertaintyValue : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:QualityScoreFailureCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:string
+  Primitive: 0
+  Enum:
+    - Calculation Failed
+    - Not Calculated
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeGrowthOrShrinkageCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - B
+    - S
+    - G
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:DispositionCategoryCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RBNFCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:QualityScoreSimpleType
+  Union:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer0to100SimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:QualityScoreFailureCodeSimpleType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:QualityScoreType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:CustodySupervisoryDataType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - StartDate : {}: [0, 1]
+    - EndDate : {}: [0, 1]
+    - SupervisionStatus : {}: [0, 1]
+    - SupervisedReleaseActionCode : {}: [0, 1]
+    - SupervisedReleaseRevocationReasonText : {}: [0, 1]
+    - SupervisionReceivingOrganizationID : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:FrictionRidgeExceptionCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:RelativeRotationMeasureSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Facets:
+    minInclusive = -179
+    maxInclusive = 180
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ScaleUnitsCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:HexDoubleByteSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:hexBinary
+  Primitive: 6
+  Facets:
+    minLength    = 2
+    maxLength    = 2
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:Integer0to50000SimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 50000
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MNUCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:INCITSRidgeCountAlgorithmCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MinutiaPositionType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PositionDirectionDegreeValue : {}: [1, 3]
+    - PositionHorizontalCoordinateValue : {}: [1, 1]
+    - PositionUncertaintyValue : {}: [1, 1]
+    - PositionVerticalCoordinateValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ScanningResolutionCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 0
+    - 1
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeCountResidualCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 0
+    - 1
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ScanningResolutionCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SegmentLocationCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - DST
+    - NA
+    - UNK
+    - MED
+    - PRX
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SegmentLocationCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SlapFingerPositionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 12
+    - 14
+    - 15
+    - 13
+    - 11
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:AssociatedContextType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ContextID : {}: [1, 1]
+    - ImageSegmentID : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SmallAngleMeasureSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 179
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SourceAcquisitionType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - AcquisitionSourceCode : {}: [1, 1]
+    - AcquisitionDigitalConversionDescriptionText : {}: [0, 1]
+    - AcquisitionRadioTransmissionFormatDescriptionText : {}: [0, 1]
+    - AcquisitionSpecialCharacteristicsText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SourceFileFormatType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - SourceFileCategoryText : {}: [1, 1]
+    - SourceFileDecodingInstructionsText : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SubjectPoseCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - R
+    - F
+    - A
+    - L
+    - D
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MilitaryBranchCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - A
+    - F
+    - G
+    - M
+    - N
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SubjectPoseCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ThetaAngleMeasureSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 359
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PlantarPositionCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FrictionRidgeImageQualityType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - LatentFrictionRidgePositionCode : {}: [1, 1]
+    - QualityAlgorithmProductID : {}: [1, 1]
+    - QualityAlgorithmVendorID : {}: [1, 1]
+    - QualityValue : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:UncertaintyValueType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MinutiaeReadingSystemType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ReadingSystemName : {}: [0, 1]
+    - ReadingSystemSubsystemID : {}: [0, 1]
+    - ReadingSystemCodingMethodCode : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageSegmentPolygonType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PositionPolygonVertex : {}: [3, 99]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:UnknownPositionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 18
+
+Type: {http://biometrics.nist.gov/standard/2011}:NISTBiometricInformationExchangePackageType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PackageInformationRecord : {}: [1, 1]
+    - PackageDescriptiveTextRecord : {}: [1, 2]
+    - PackageDataRecordAbstract : {}: [0, 998]
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackageInformationRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - Transaction : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeWavelengthMapFormatCodeType
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackageUserDefinedImageRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - UserDefinedFields : {}: [0, unbounded]
+    - BiometricImageAbstract : {}: [0, 1]
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackageMinutiaeRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - UserDefinedFields : {}: [0, unbounded]
+    - ProcessAnnotation : {}: [0, unbounded]
+    - FrictionRidgeImageImpressionCaptureCategoryAbstract : {}: [1, 1]
+    - MinutiaeUniversalLatentWorkstationAnnotationText : {}: [0, unbounded]
+    - CaptureDevice : {}: [0, 1]
+    - RecordMinutiaeAbstract : {}: [1, unbounded]
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackagePhotographicBodyPartImageRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - UserDefinedFields : {}: [0, unbounded]
+    - ProcessAnnotation : {}: [0, unbounded]
+    - AssociatedContext : {}: [0, 255]
+    - ImageHashValue : {}: [0, 1]
+    - SourceInformation : {}: [0, 255]
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackageLatentImageRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - UserDefinedFields : {}: [0, unbounded]
+    - ProcessAnnotation : {}: [0, unbounded]
+    - AssociatedContext : {}: [0, 255]
+    - ImageHashValue : {}: [0, 1]
+    - SourceInformation : {}: [0, 255]
+    - Base64BinaryObject : {}: [1, 1]
+    - FrictionRidgeDetail : {}: [1, 1]
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackageFingerImpressionImageRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - UserDefinedFields : {}: [0, unbounded]
+    - ProcessAnnotation : {}: [0, unbounded]
+    - AssociatedContext : {}: [0, 255]
+    - ImageHashValue : {}: [0, 1]
+    - SourceInformation : {}: [0, 255]
+    - Base64BinaryObject : {}: [0, 1]
+    - FingerImpressionImageDetail : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:EFSRidgeCountItemType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeCountItemType
+  Elements:
+    - MinutiaeRidgeCountOctantNumeric : {}: [0, 1]
+    - MinutiaeRidgeCountResidualCode : {}: [0, 1]
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackageAssociatedContextRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - UserDefinedFields : {}: [0, unbounded]
+    - ProcessAnnotation : {}: [0, unbounded]
+    - ImageHashValue : {}: [0, 1]
+    - ContextFileFormat : {}: [1, 1]
+    - ContextCommentText : {}: [0, 1]
+    - ContextID : {}: [1, 1]
+    - Base64BinaryObject : {}: [1, 1]
+    - ContextMediaDetail : {}: [1, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:SRFCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - C
+    - D
+    - G
+    - I
+    - M
+    - N
+    - P
+    - R
+    - Y
+    - X
+    - Z
+
+Type: {http://biometrics.nist.gov/standard/2011}:PackageCBEFFBiometricDataRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageReferenceID : {}: [1, 1]
+    - UserDefinedFields : {}: [0, unbounded]
+    - ProcessAnnotation : {}: [0, unbounded]
+    - AssociatedContext : {}: [0, 255]
+    - ImageHashValue : {}: [0, 1]
+    - SourceInformation : {}: [0, 255]
+    - CBEFFImage : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:HairColorCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MinutiaRidgeCountType
+  Bases:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaRidgeCountType
+  Elements:
+    - MinutiaOctantNumeric : {}: [1, 1]
+    - MinutiaOctantResidualNumeric : {}: [0, 1]
+
+Type: {http://biometrics.nist.gov/standard/2011}:CharacterSetCommonNameCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:AcquisitionSourceCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:BNOCategoryCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 0999 Homicide
+    - 1099 Kidnapping
+    - 1199 Sexual Assault
+    - 1299 Robbery
+    - 1399 Assault
+    - 2699 Sex Offense
+    - 6499 Exploitation
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeExaminerProgressCodeType
+
+Type: {http://biometrics.nist.gov/standard/2011}:CharacterSetIndexUserDefinedCodeType
+
+Type: {http://biometrics.nist.gov/standard/2011}:CharacterSetUserDefinedNameType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:FBIMinutiaType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaID : {}: [1, 1]
+    - PositionHorizontalCoordinateValue : {}: [1, 1]
+    - PositionVerticalCoordinateValue : {}: [1, 1]
+    - PositionThetaAngleMeasure : {}: [1, 1]
+    - MinutiaQualityValue : {}: [0, 1]
+    - MinutiaRidgeCount : {}: [8, 8]
+    - MinutiaTypeCode : {}: [0, 1]
+
+Type: {http://biometrics.nist.gov/standard/2011}:CharacterSetIndexCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeEdgeOrDiscontinuityType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageFeatureVertex : {}: [1, 1]
+    - MinutiaeRidgeEdgeOrDiscontinuityCategoryCode : {}: [1, 1]
+
+Type: {http://biometrics.nist.gov/standard/2011}:ContentRecordQuantityType
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:SEXCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:CSFCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - CR
+    - CI
+    - BO
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageQualityType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - QualityAlgorithmProductID : {}: [0, 1]
+    - QualityAlgorithmVendorID : {}: [0, 1]
+    - QualityValue : {}: [1, 1]
+
+Type: {http://biometrics.nist.gov/standard/2011}:Integer0to63Type
+
+Type: {http://biometrics.nist.gov/standard/2011}:LegacyImageCompressionAlgorithmCodeType
+
+Type: {http://biometrics.nist.gov/standard/2011}:MajorVersionNumberType
+
+Type: {http://biometrics.nist.gov/standard/2011}:RecordCategoryCodeType
+
+Type: {http://biometrics.nist.gov/standard/2011}:TransactionType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - TransactionDate : {}: [1, 1]
+    - TransactionDestinationAgency : {}: [1, 1]
+    - TransactionOriginatingAgency : {}: [1, 1]
+    - TransactionUTCDate : {}: [0, 1]
+    - TransactionControlNumberID : {}: [1, 1]
+    - TransactionControlReferenceNumberID : {}: [0, 1]
+    - TransactionDomain : {}: [1, 1]
+    - TransactionApplicationProfile : {}: [0, 99]
+    - TransactionImageResolutionDetails : {}: [1, 1]
+    - TransactionMajorVersionValue : {}: [1, 1]
+    - TransactionMinorVersionValue : {}: [1, 1]
+    - TransactionPriorityValue : {}: [0, 1]
+    - TransactionCategoryAbstract : {}: [1, 1]
+    - TransactionContentSummary : {}: [1, 1]
+    - TransactionCharacterSetDirectory : {}: [0, 1]
+
+Type: {http://biometrics.nist.gov/standard/2011}:TransactionAgencyType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - AgencyName : {}: [0, 1]
+    - IdentificationID : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeDeltaType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ImageFeatureVertex : {}: [1, 1]
+    - MinutiaeDeltaDirectionUpMeasure : {}: [0, 1]
+    - MinutiaeDeltaDirectionLeftMeasure : {}: [0, 1]
+    - MinutiaeDeltaDirectionRightMeasure : {}: [0, 1]
+    - MinutiaeDeltaCategoryCode : {}: [0, 1]
+    - ImageLocationUncertaintyRadiusMeasure : {}: [0, 1]
+    - MinutiaeDeltaDirectionUpUncertaintyValue : {}: [0, 1]
+    - MinutiaeDeltaDirectionLeftUncertaintyValue : {}: [0, 1]
+    - MinutiaeDeltaDirectionRightUncertaintyValue : {}: [0, 1]
+
+Type: {http://biometrics.nist.gov/standard/2011}:TransactionCharacterSetType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - CharacterSetVersionID : {}: [0, 1]
+
+Type: {http://biometrics.nist.gov/standard/2011}:TwoCharacterTextType
+
+Type: {http://biometrics.nist.gov/standard/2011}:MinutiaeType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - MinutiaeNISTStandard : {}: [1, 1]
+    - FrictionRidgePatternCoreLocation : {}: [0, unbounded]
+    - FrictionRidgePatternDeltaLocation : {}: [0, unbounded]
+    - MinutiaeFingerPatternDetail : {}: [0, 1]
+    - LatentFrictionRidgePositionCode : {}: [1, unbounded]
+
+Type: {http://biometrics.nist.gov/standard/2011}:MinutiaeReadingSystemType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - ReadingSystemCodingMethodCode : {}: [1, 1]
+    - ReadingSystemName : {}: [1, 1]
+    - ReadingSystemSubsystemID : {}: [0, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeFeatureCorrespondenceType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FeatureLabelID : {}: [1, 1]
+    - MinutiaeFeatureCorrespondenceCategoryCode : {}: [1, 1]
+    - MinutiaeFeatureCategoryCode : {}: [0, 1]
+    - CorrespondingSubfieldID : {}: [0, 1]
+    - ImageFeatureVertex : {}: [0, 1]
+    - MinutiaeCommentText : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:ArrestOffenseDataType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - OffenseDate : {}: [0, 1]
+    - ChargeText : {}: [1, 1]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:ImageCompressionAlgorithmCodeType
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:hexBinary
+
+Type: {http://biometrics.nist.gov/standard/2011}:ReadingSystemCodingMethodCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:DateRangeType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - StartDate : {}: [1, 1]
+    - EndDate : {}: [1, 1]
+
+Type: {http://biometrics.nist.gov/standard/2011}:PCSCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:ArrestDateSuffixSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:string
+  Primitive: 0
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:BiometricImageCategoryCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeCountConfidenceValueSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 99
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:BiometricImageDescriptionListType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - BiometricImageDescription : {}: [1, 1000]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:RBNFCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 1
+    - 2
+    - 3
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:BiometricImageEnrollmentRecordListType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - BiometricImageEnrollmentRecord : {}: [1, 61]
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:DeltaDirectionMeasureSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:nonNegativeInteger
+  Primitive: 1
+  Facets:
+    maxInclusive = 359
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:BiometricImageEnrollmentRecordType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - BiometricSetID : {}: [1, 1]
+    - BiometricImageCategoryCode : {}: [1, 1]
+    - FaceImageSubjectPoseCode : {}: [0, 1]
+    - PhysicalFeatureCategoryCode : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:CandidateImageType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - PersonFBIIdentification : {}: [1, 1]
+    - BiometricSetID : {}: [1, 1]
+    - CaptureDate : {}: [1, 1]
+    - RecordBiometricImageCategoryCode : {}: [1, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:FingerprintImageFingerType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FingerPositionCode : {}: [0, 1]
+    - RidgeCoreDelta : {}: [0, 3]
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:UTMCoordinateType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:FrictionRidgeExceptionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - A
+    - N
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:Location3DGeospatialCoordinateType
+  Bases:
+    - {http://release.niem.gov/niem/niem-core/4.0/}:Location2DGeospatialCoordinateType
+  Elements:
+    - LocationHeightAbstract : {}: [0, 1]
+    - Location3DGeospatialCoordinateAugmentationPoint : {}: [0, unbounded]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:FrictionRidgePositionCodeSimpleType
+  Union:
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:UnknownPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FingerPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SlapFingerPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PalmPositionCodeSimpleType
+    - {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:SupplementalFingerPositionCodeSimpleType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:FrictionRidgePositionCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:GeographicAreaCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:IFSCodeType
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:LatitudeCoordinateType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - LatitudeDegreeValue : {}: [1, 1]
+    - LatitudeMinuteValue : {}: [0, 1]
+    - LatitudeSecondValue : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:IIRCodeType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:PalmPositionCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Enum:
+    - 22
+    - 30
+    - 26
+    - 84
+    - 38
+    - 34
+    - 37
+    - 29
+    - 25
+    - 33
+    - 83
+    - 21
+    - 82
+    - 36
+    - 20
+    - 28
+    - 24
+    - 32
+    - 23
+    - 31
+    - 35
+    - 27
+    - 81
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:ImageCaptureDeviceDetailType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:ImageSourceCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 1
+    - 2
+    - 3
+    - 4
+
+Type: {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:MexicanCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - NL
+    - BJ
+    - TB
+    - GR
+    - MR
+    - 0A
+    - CU
+    - SI
+    - CH
+    - HL
+    - QR
+    - VC
+    - DF
+    - TA
+    - BA
+    - NA
+    - ZA
+    - MC
+    - S0
+    - CL
+    - GU
+    - TL
+    - PB
+    - CE
+    - SL
+    - AG
+    - MX
+    - D0
+    - CI
+    - QU
+    - JL
+    - YU
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MaintenanceActionCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:METCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:string
+  Primitive: 0
+
+Type: {http://release.niem.gov/niem/niem-core/4.0/}:NumericType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:METCodeType
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MNTCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - A
+    - B
+    - C
+    - D
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:AuditTrailRecordListType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - AuditTrailRecord : {}: [1, 100]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:MNUUnionCodeSimpleType
+  Union:
+    - {http://cjis.fbi.gov/fbi_ebts/11.2}:MNUCodeSimpleType
+    - {http://release.niem.gov/niem/codes/fbi_ncic/4.0/}:MNUCodeSimpleType
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:FaceImageAcquisitionType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - FaceImageAcquisitionCode : {}: [1, 1]
+    - AcquisitionSourceDescriptionText : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:OFCCodeSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:token
+  Primitive: 0
+  Enum:
+    - 1
+    - 2
+    - 3
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:OFCCodeType
+
+Type: {http://release.niem.gov/niem/proxy/xsd/4.0/}:base64Binary
+
+Type: {http://publication.niem.gov/niem/domains/biometrics/4.0/1/}:MinutiaeRidgeCountCoreToDeltaType
+  Bases:
+    - {http://release.niem.gov/niem/structures/4.0/}:ObjectType
+  Elements:
+    - CoreID : {}: [1, 1]
+    - DeltaID : {}: [1, 1]
+    - RidgeCountMinimumValue : {}: [1, 1]
+    - RidgeCountMaximumValue : {}: [0, 1]
+
+Type: {http://cjis.fbi.gov/fbi_ebts/11.2}:PercentageSimpleType
+  Bases:
+    - {http://www.w3.org/2001/XMLSchema}:integer
+  Primitive: 1
+  Facets:
+    minInclusive = 0
+    maxInclusive = 99
+
+[38;2;0;255;0m[PASS] NXSD_Load_EBTS_FromMPD_DiscoveredSchemas[0m
+[38;2;0;255;0m[PASS] XSD_ResolveFacets_DirectFacet[0m
+[38;2;0;255;0m[PASS] XSD_ResolveFacets_InheritedFacet[0m
+[38;2;0;255;0m[PASS] XSD_ResolveFacets_MultiLevelInheritance[0m
+[38;2;0;255;0m[PASS] XSD_ResolveFacets_NoneFound[0m
+[38;2;0;255;0m[PASS] XSD_ResolvePrimitive_DirectPrimitive[0m
+[38;2;0;255;0m[PASS] XSD_ResolvePrimitive_UnknownType[0m
+[38;2;0;255;0m[PASS] XSD_ResolvePrimitive_ComplexType[0m
+[38;2;0;255;0m[PASS] XSD_ResolvePrimitive_CycleSafe[0m
+[38;2;0;255;0m[PASS] XSD_ResolvePrimitive_UnionType[0m
+17 passed, 0 failed.
+[38;2;0;255;0m
+All tests passed :)
+[0m

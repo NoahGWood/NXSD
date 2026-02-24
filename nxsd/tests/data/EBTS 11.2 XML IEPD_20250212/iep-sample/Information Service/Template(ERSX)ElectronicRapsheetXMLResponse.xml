@@ -1,0 +1,2550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itl:NISTBiometricInformationExchangePackage 
+    xmlns:biom="http://publication.niem.gov/niem/domains/biometrics/4.0/1/" 
+    xmlns:ebts="http://cjis.fbi.gov/fbi_ebts/11.2" 
+    xmlns:itl="http://biometrics.nist.gov/standard/2011" 
+    xmlns:j="http://release.niem.gov/niem/domains/jxdm/6.0/" 
+    xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://cjis.fbi.gov/fbi_ebts/11.2 ../../base-xsd/fbi_ebts/11.2/fbi_ebts.xsd">
+  <!--******************************************************************-->
+    <!--Type-1 Record (Header Record)-->
+    <!--******************************************************************-->
+  <itl:PackageInformationRecord>
+    <itl:Transaction>
+      <!--DAT 1.005-->
+      <itl:TransactionDate>2024-09-19</itl:TransactionDate>
+      <!--DAI 1.007-->
+      <itl:TransactionDestinationAgency>
+        <!-- 1.007 DAI -->
+        <nc:IdentificationID>USTVA010Z</nc:IdentificationID>
+      </itl:TransactionDestinationAgency>
+      <itl:TransactionOriginatingAgency>
+        <!--ORI 1.008-->
+        <nc:IdentificationID>WVIAFIS0Z</nc:IdentificationID>
+      </itl:TransactionOriginatingAgency>
+      <!--TCN 1.009-->
+      <itl:TransactionControlNumberID>E2024263850000000026</itl:TransactionControlNumberID>
+      <!--TCR 1.010, Optional-->
+      <itl:TransactionControlReferenceNumberID>TVA73N1502270001</itl:TransactionControlReferenceNumberID>
+      <!--DOM 1.013, Required for EBTS-->
+      <itl:TransactionDomain>
+        <!-- DVN -->
+        <itl:DomainVersionNumberID>EBTS 10.0</itl:DomainVersionNumberID>
+        <!-- DNM -->
+        <itl:TransactionDomainName>NORAM</itl:TransactionDomainName>
+      </itl:TransactionDomain>
+      <itl:TransactionImageResolutionDetails>
+        <!--NSR 1.011 Non-zero values apply to Type-4 and Type-7 fingerprint records only. -->
+        <biom:NativeScanningResolutionValue>00.00</biom:NativeScanningResolutionValue>
+        <!--NTR 1.012 Non-zero values apply to Type-4 and Type-7 fingerprint records only. -->
+        <biom:NominalTransmittingResolutionValue>00.00</biom:NominalTransmittingResolutionValue>
+      </itl:TransactionImageResolutionDetails>
+      <!--VER 1.002-->
+      <itl:TransactionMajorVersionValue>05</itl:TransactionMajorVersionValue>
+      <itl:TransactionMinorVersionValue>00</itl:TransactionMinorVersionValue>
+      <!--PRY 1.006, Optional-->
+      <itl:TransactionPriorityValue>2</itl:TransactionPriorityValue>
+      <!--TOT 1.004-->
+      <ebts:TransactionCategoryCode>SRE</ebts:TransactionCategoryCode>
+      <!--CNT 1.003-->
+      <itl:TransactionContentSummary>
+        <!-- CRC -->
+        <itl:ContentRecordQuantity>1</itl:ContentRecordQuantity>
+        <itl:ContentRecordSummary>
+          <!-- IDC -->
+          <biom:ImageReferenceID>00</biom:ImageReferenceID>
+          <!-- REC -->
+          <itl:RecordCategoryCode>2</itl:RecordCategoryCode>
+        </itl:ContentRecordSummary>
+      </itl:TransactionContentSummary>
+    </itl:Transaction>
+  </itl:PackageInformationRecord>
+  <!--******************************************************************-->
+    <!--Type-2 Record (User Defined Descriptive Text Record)-->
+    <!--******************************************************************-->
+  <itl:PackageDescriptiveTextRecord>
+    <!-- IDC 2.002-->
+    <biom:ImageReferenceID>00</biom:ImageReferenceID>
+    <itl:UserDefinedDescriptiveDetail>
+      <ebts:DomainDefinedDescriptiveFields>
+        <ebts:RecordTransactionData>
+          <ebts:TransactionResponseData>
+                        <!-- SRF 2.059 -->
+                        <ebts:TransactionSearchResultsCode>I</ebts:TransactionSearchResultsCode>
+                        <!--ERS 2.075-->
+                        <ebts:TransactionElectronicRapSheetText>
+
+
+                   UNITED STATES DEPARTMENT OF JUSTICE
+                     FEDERAL BUREAU OF INVESTIGATION
+              CRIMINAL JUSTICE INFORMATION SERVICES DIVISION
+                           CLARKSBURG, WV  26306
+
+
+USTVA010Z
+TCN TVA73N1502270001
+
+
+THE FBI IDENTIFIED YOUR TEN-PRINT SUBMISSION WHICH
+CONTAINED THE FOLLOWING DESCRIPTORS:
+
+NAME MURPHY,GREGORY
+
+SEX      RACE      BIRTH DATE    HEIGHT   WEIGHT   EYES      HAIR
+M        B         1962/05/30    508      195      BROWN     BLACK  
+
+STATE ID       BIRTH PLACE
+NULL           CALIFORNIA                              
+
+CITIZENSHIP
+UNITED STATES
+
+OTHER BIRTH                                 SOCIAL
+DATES            SCARS-MARKS-TATTOOS        SECURITY    MISC NUMBERS
+
+NONE                 NONE                   556-47-8120 NONE           
+
+ALIAS NAME(S)
+NONE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+END OF COVER SHEET
+
+
+
+
+                   UNITED STATES DEPARTMENT OF JUSTICE
+                     FEDERAL BUREAU OF INVESTIGATION
+              CRIMINAL JUSTICE INFORMATION SERVICES DIVISION
+                           CLARKSBURG, WV  26306
+
+
+USTVA010Z                                       NCN E2024263850000000026
+
+BECAUSE ADDITIONS OR DELETIONS MAY BE MADE AT ANY TIME, A NEW COPY
+SHOULD BE REQUESTED WHEN NEEDED FOR SUBSEQUENT USE.
+
+              THIS RECORD IS SUBJECT TO THE
+       FOLLOWING USE AND DISSEMINATION RESTRICTIONS
+ 
+     UNDER PROVISIONS SET FORTH IN TITLE 28, CODE OF FEDERAL
+REGULATIONS (CFR), SECTION 50.12, BOTH GOVERNMENTAL AND NONGOVERNMENTAL
+ENTITIES AUTHORIZED TO SUBMIT FINGERPRINTS AND RECEIVE FBI IDENTIFICATION
+RECORDS MUST NOTIFY THE INDIVIDUALS FINGERPRINTED THAT THE FINGERPRINTS
+WILL BE USED TO CHECK THE CRIMINAL HISTORY RECORDS OF THE FBI.
+IDENTIFICATION RECORDS OBTAINED FROM THE FBI MAY BE USED SOLELY FOR
+THE PURPOSE REQUESTED AND MAY NOT BE DISSEMINATED OUTSIDE THE RECEIVING
+DEPARTMENT, RELATED AGENCY OR OTHER AUTHORIZED ENTITY.  IF THE INFORMATION
+ON THE RECORD IS USED TO DISQUALIFY AN APPLICANT, THE OFFICIAL MAKING THE
+DETERMINATION OF SUITABILITY FOR LICENSING OR EMPLOYMENT SHALL PROVIDE THE
+APPLICANT THE OPPORTUNITY TO COMPLETE, OR CHALLENGE THE ACCURACY OF, THE
+INFORMATION CONTAINED IN THE FBI IDENTIFICATION RECORD.  THE DECIDING
+OFFICIAL SHOULD NOT DENY THE LICENSE OR EMPLOYMENT BASED ON THE
+INFORMATION IN THE RECORD UNTIL THE APPLICANT HAS BEEN AFFORDED A
+REASONABLE TIME TO CORRECT OR COMPLETE THE INFORMATION, OR HAS DECLINED TO
+DO SO.  AN INDIVIDUAL SHOULD BE PRESUMED NOT GUILTY OF ANY CHARGE/ARREST
+FOR WHICH THERE IS NO FINAL DISPOSITION STATED ON THE RECORD OR OTHERWISE
+DETERMINED.  IF THE APPLICANT WISHES TO CORRECT THE RECORD AS IT APPEARS
+IN THE FBI'S CJIS DIVISION RECORDS SYSTEM, THE APPLICANT SHOULD
+BE ADVISED THAT THE PROCEDURES TO CHANGE, CORRECT OR UPDATE THE RECORD ARE
+SET FORTH IN TITLE 28, CFR, SECTION 16.34.
+                     - FBI IDENTIFICATION RECORD -
+
+WHEN EXPLANATION OF A CHARGE OR DISPOSITION IS NEEDED, COMMUNICATE
+DIRECTLY WITH THE AGENCY THAT FURNISHED THE DATA TO THE FBI.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+END OF PART 1 - PART 2 TO FOLLOW
+
+
+
+
+                   UNITED STATES DEPARTMENT OF JUSTICE
+                     FEDERAL BUREAU OF INVESTIGATION
+              CRIMINAL JUSTICE INFORMATION SERVICES DIVISION
+                           CLARKSBURG, WV  26306
+
+
+USTVA010Z                                       NCN E2024263850000000026
+PART 2
+                  - FBI IDENTIFICATION RECORD - FBI UCN-526680FA9
+
+NAME                                  FBI UCN        DATE REQUESTED
+MURPHY,GREGORY                        526680FA9      2024/09/19
+
+SEX  RACE  BIRTH DATE  HEIGHT  WEIGHT  EYES  HAIR
+M    B     1962/05/30  506     145     BRO   BLK   
+
+BIRTH PLACE
+CALIFORNIA                              
+
+PATTERN CLASS                    CITIZENSHIP
+AU AU AU LS LS AU AU AU LS LS    UNITED STATES
+                              
+                              
+                              
+
+
+1-ARRESTED OR RECEIVED 1986/10/24  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-409714
+
+     CHARGE 1-P0SS C0NTR0LLED SUBS
+
+
+2-ARRESTED OR RECEIVED 1986/11/14  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-409714
+
+     CHARGE 1-P0SS NARC0 C0NTR0LLED SUBS
+
+   COURT-MUNICIPAL COURT LONG BEACH (CA019143J)
+     CHARGE-11350 A  HS-POSSESS NARC CONTROL SUBSTANCE
+     DIVERSION TERM/SUCCESSFUL/DISM
+
+
+3-ARRESTED OR RECEIVED 1989/01/11  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-409714
+
+     CHARGE 1-M FALSE ID TO PO WAR 03533501
+
+
+
+
+
+END OF PART 2 - PART 3 TO FOLLOW
+
+
+
+
+                   UNITED STATES DEPARTMENT OF JUSTICE
+                     FEDERAL BUREAU OF INVESTIGATION
+              CRIMINAL JUSTICE INFORMATION SERVICES DIVISION
+                           CLARKSBURG, WV  26306
+
+
+USTVA010Z                                       NCN E2024263850000000026
+PART 3
+                  - FBI IDENTIFICATION RECORD - FBI UCN-526680FA9
+     CHARGE 2-F POSS NARCO CONTROLLED SUBSWARRANT 03514801
+     CHARGE 3-POSS NARCO CONTROLLED SUBS
+
+   COURT-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     CHARGE-148 9 PC-FALSE IDENTIFICATION TO PEACE OFFICER
+     REL/DET ONLY/ADMISS EVIDENCE INSUFF
+
+
+4-ARRESTED OR RECEIVED 1989/03/08  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-409714
+
+     CHARGE 1-M-USE C0NT SUBS
+
+   COURT-MUNICIPAL COURT LONG BEACH (CA019143J)
+     CHARGE-11550 HS-USE UNDER INFLUENCE CONTROL SUBST
+     CONVICTED-PROB/JAIL                     -012MONTHS         
+     PROBATION      -090DAYS           JAIL
+
+
+5-ARRESTED OR RECEIVED 1989/03/11  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-409714
+
+     CHARGE 1-M-USE C0NT SUBS
+
+   COURT-MUNICIPAL COURT LONG BEACH (CA019143J)
+     CHARGE-11550 HS-USE UNDER INFLUENCE CONTROL SUBST
+     CONVICTED-PROB/JAIL                     -012MONTHS         
+     PROBATION      -090DAYS           JAIL
+
+
+6-ARRESTED OR RECEIVED 1990/11/30  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-409714
+
+     CHARGE 1-GRAND THEFT MOTO/VEH
+
+   COURT-SUPERIOR COURT LOS ANGELES (CA019293J)
+     CHARGE-10851 A  VC-TAKE VEH W O OWN CONSENT VEH THEFT
+
+
+
+
+
+END OF PART 3 - PART 4 TO FOLLOW
+
+
+
+
+                   UNITED STATES DEPARTMENT OF JUSTICE
+                     FEDERAL BUREAU OF INVESTIGATION
+              CRIMINAL JUSTICE INFORMATION SERVICES DIVISION
+                           CLARKSBURG, WV  26306
+
+
+USTVA010Z                                       NCN E2024263850000000026
+PART 4
+                  - FBI IDENTIFICATION RECORD - FBI UCN-526680FA9
+     CONVICTED-PROB/JAIL
+     CHARGE-496 1 PC-RECEIVE ETC KNOWN STOLEN PROPERTY
+     CONVICTED-PROB/JAIL                     -036MONTHS         
+     PROBATION      -180DAYS           JAIL           -                  
+     IMP SEN SS
+
+
+7-ARRESTED OR RECEIVED 1991/09/11  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-409714
+
+     CHARGE 1-GRAND THEFT/PROP
+     CHARGE 2-TRESPASS/OCCUPY PROP W/O CONSENT
+     CHARGE 3-GIVE FALSE INFO TO PO WRNT LB91L06652
+
+   COURT-MUNICIPAL COURT LONG BEACH (CA019143J)
+     CHARGE-602 J  PC-TRESPASS INJURE PROPERTY
+     DISMISSED/FURTHERANCE OF JUSTICE
+     CHARGE-487 1 PC-GRAND THEFT PROPERTY
+     CONVICTED-PROB/JAIL                     -036MONTHS         
+     PROBATION      -090DAYS           JAIL
+
+
+8-ARRESTED OR RECEIVED 1993/01/21  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-7143388431
+
+     NAME USED-MURPHY,GREG
+     CHARGE 1-POSS CONT SUB PARAPHERNALIA WRNT
+
+   COURT-MUNICIPAL COURT LONG BEACH (CA019143J)
+     CHARGE-11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA
+     CONVICTED-PROB/JAIL                     -001YR  PROBATION      
+     -010DS  JAIL           -       IMP SEN SS
+
+
+9-ARRESTED OR RECEIVED 1994/01/13  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-7143826691
+
+
+
+
+
+
+END OF PART 4 - PART 5 TO FOLLOW
+
+
+
+
+                   UNITED STATES DEPARTMENT OF JUSTICE
+                     FEDERAL BUREAU OF INVESTIGATION
+              CRIMINAL JUSTICE INFORMATION SERVICES DIVISION
+                           CLARKSBURG, WV  26306
+
+
+USTVA010Z                                       NCN E2024263850000000026
+PART 5
+                  - FBI IDENTIFICATION RECORD - FBI UCN-526680FA9
+     NAME USED-MURPHY,GREG
+     CHARGE 1-TRESPASS/OCCUPY PROP W/O CONSENT
+     CHARGE 2-ATTEMPT PETTY THEFT
+
+   COURT-MUNICIPAL COURT LONG BEACH (CA019143J)
+     CHARGE-484 A  PC-THEFT OF PERSONAL PROPERTY
+     PROBATION MODIFIED/JAIL                 -045DAYS           JAIL
+
+
+10-ARRESTED OR RECEIVED 1994/04/03  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-08008911
+
+     CHARGE 1-TRESP/OCCUPY PROP W/O CONSENT-WRT#94M0035801
+
+
+11-ARRESTED OR RECEIVED 1994/05/03  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LOS ANGELES (CA0194200)
+     AGENCY CASE-2379948Y
+
+     CHARGE 1-M POSS CONTRLD SUBS/PARAPHERNALIA
+
+   COURT-MUN CRT METRO LOS ANGELES (CA019023J)
+     CHARGE-11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA
+     CONVICTED-PROB/JAIL                     -036MONTHS         
+     PROBATION      -045DAYS           JAIL           -002DAYS           
+     JAIL SS        -                  IMP SEN SS
+
+
+12-ARRESTED OR RECEIVED 1994/10/18  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-0318409714
+
+     CHARGE 1-POSS CONT SUB PARAPH-WARR#94S0143701
+
+
+13-ARRESTED OR RECEIVED 1995/05/31  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-7144423247
+
+
+
+
+
+
+END OF PART 5 - PART 6 TO FOLLOW
+
+
+
+
+                   UNITED STATES DEPARTMENT OF JUSTICE
+                     FEDERAL BUREAU OF INVESTIGATION
+              CRIMINAL JUSTICE INFORMATION SERVICES DIVISION
+                           CLARKSBURG, WV  26306
+
+
+USTVA010Z                                       NCN E2024263850000000026
+PART 6
+                  - FBI IDENTIFICATION RECORD - FBI UCN-526680FA9
+     CHARGE 1-POSS CONT SUB PARAPHERNALIA-W#94S0143701
+
+   COURT-MUN CRT METRO LOS ANGELES (CA019023J)
+     CHARGE-11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA
+     CONVICTED-PROB/JAIL                     -036MONTHS         
+     PROBATION      -045DAYS           JAIL           -002DAYS           
+     JAIL SS        -                  IMP SEN SS
+
+
+14-ARRESTED OR RECEIVED 1995/07/14  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LOS ANGELES (CA0194200)
+     AGENCY CASE-2379948Y
+
+     CHARGE 1-M TRES REFUSE LEAVE PROP
+
+   COURT-MUN CRT METRO LOS ANGELES (CA019023J)
+     CHARGE-602 J  PC-TRESPASS INJURE PROPERTY
+     CONVICTED-PROB/JAIL                     -036MONTHS         
+     PROBATION      -030DAYS           JAIL           -                  
+     IMP SEN SS
+
+
+15-ARRESTED OR RECEIVED 1995/09/03  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-3711409714
+
+     CHARGE 1-POSS CONT SUB PARAPHERNALIA-WT 95M1163001
+
+   COURT-MUNICIPAL COURT LONG BEACH (CA019143J)
+     CHARGE-11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA
+     CONVICTED-PROB/JAIL                     -001YR  PROBATION      
+     -030DS  JAIL
+
+
+16-ARRESTED OR RECEIVED 1995/10/22  SID- CA07799036
+   AGENCY-SHERIFF'S OFFICE NORWALK (CA0190000)
+     AGENCY CASE-4590706
+
+     CHARGE 1-POSS PARAPHERNALIA CONTROLLED SUBS
+
+
+
+
+
+
+END OF PART 6 - PART 7 TO FOLLOW
+
+
+
+
+                   UNITED STATES DEPARTMENT OF JUSTICE
+                     FEDERAL BUREAU OF INVESTIGATION
+              CRIMINAL JUSTICE INFORMATION SERVICES DIVISION
+                           CLARKSBURG, WV  26306
+
+
+USTVA010Z                                       NCN E2024263850000000026
+PART 7
+                  - FBI IDENTIFICATION RECORD - FBI UCN-526680FA9
+
+   COURT-MUNICIPAL COURT LONG BEACH (CA019143J)
+     CHARGE-11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA
+     CONVICTED-PROB/JAIL                     -001YR  PROBATION      
+     -010DS  JAIL           -       IMP SEN SS
+
+
+17-ARRESTED OR RECEIVED 1997/02/24  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LOS ANGELES (CA0194200)
+     AGENCY CASE-2379948Y
+
+     NAME USED-MURPHEY,GREG
+     CHARGE 1-F GRAND THEFT AUTO
+
+   COURT-SUPERIOR COURT LOS ANGELES (CA019293J)
+     CHARGE-459 PC-BURGLARY
+     CONVICTED-PROB/JAIL
+
+
+18-ARRESTED OR RECEIVED 1998/04/14W (PRT REC) SID- CA07799036
+   AGENCY-DOC N KERN ST PRISON DELANO (CA015045C)
+     AGENCY CASE-K87308
+
+     CHARGE 1-CT 1 POSS NARC CONTRL SUB
+     CHARGE 2-CT 1 BURG
+
+   COURT- ()
+     CHARGE-CT 1 POSS NARC CONTRL SUB
+     / UNABLE TO ASSOCIATE DISPOSITION WITH CHARGE
+     CHARGE-CT 1 BURG
+     TT EQUALS 1 YR 4 MON / UNABLE TO ASSOCIATE DISPOSITION WITH CHARGE
+
+
+19-ARRESTED OR RECEIVED 1999/05/04  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-6045077
+
+     CHARGE 1-001 COUNTS OF GRAND THEFT,AUTO
+     CHARGE 2-001 COUNTS OF TAKE VEH W/O OWNER CONSNT
+
+
+
+
+
+
+END OF PART 7 - PART 8 TO FOLLOW
+
+
+
+
+                   UNITED STATES DEPARTMENT OF JUSTICE
+                     FEDERAL BUREAU OF INVESTIGATION
+              CRIMINAL JUSTICE INFORMATION SERVICES DIVISION
+                           CLARKSBURG, WV  26306
+
+
+USTVA010Z                                       NCN E2024263850000000026
+PART 8
+                  - FBI IDENTIFICATION RECORD - FBI UCN-526680FA9
+
+   COURT-MUN CRT METRO LOS ANGELES (CA019023J)
+     CHARGE-369I A  PC-TRESPASS RAILROAD PROPERTY
+     CONVICTED-PROB/JAIL                     -036MO  PROBATION      
+     -018DS  JAIL
+
+
+20-ARRESTED OR RECEIVED 2000/04/25  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LOS ANGELES (CA0194200)
+     AGENCY CASE-006440631
+
+   FINGERPRINT INFORMATION
+     BSI/2000064754962
+
+     CHARGE 1-001 COUNTS OF POSSESS NARCOTIC CNTL SUB
+     CHARGE 2-001 COUNTS OF VIOLATION OF PAROLE,FEL
+
+   COURT-SUPERIOR COURT LOS ANGELES (CA019293J)
+     CHARGE-11350 A  HS-POSSESS NARC CONTROL SUBSTANCE
+     CONVICTED COMMITTED TO PRISON           -016MONTHS         PRISON
+
+
+21-ARRESTED OR RECEIVED 2000/06/20  SID- CA07799036
+   AGENCY-DOC N KERN ST PRISON DELANO (CA015045C)
+     AGENCY CASE-K87308
+
+   FINGERPRINT INFORMATION
+     BSI/2000064755667
+
+     CHARGE 1-CMT#1: PAROLE VIOLATOR
+     CHARGE 2-CMT#2: CDC FROM: 19-LOS ANGELES CO (#2) X001 11350(A) HS (
+              F) POSSESS NARCOTIC CNTL SUB
+
+   COURT- ()
+     CHARGE-CMT#1: PAROLE VIOLATOR
+     CRT/NA044940 SENT 16 MONTHS PRISN
+
+
+
+
+
+
+
+
+
+END OF PART 8 - PART 9 TO FOLLOW
+
+
+
+
+                   UNITED STATES DEPARTMENT OF JUSTICE
+                     FEDERAL BUREAU OF INVESTIGATION
+              CRIMINAL JUSTICE INFORMATION SERVICES DIVISION
+                           CLARKSBURG, WV  26306
+
+
+USTVA010Z                                       NCN E2024263850000000026
+PART 9
+                  - FBI IDENTIFICATION RECORD - FBI UCN-526680FA9
+22-ARRESTED OR RECEIVED 2003/06/12  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LOS ANGELES (CA0194200)
+     AGENCY CASE-7729366
+
+   FINGERPRINT INFORMATION
+     BSI/2000064755394
+
+     CHARGE 1-001 COUNTS OF FRAUD CHARITY SOLICITATN
+
+   COURT-MUN CRT METRO LOS ANGELES (CA019023J)
+     CHARGE-LOCAL ORDINANCE VIOLATION
+     CONVICTED-JAIL                          -180DS  JAIL
+
+
+23-ARRESTED OR RECEIVED 2004/02/04  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LONG BEACH (CA0194100)
+     AGENCY CASE-8001994
+
+   FINGERPRINT INFORMATION
+     BSI/2000064757276
+
+     CHARGE 1-001 COUNTS OF CNTL SUB PARAPHERNALIA
+     CHARGE 2-001 COUNTS OF VIOLATION OF PAROLE,FEL
+
+   COURT-MUNICIPAL COURT LONG BEACH (CA019143J)
+     CHARGE-11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA
+     CONVICTED-PROB/JAIL                     -003YR  PROBATION      
+     -010DS  JAIL           -       IMP SEN SS                           
+                             -FOR CERT INFO SEE AUTO
+
+
+24-ARRESTED OR RECEIVED 2004/04/03  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LOS ANGELES (CA0194200)
+     AGENCY CASE-8074720
+
+   FINGERPRINT INFORMATION
+     BSI/2000064757759
+
+     CHARGE 1-001 COUNTS OF THRTN CRIME,INT,TERRORIZE
+     CHARGE 2-001 COUNTS OF CNTL SUB PARAPHERNALIA
+
+
+
+
+
+END OF PART 9 - PART 10 TO FOLLOW
+
+
+
+
+                   UNITED STATES DEPARTMENT OF JUSTICE
+                     FEDERAL BUREAU OF INVESTIGATION
+              CRIMINAL JUSTICE INFORMATION SERVICES DIVISION
+                           CLARKSBURG, WV  26306
+
+
+USTVA010Z                                       NCN E2024263850000000026
+PART 10
+                  - FBI IDENTIFICATION RECORD - FBI UCN-526680FA9
+
+   COURT-MUNICIPAL COURT LONG BEACH (CA019143J)
+     CHARGE-11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA
+     CONVICTED-PROB/JAIL                     -001YR  PROBATION      
+     -007DS  JAIL           -       IMP SEN SS
+
+
+25-ARRESTED OR RECEIVED 2006/05/11  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LOS ANGELES (CA0194200)
+     AGENCY CASE-9039459
+
+   FINGERPRINT INFORMATION
+     BSI/2000064756056
+
+     CHARGE 1-001 COUNTS OF DRIVE,LIC SUSPENDED/ETC
+
+   COURT-MUNICIPAL COURT LONG BEACH (CA019143J)
+     CHARGE-TRAFFIC VIOLATION
+     DISMISSED/FURTHERANCE OF JUSTICE
+     CHARGE-16020 A  VC-NO PROOF FINANCIAL RESPONSE VEH
+     DISMISSED/FURTHERANCE OF JUSTICE
+     CHARGE-14601 1 A  VC-DRIVE WHILE LIC SUSPEND ETC
+     CONVICTED-PROBATION                     -003YR  PROBATION      -    
+        FINE           -       IMP SEN SS
+
+
+26-ARRESTED OR RECEIVED 2007/08/31  SID- CA07799036
+   AGENCY-SHERIFF'S OFFICE NORWALK (CA0190000)
+     AGENCY CASE-9924182
+
+   FINGERPRINT INFORMATION
+     BSI/2000064755934
+
+     CHARGE 1-001 COUNTS OF DRIVE,LIC SUSPENDED/ETC
+
+   COURT-MUN CRT METRO LOS ANGELES (CA019023J)
+     CHARGE-12500 A  VC-DRIVE W O LICENSE
+     DISMISSED/FURTHERANCE OF JUSTICE
+     CHARGE-14601 1 A  VC-DRIVE WHILE LIC SUSPEND ETC
+
+
+
+
+
+
+END OF PART 10 - PART 11 TO FOLLOW
+
+
+
+
+                   UNITED STATES DEPARTMENT OF JUSTICE
+                     FEDERAL BUREAU OF INVESTIGATION
+              CRIMINAL JUSTICE INFORMATION SERVICES DIVISION
+                           CLARKSBURG, WV  26306
+
+
+USTVA010Z                                       NCN E2024263850000000026
+PART 11
+                  - FBI IDENTIFICATION RECORD - FBI UCN-526680FA9
+     CONVICTED-PROB/JAIL                     -036MO  PROBATION      
+     -010DS  JAIL           -       FINE           -       WORK PROGRAM  
+      -       IMP SEN SS
+
+
+27-ARRESTED OR RECEIVED 2008/01/20  SID- CA07799036
+   AGENCY-POLICE DEPARTMENT LOS ANGELES (CA0194200)
+     AGENCY CASE-1143798
+
+   FINGERPRINT INFORMATION
+     BSI/2000064755250
+
+     CHARGE 1-001 COUNTS OF DRIVE,LIC SUSPENDED/ETC
+
+RECORD UPDATED 2024/09/19
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ALL ENTRIES CONTAINED IN THIS FBI RECORD ARE BASED ON
+FINGERPRINT COMPARISONS AND PERTAIN TO THE SAME INDIVIDUAL.
+
+THE USE OF THIS RECORD IS REGULATED BY LAW.  IT IS PROVIDED FOR OFFICIAL
+USE ONLY AND MAY BE USED ONLY FOR THE PURPOSE REQUESTED.
+
+</ebts:TransactionElectronicRapSheetText>
+			<!--ERSX 2.090-->
+			<ebts:TransactionElectronicRapSheetXML>
+		<![CDATA[<?xml version="1.0" encoding="UTF-8"?><ersx xmlns:nist="http://niem.gov/niem/ansi-nist/2.0" xmlns:rap="http://nlets.org/niem2/rapsheet/1.0" xmlns:j="http://niem.gov/niem/domains/jxdm/4.1" xmlns:nc="http://niem.gov/niem/niem-core/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n2="http://www.nlets.org/niem/1.0" xmlns:nh2="http://www.nlets.org/niem/nlets-hdr/1.0" xmlns:j4="http://niem.gov/niem/domains/jxdm/4.1" xmlns:rap41="http://nlets.org/niem2/rapsheet/1.0" xmlns:s="http://niem.gov/niem/structures/2.0">
+<n2:OriginatingORIID>
+WVFBINF00
+</n2:OriginatingORIID>
+<rap:RapSheet xmlns:struct="http://niem.gov/niem/structures/2.0" xmlns:niem="http://www.nlets.org/niem/1.0" xmlns:fam="http://niem.gov/niem/domains/familyServices/2.1" xmlns:jxdm="http://niem.gov/niem/domains/jxdm/4.1" xmlns:ansinist="http://niem.gov/niem/ansi-nist/2.0">
+    <rap:Metadata struct:id="meta01">
+        <nc:ReportedDate>
+            <nc:Date>2024-09-19</nc:Date>
+        </nc:ReportedDate>
+        <nc:SourceIDText/>
+        <rap:Version>4.1</rap:Version>
+        <rap:TripleIStatusText/>
+    </rap:Metadata>
+    <ansinist:TransactionControlIdentification>
+        <nc:IdentificationID xsi:type="nc:TextType">TVA73N1502270001</nc:IdentificationID>
+    </ansinist:TransactionControlIdentification>
+    <rap:Introduction>
+        <rap:Caveat>
+            <nc:CaveatText xsi:nil="true"/>
+            <rap:CaveatFormattedText>BECAUSE ADDITIONS OR DELETIONS MAY BE MADE AT ANY TIME, A NEW COPY SHOULD BE REQUESTED WHEN NEEDED FOR SUBSEQUENT USE.</rap:CaveatFormattedText>
+            <rap:CaveatReferenceDate>2024-09-19</rap:CaveatReferenceDate>
+            <rap:CaveatIssuingAuthorityText>US</rap:CaveatIssuingAuthorityText>
+        </rap:Caveat>
+        <rap:Caveat>
+            <nc:CaveatText xsi:nil="true"/>
+            <rap:CaveatFormattedText>WHEN EXPLANATION OF A CHARGE OR DISPOSITION IS NEEDED, COMMUNICATE DIRECTLY WITH THE AGENCY THAT FURNISHED THE DATA TO THE FBI.</rap:CaveatFormattedText>
+            <rap:CaveatReferenceDate>2024-09-19</rap:CaveatReferenceDate>
+            <rap:CaveatIssuingAuthorityText>US</rap:CaveatIssuingAuthorityText>
+        </rap:Caveat>
+        <rap:Caveat>
+            <nc:CaveatText xsi:nil="true"/>
+            <rap:CaveatFormattedText>ALL ENTRIES CONTAINED IN THIS FBI RECORD ARE BASED ON FINGERPRINT COMPARISONS AND PERTAIN TO THE SAME INDIVIDUAL. THE USE OF THIS RECORD IS REGULATED BY LAW.  IT IS PROVIDED FOR OFFICIAL USE ONLY AND MAY BE USED ONLY FOR THE PURPOSE REQUESTED.</rap:CaveatFormattedText>
+            <rap:CaveatReferenceDate>2024-09-19</rap:CaveatReferenceDate>
+            <rap:CaveatIssuingAuthorityText>US</rap:CaveatIssuingAuthorityText>
+        </rap:Caveat>
+        <rap:RapSheetRequest struct:metadata="meta01">
+            <rap:PurposeCode>I</rap:PurposeCode>
+            <rap:Attention/>
+            <rap:RapSheetPerson>
+                <nc:PersonBirthDate>
+                    <nc:Date>1962-05-30</nc:Date>
+                </nc:PersonBirthDate>
+                <nc:PersonBirthLocation>
+                    <nc:LocationName>CA</nc:LocationName>
+                </nc:PersonBirthLocation>
+                <rap:PersonEyeColorText>Brown</rap:PersonEyeColorText>
+                <rap:PersonHairColorText>Black</rap:PersonHairColorText>
+                <nc:PersonHeightMeasure>
+                    <nc:MeasureText>508</nc:MeasureText>
+                </nc:PersonHeightMeasure>
+                <rap:PersonRaceText>Black</rap:PersonRaceText>
+                <rap:PersonSexText>Male</rap:PersonSexText>
+                <nc:PersonWeightMeasure>
+                    <nc:MeasureText>195</nc:MeasureText>
+                </nc:PersonWeightMeasure>
+                <jxdm:PersonAugmentation/>
+            </rap:RapSheetPerson>
+        </rap:RapSheetRequest>
+    </rap:Introduction>
+    <rap:RapSheetPerson struct:id="Person1">
+        <nc:PersonBirthDate>
+            <nc:Date>1962-05-30</nc:Date>
+        </nc:PersonBirthDate>
+        <nc:PersonBirthLocation>
+            <nc:LocationName>CA</nc:LocationName>
+        </nc:PersonBirthLocation>
+        <nc:PersonCitizenshipText>US</nc:PersonCitizenshipText>
+        <rap:PersonEyeColorText>Brown</rap:PersonEyeColorText>
+        <rap:PersonHairColorText>Black</rap:PersonHairColorText>
+        <nc:PersonHeightMeasure>
+            <nc:MeasureText>506</nc:MeasureText>
+        </nc:PersonHeightMeasure>
+        <nc:PersonName>
+            <nc:PersonGivenName>GREGORY</nc:PersonGivenName>
+            <nc:PersonMiddleName/>
+            <nc:PersonSurName>MURPHY</nc:PersonSurName>
+        </nc:PersonName>
+        <rap:PersonRaceText>Black</rap:PersonRaceText>
+        <rap:PersonSexText>Male</rap:PersonSexText>
+        <nc:PersonWeightMeasure>
+            <nc:MeasureText>145</nc:MeasureText>
+        </nc:PersonWeightMeasure>
+        <jxdm:PersonAugmentation>
+            <jxdm:PersonFBIIdentification>
+                <nc:IdentificationID>526680FA9</nc:IdentificationID>
+            </jxdm:PersonFBIIdentification>
+            <jxdm:PersonStateFingerprintIdentification>
+                <nc:IdentificationID>CA07799036</nc:IdentificationID>
+                <jxdm:IdentificationJurisdictionNCICLSTACode>CA</jxdm:IdentificationJurisdictionNCICLSTACode>
+            </jxdm:PersonStateFingerprintIdentification>
+        </jxdm:PersonAugmentation>
+    </rap:RapSheetPerson>
+    <rap:PersonBiometricsAssociation>
+        <nc:PersonReference struct:ref="Person1"/>
+        <rap:PersonBiometrics>
+            <nc:PersonDigitalImage struct:id="biometric04">
+                <nc:BinaryAvailableIndicator>true</nc:BinaryAvailableIndicator>
+                <nc:BinaryCaptureDate>
+                    <nc:Date>2007-08-31</nc:Date>
+                </nc:BinaryCaptureDate>
+                <nc:BinaryCapturer>
+                    <rap:EntityOrganization>
+                        <nc:OrganizationName>SHERIFF'S OFFICE</nc:OrganizationName>
+                        <jxdm:OrganizationAugmentation>
+                            <jxdm:OrganizationORIIdentification>
+                                <nc:IdentificationID>CA0190000</nc:IdentificationID>
+                            </jxdm:OrganizationORIIdentification>
+                        </jxdm:OrganizationAugmentation>
+                    </rap:EntityOrganization>
+                </nc:BinaryCapturer>
+                <nc:BinaryDescriptionText>Arresting agency has photo</nc:BinaryDescriptionText>
+                <nc:BinaryCategoryText>Other</nc:BinaryCategoryText>
+            </nc:PersonDigitalImage>
+            <nc:PersonDigitalImage struct:id="biometric06">
+                <nc:BinaryAvailableIndicator>true</nc:BinaryAvailableIndicator>
+                <nc:BinaryCaptureDate>
+                    <nc:Date>1995-09-03</nc:Date>
+                </nc:BinaryCaptureDate>
+                <nc:BinaryCapturer>
+                    <rap:EntityOrganization>
+                        <nc:OrganizationName>POLICE DEPARTMENT</nc:OrganizationName>
+                        <jxdm:OrganizationAugmentation>
+                            <jxdm:OrganizationORIIdentification>
+                                <nc:IdentificationID>CA0194100</nc:IdentificationID>
+                            </jxdm:OrganizationORIIdentification>
+                        </jxdm:OrganizationAugmentation>
+                    </rap:EntityOrganization>
+                </nc:BinaryCapturer>
+                <nc:BinaryDescriptionText>Arresting agency has photo</nc:BinaryDescriptionText>
+                <nc:BinaryCategoryText>Other</nc:BinaryCategoryText>
+            </nc:PersonDigitalImage>
+            <nc:PersonDigitalImage struct:id="biometric10">
+                <nc:BinaryAvailableIndicator>true</nc:BinaryAvailableIndicator>
+                <nc:BinaryCaptureDate>
+                    <nc:Date>1995-10-22</nc:Date>
+                </nc:BinaryCaptureDate>
+                <nc:BinaryCapturer>
+                    <rap:EntityOrganization>
+                        <nc:OrganizationName>SHERIFF'S OFFICE</nc:OrganizationName>
+                        <jxdm:OrganizationAugmentation>
+                            <jxdm:OrganizationORIIdentification>
+                                <nc:IdentificationID>CA0190000</nc:IdentificationID>
+                            </jxdm:OrganizationORIIdentification>
+                        </jxdm:OrganizationAugmentation>
+                    </rap:EntityOrganization>
+                </nc:BinaryCapturer>
+                <nc:BinaryDescriptionText>Arresting agency has photo</nc:BinaryDescriptionText>
+                <nc:BinaryCategoryText>Other</nc:BinaryCategoryText>
+            </nc:PersonDigitalImage>
+            <nc:PersonDigitalImage struct:id="biometric13">
+                <nc:BinaryAvailableIndicator>true</nc:BinaryAvailableIndicator>
+                <nc:BinaryCaptureDate>
+                    <nc:Date>2008-01-20</nc:Date>
+                </nc:BinaryCaptureDate>
+                <nc:BinaryCapturer>
+                    <rap:EntityOrganization>
+                        <nc:OrganizationName>POLICE DEPARTMENT</nc:OrganizationName>
+                        <jxdm:OrganizationAugmentation>
+                            <jxdm:OrganizationORIIdentification>
+                                <nc:IdentificationID>CA0194200</nc:IdentificationID>
+                            </jxdm:OrganizationORIIdentification>
+                        </jxdm:OrganizationAugmentation>
+                    </rap:EntityOrganization>
+                </nc:BinaryCapturer>
+                <nc:BinaryDescriptionText>Arresting agency has photo</nc:BinaryDescriptionText>
+                <nc:BinaryCategoryText>Other</nc:BinaryCategoryText>
+            </nc:PersonDigitalImage>
+            <rap:PersonFingerprintSet struct:id="biometric01">
+                <nc:BiometricValueText>AAAAAA1810AAAAAA0812</nc:BiometricValueText>
+                <nc:BiometricEncodingMethodText>FPC</nc:BiometricEncodingMethodText>
+            </rap:PersonFingerprintSet>
+            <rap:PersonFingerprintSet struct:id="biometric02">
+                <nc:BiometricValueText>AUAUAULSLSAUAUAULSLS</nc:BiometricValueText>
+                <nc:BiometricEncodingMethodText>Other</nc:BiometricEncodingMethodText>
+            </rap:PersonFingerprintSet>
+            <rap:PersonFingerprintSet struct:id="biometric03">
+                <nc:BiometricImage>
+                    <nc:BinaryAvailableIndicator>true</nc:BinaryAvailableIndicator>
+                    <nc:BinaryCaptureDate/>
+                    <nc:BinaryCapturer>
+                        <rap:EntityOrganization>
+                            <nc:OrganizationName>FBI-CJIS DIV-CLRKSBG CLARKSBURG</nc:OrganizationName>
+                            <jxdm:OrganizationAugmentation>
+                                <jxdm:OrganizationORIIdentification>
+                                    <nc:IdentificationID>WVFBINF00</nc:IdentificationID>
+                                </jxdm:OrganizationORIIdentification>
+                            </jxdm:OrganizationAugmentation>
+                        </rap:EntityOrganization>
+                    </nc:BinaryCapturer>
+                    <nc:BinaryDescriptionText>FINGERPRINT  BSI: 2000064757276</nc:BinaryDescriptionText>
+                    <nc:BinaryDescriptionText>FINGERPRINT</nc:BinaryDescriptionText>
+                </nc:BiometricImage>
+            </rap:PersonFingerprintSet>
+            <rap:PersonFingerprintSet struct:id="biometric05">
+                <nc:BiometricImage>
+                    <nc:BinaryAvailableIndicator>true</nc:BinaryAvailableIndicator>
+                    <nc:BinaryCaptureDate/>
+                    <nc:BinaryCapturer>
+                        <rap:EntityOrganization>
+                            <nc:OrganizationName>FBI-CJIS DIV-CLRKSBG CLARKSBURG</nc:OrganizationName>
+                            <jxdm:OrganizationAugmentation>
+                                <jxdm:OrganizationORIIdentification>
+                                    <nc:IdentificationID>WVFBINF00</nc:IdentificationID>
+                                </jxdm:OrganizationORIIdentification>
+                            </jxdm:OrganizationAugmentation>
+                        </rap:EntityOrganization>
+                    </nc:BinaryCapturer>
+                    <nc:BinaryDescriptionText>FINGERPRINT  BSI: 2000064755934</nc:BinaryDescriptionText>
+                    <nc:BinaryDescriptionText>FINGERPRINT</nc:BinaryDescriptionText>
+                </nc:BiometricImage>
+            </rap:PersonFingerprintSet>
+            <rap:PersonFingerprintSet struct:id="biometric07">
+                <nc:BiometricImage>
+                    <nc:BinaryAvailableIndicator>true</nc:BinaryAvailableIndicator>
+                    <nc:BinaryCaptureDate/>
+                    <nc:BinaryCapturer>
+                        <rap:EntityOrganization>
+                            <nc:OrganizationName>FBI-CJIS DIV-CLRKSBG CLARKSBURG</nc:OrganizationName>
+                            <jxdm:OrganizationAugmentation>
+                                <jxdm:OrganizationORIIdentification>
+                                    <nc:IdentificationID>WVFBINF00</nc:IdentificationID>
+                                </jxdm:OrganizationORIIdentification>
+                            </jxdm:OrganizationAugmentation>
+                        </rap:EntityOrganization>
+                    </nc:BinaryCapturer>
+                    <nc:BinaryDescriptionText>FINGERPRINT  BSI: 2000064754962</nc:BinaryDescriptionText>
+                    <nc:BinaryDescriptionText>FINGERPRINT</nc:BinaryDescriptionText>
+                </nc:BiometricImage>
+            </rap:PersonFingerprintSet>
+            <rap:PersonFingerprintSet struct:id="biometric08">
+                <nc:BiometricImage>
+                    <nc:BinaryAvailableIndicator>true</nc:BinaryAvailableIndicator>
+                    <nc:BinaryCaptureDate/>
+                    <nc:BinaryCapturer>
+                        <rap:EntityOrganization>
+                            <nc:OrganizationName>FBI-CJIS DIV-CLRKSBG CLARKSBURG</nc:OrganizationName>
+                            <jxdm:OrganizationAugmentation>
+                                <jxdm:OrganizationORIIdentification>
+                                    <nc:IdentificationID>WVFBINF00</nc:IdentificationID>
+                                </jxdm:OrganizationORIIdentification>
+                            </jxdm:OrganizationAugmentation>
+                        </rap:EntityOrganization>
+                    </nc:BinaryCapturer>
+                    <nc:BinaryDescriptionText>FINGERPRINT  BSI: 2000064755394</nc:BinaryDescriptionText>
+                    <nc:BinaryDescriptionText>FINGERPRINT</nc:BinaryDescriptionText>
+                </nc:BiometricImage>
+            </rap:PersonFingerprintSet>
+            <rap:PersonFingerprintSet struct:id="biometric09">
+                <nc:BiometricImage>
+                    <nc:BinaryAvailableIndicator>true</nc:BinaryAvailableIndicator>
+                    <nc:BinaryCaptureDate/>
+                    <nc:BinaryCapturer>
+                        <rap:EntityOrganization>
+                            <nc:OrganizationName>FBI-CJIS DIV-CLRKSBG CLARKSBURG</nc:OrganizationName>
+                            <jxdm:OrganizationAugmentation>
+                                <jxdm:OrganizationORIIdentification>
+                                    <nc:IdentificationID>WVFBINF00</nc:IdentificationID>
+                                </jxdm:OrganizationORIIdentification>
+                            </jxdm:OrganizationAugmentation>
+                        </rap:EntityOrganization>
+                    </nc:BinaryCapturer>
+                    <nc:BinaryDescriptionText>FINGERPRINT  BSI: 2000064757759</nc:BinaryDescriptionText>
+                    <nc:BinaryDescriptionText>FINGERPRINT</nc:BinaryDescriptionText>
+                </nc:BiometricImage>
+            </rap:PersonFingerprintSet>
+            <rap:PersonFingerprintSet struct:id="biometric11">
+                <nc:BiometricImage>
+                    <nc:BinaryAvailableIndicator>true</nc:BinaryAvailableIndicator>
+                    <nc:BinaryCaptureDate/>
+                    <nc:BinaryCapturer>
+                        <rap:EntityOrganization>
+                            <nc:OrganizationName>FBI-CJIS DIV-CLRKSBG CLARKSBURG</nc:OrganizationName>
+                            <jxdm:OrganizationAugmentation>
+                                <jxdm:OrganizationORIIdentification>
+                                    <nc:IdentificationID>WVFBINF00</nc:IdentificationID>
+                                </jxdm:OrganizationORIIdentification>
+                            </jxdm:OrganizationAugmentation>
+                        </rap:EntityOrganization>
+                    </nc:BinaryCapturer>
+                    <nc:BinaryDescriptionText>FINGERPRINT  BSI: 2000064755667</nc:BinaryDescriptionText>
+                    <nc:BinaryDescriptionText>FINGERPRINT</nc:BinaryDescriptionText>
+                </nc:BiometricImage>
+            </rap:PersonFingerprintSet>
+            <rap:PersonFingerprintSet struct:id="biometric12">
+                <nc:BiometricImage>
+                    <nc:BinaryAvailableIndicator>true</nc:BinaryAvailableIndicator>
+                    <nc:BinaryCaptureDate/>
+                    <nc:BinaryCapturer>
+                        <rap:EntityOrganization>
+                            <nc:OrganizationName>FBI-CJIS DIV-CLRKSBG CLARKSBURG</nc:OrganizationName>
+                            <jxdm:OrganizationAugmentation>
+                                <jxdm:OrganizationORIIdentification>
+                                    <nc:IdentificationID>WVFBINF00</nc:IdentificationID>
+                                </jxdm:OrganizationORIIdentification>
+                            </jxdm:OrganizationAugmentation>
+                        </rap:EntityOrganization>
+                    </nc:BinaryCapturer>
+                    <nc:BinaryDescriptionText>FINGERPRINT  BSI: 2000064756056</nc:BinaryDescriptionText>
+                    <nc:BinaryDescriptionText>FINGERPRINT</nc:BinaryDescriptionText>
+                </nc:BiometricImage>
+            </rap:PersonFingerprintSet>
+            <rap:PersonFingerprintSet struct:id="biometric14">
+                <nc:BiometricImage>
+                    <nc:BinaryAvailableIndicator>true</nc:BinaryAvailableIndicator>
+                    <nc:BinaryCaptureDate/>
+                    <nc:BinaryCapturer>
+                        <rap:EntityOrganization>
+                            <nc:OrganizationName>FBI-CJIS DIV-CLRKSBG CLARKSBURG</nc:OrganizationName>
+                            <jxdm:OrganizationAugmentation>
+                                <jxdm:OrganizationORIIdentification>
+                                    <nc:IdentificationID>WVFBINF00</nc:IdentificationID>
+                                </jxdm:OrganizationORIIdentification>
+                            </jxdm:OrganizationAugmentation>
+                        </rap:EntityOrganization>
+                    </nc:BinaryCapturer>
+                    <nc:BinaryDescriptionText>FINGERPRINT  BSI: 2000064755250</nc:BinaryDescriptionText>
+                    <nc:BinaryDescriptionText>FINGERPRINT</nc:BinaryDescriptionText>
+                </nc:BiometricImage>
+            </rap:PersonFingerprintSet>
+        </rap:PersonBiometrics>
+    </rap:PersonBiometricsAssociation>
+    <rap:Court struct:id="court01">
+        <nc:OrganizationAbbreviationText>MUN CRT METRO</nc:OrganizationAbbreviationText>
+        <nc:OrganizationLocation>
+            <nc:LocationAddress>
+                <nc:StructuredAddress>
+                    <nc:LocationStreet>
+                        <nc:StreetFullText/>
+                        <nc:StreetFullText/>
+                    </nc:LocationStreet>
+                    <nc:LocationCityName>LOS ANGELES</nc:LocationCityName>
+                    <nc:LocationStateName>CA</nc:LocationStateName>
+                    <nc:LocationPostalCode>900123014</nc:LocationPostalCode>
+                </nc:StructuredAddress>
+            </nc:LocationAddress>
+            <nc:LocationContactInformation>
+                <nc:ContactEmailID>unknown@localhost</nc:ContactEmailID>
+                <nc:ContactTelephoneNumber>
+                    <nc:FullTelephoneNumber>
+                        <nc:TelephoneNumberFullID>213 974-6019</nc:TelephoneNumberFullID>
+                    </nc:FullTelephoneNumber>
+                </nc:ContactTelephoneNumber>
+            </nc:LocationContactInformation>
+        </nc:OrganizationLocation>
+        <nc:OrganizationName>MUNICIPAL COURT</nc:OrganizationName>
+        <jxdm:OrganizationAugmentation>
+            <jxdm:OrganizationORIIdentification>
+                <nc:IdentificationID>CA019023J</nc:IdentificationID>
+            </jxdm:OrganizationORIIdentification>
+        </jxdm:OrganizationAugmentation>
+    </rap:Court>
+    <rap:Court struct:id="court02">
+        <nc:OrganizationAbbreviationText>MUNICIPAL COURT</nc:OrganizationAbbreviationText>
+        <nc:OrganizationLocation>
+            <nc:LocationAddress>
+                <nc:StructuredAddress>
+                    <nc:LocationStreet>
+                        <nc:StreetFullText>RM 203</nc:StreetFullText>
+                        <nc:StreetFullText/>
+                    </nc:LocationStreet>
+                    <nc:LocationCityName>LONG BEACH</nc:LocationCityName>
+                    <nc:LocationStateName>CA</nc:LocationStateName>
+                    <nc:LocationPostalCode>90801</nc:LocationPostalCode>
+                </nc:StructuredAddress>
+            </nc:LocationAddress>
+            <nc:LocationContactInformation>
+                <nc:ContactEmailID>unknown@localhost</nc:ContactEmailID>
+                <nc:ContactTelephoneNumber>
+                    <nc:FullTelephoneNumber>
+                        <nc:TelephoneNumberFullID>310 491-6215</nc:TelephoneNumberFullID>
+                    </nc:FullTelephoneNumber>
+                </nc:ContactTelephoneNumber>
+            </nc:LocationContactInformation>
+        </nc:OrganizationLocation>
+        <nc:OrganizationName>MUNICIPAL COURT</nc:OrganizationName>
+        <jxdm:OrganizationAugmentation>
+            <jxdm:OrganizationORIIdentification>
+                <nc:IdentificationID>CA019143J</nc:IdentificationID>
+            </jxdm:OrganizationORIIdentification>
+        </jxdm:OrganizationAugmentation>
+    </rap:Court>
+    <rap:Court struct:id="court03">
+        <nc:OrganizationAbbreviationText>SUPERIOR COURT</nc:OrganizationAbbreviationText>
+        <nc:OrganizationLocation>
+            <nc:LocationAddress>
+                <nc:StructuredAddress>
+                    <nc:LocationStreet>
+                        <nc:StreetFullText/>
+                        <nc:StreetFullText/>
+                    </nc:LocationStreet>
+                    <nc:LocationCityName>LOS ANGELES</nc:LocationCityName>
+                    <nc:LocationStateName>CA</nc:LocationStateName>
+                    <nc:LocationPostalCode>900123014</nc:LocationPostalCode>
+                </nc:StructuredAddress>
+            </nc:LocationAddress>
+            <nc:LocationContactInformation>
+                <nc:ContactEmailID>unknown@localhost</nc:ContactEmailID>
+                <nc:ContactTelephoneNumber>
+                    <nc:FullTelephoneNumber>
+                        <nc:TelephoneNumberFullID>213 974-5821</nc:TelephoneNumberFullID>
+                    </nc:FullTelephoneNumber>
+                </nc:ContactTelephoneNumber>
+            </nc:LocationContactInformation>
+        </nc:OrganizationLocation>
+        <nc:OrganizationName>SUPERIOR COURT</nc:OrganizationName>
+        <jxdm:OrganizationAugmentation>
+            <jxdm:OrganizationORIIdentification>
+                <nc:IdentificationID>CA019293J</nc:IdentificationID>
+            </jxdm:OrganizationORIIdentification>
+        </jxdm:OrganizationAugmentation>
+    </rap:Court>
+    <rap:Court struct:id="court04">
+        <nc:OrganizationAbbreviationText>POLICE DEPARTMENT</nc:OrganizationAbbreviationText>
+        <nc:OrganizationLocation>
+            <nc:LocationAddress>
+                <nc:StructuredAddress>
+                    <nc:LocationStreet>
+                        <nc:StreetFullText>STE 100</nc:StreetFullText>
+                        <nc:StreetFullText/>
+                    </nc:LocationStreet>
+                    <nc:LocationCityName>LONG BEACH</nc:LocationCityName>
+                    <nc:LocationStateName>CA</nc:LocationStateName>
+                    <nc:LocationPostalCode>908024497</nc:LocationPostalCode>
+                </nc:StructuredAddress>
+            </nc:LocationAddress>
+            <nc:LocationContactInformation>
+                <nc:ContactEmailID>unknown@localhost</nc:ContactEmailID>
+                <nc:ContactTelephoneNumber>
+                    <nc:FullTelephoneNumber>
+                        <nc:TelephoneNumberFullID>562 570-7288</nc:TelephoneNumberFullID>
+                    </nc:FullTelephoneNumber>
+                </nc:ContactTelephoneNumber>
+            </nc:LocationContactInformation>
+        </nc:OrganizationLocation>
+        <nc:OrganizationName>POLICE DEPARTMENT</nc:OrganizationName>
+        <jxdm:OrganizationAugmentation>
+            <jxdm:OrganizationORIIdentification>
+                <nc:IdentificationID>CA0194100</nc:IdentificationID>
+            </jxdm:OrganizationORIIdentification>
+        </jxdm:OrganizationAugmentation>
+    </rap:Court>
+    <rap:Agency struct:id="agency01">
+        <nc:OrganizationAbbreviationText>POLICE DEPARTMENT</nc:OrganizationAbbreviationText>
+        <nc:OrganizationLocation>
+            <nc:LocationAddress>
+                <nc:StructuredAddress>
+                    <nc:LocationStreet>
+                        <nc:StreetFullText>100 W FIRST ST</nc:StreetFullText>
+                        <nc:StreetFullText/>
+                    </nc:LocationStreet>
+                    <nc:LocationCityName>LOS ANGELES</nc:LocationCityName>
+                    <nc:LocationStateName>CA</nc:LocationStateName>
+                    <nc:LocationPostalCode>90030</nc:LocationPostalCode>
+                </nc:StructuredAddress>
+            </nc:LocationAddress>
+            <nc:LocationContactInformation>
+                <nc:ContactEmailID>unknown@localhost</nc:ContactEmailID>
+                <nc:ContactTelephoneNumber>
+                    <nc:FullTelephoneNumber>
+                        <nc:TelephoneNumberFullID>213 486-0150</nc:TelephoneNumberFullID>
+                    </nc:FullTelephoneNumber>
+                </nc:ContactTelephoneNumber>
+            </nc:LocationContactInformation>
+        </nc:OrganizationLocation>
+        <nc:OrganizationName>POLICE DEPARTMENT</nc:OrganizationName>
+        <jxdm:OrganizationAugmentation>
+            <jxdm:OrganizationORIIdentification>
+                <nc:IdentificationID>CA0194200</nc:IdentificationID>
+            </jxdm:OrganizationORIIdentification>
+        </jxdm:OrganizationAugmentation>
+    </rap:Agency>
+    <rap:Agency struct:id="agency02">
+        <nc:OrganizationAbbreviationText>POLICE DEPARTMENT</nc:OrganizationAbbreviationText>
+        <nc:OrganizationLocation>
+            <nc:LocationAddress>
+                <nc:StructuredAddress>
+                    <nc:LocationStreet>
+                        <nc:StreetFullText>STE 100</nc:StreetFullText>
+                        <nc:StreetFullText/>
+                    </nc:LocationStreet>
+                    <nc:LocationCityName>LONG BEACH</nc:LocationCityName>
+                    <nc:LocationStateName>CA</nc:LocationStateName>
+                    <nc:LocationPostalCode>908024497</nc:LocationPostalCode>
+                </nc:StructuredAddress>
+            </nc:LocationAddress>
+            <nc:LocationContactInformation>
+                <nc:ContactEmailID>unknown@localhost</nc:ContactEmailID>
+                <nc:ContactTelephoneNumber>
+                    <nc:FullTelephoneNumber>
+                        <nc:TelephoneNumberFullID>562 570-7288</nc:TelephoneNumberFullID>
+                    </nc:FullTelephoneNumber>
+                </nc:ContactTelephoneNumber>
+            </nc:LocationContactInformation>
+        </nc:OrganizationLocation>
+        <nc:OrganizationName>POLICE DEPARTMENT</nc:OrganizationName>
+        <jxdm:OrganizationAugmentation>
+            <jxdm:OrganizationORIIdentification>
+                <nc:IdentificationID>CA0194100</nc:IdentificationID>
+            </jxdm:OrganizationORIIdentification>
+        </jxdm:OrganizationAugmentation>
+    </rap:Agency>
+    <rap:Agency struct:id="agency03">
+        <nc:OrganizationAbbreviationText>DOC N KERN ST PRISON</nc:OrganizationAbbreviationText>
+        <nc:OrganizationLocation>
+            <nc:LocationAddress>
+                <nc:StructuredAddress>
+                    <nc:LocationStreet>
+                        <nc:StreetFullText>2737 W CECIL AVE</nc:StreetFullText>
+                        <nc:StreetFullText/>
+                    </nc:LocationStreet>
+                    <nc:LocationCityName>DELANO</nc:LocationCityName>
+                    <nc:LocationStateName>CA</nc:LocationStateName>
+                    <nc:LocationPostalCode>93216</nc:LocationPostalCode>
+                </nc:StructuredAddress>
+            </nc:LocationAddress>
+            <nc:LocationContactInformation>
+                <nc:ContactEmailID>unknown@localhost</nc:ContactEmailID>
+                <nc:ContactTelephoneNumber>
+                    <nc:FullTelephoneNumber>
+                        <nc:TelephoneNumberFullID>661 721-2345</nc:TelephoneNumberFullID>
+                    </nc:FullTelephoneNumber>
+                </nc:ContactTelephoneNumber>
+            </nc:LocationContactInformation>
+        </nc:OrganizationLocation>
+        <nc:OrganizationName>NORTH KERN STATE PRISON</nc:OrganizationName>
+        <jxdm:OrganizationAugmentation>
+            <jxdm:OrganizationORIIdentification>
+                <nc:IdentificationID>CA015045C</nc:IdentificationID>
+            </jxdm:OrganizationORIIdentification>
+        </jxdm:OrganizationAugmentation>
+    </rap:Agency>
+    <rap:Agency struct:id="agency04">
+        <nc:OrganizationAbbreviationText>SHERIFF'S OFFICE</nc:OrganizationAbbreviationText>
+        <nc:OrganizationLocation>
+            <nc:LocationAddress>
+                <nc:StructuredAddress>
+                    <nc:LocationStreet>
+                        <nc:StreetFullText>STE 400-W</nc:StreetFullText>
+                        <nc:StreetFullText/>
+                    </nc:LocationStreet>
+                    <nc:LocationCityName>NORWALK</nc:LocationCityName>
+                    <nc:LocationStateName>CA</nc:LocationStateName>
+                    <nc:LocationPostalCode>90650</nc:LocationPostalCode>
+                </nc:StructuredAddress>
+            </nc:LocationAddress>
+            <nc:LocationContactInformation>
+                <nc:ContactEmailID>unknown@localhost</nc:ContactEmailID>
+                <nc:ContactTelephoneNumber>
+                    <nc:FullTelephoneNumber>
+                        <nc:TelephoneNumberFullID>562 345-4457</nc:TelephoneNumberFullID>
+                    </nc:FullTelephoneNumber>
+                </nc:ContactTelephoneNumber>
+            </nc:LocationContactInformation>
+        </nc:OrganizationLocation>
+        <nc:OrganizationName>SHERIFF'S OFFICE</nc:OrganizationName>
+        <jxdm:OrganizationAugmentation>
+            <jxdm:OrganizationORIIdentification>
+                <nc:IdentificationID>CA0190000</nc:IdentificationID>
+            </jxdm:OrganizationORIIdentification>
+        </jxdm:OrganizationAugmentation>
+    </rap:Agency>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1994-05-03</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest01">
+            <nc:ActivityDate>
+                <nc:Date>1994-05-03</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>M POSS CONTRLD SUBS/PARAPHERNALIA</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction01">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -036MONTHS         PROBATION      -045DAYS           JAIL           -002DAYS           JAIL SS        -                  IMP SEN SS</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1994-10-18</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest02">
+            <nc:ActivityDate>
+                <nc:Date>1994-10-18</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>POSS CONT SUB PARAPH-WARR#94S0143701</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1989-03-11</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest03">
+            <nc:ActivityDate>
+                <nc:Date>1989-03-11</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>M-USE C0NT SUBS</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction02">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -012MONTHS         PROBATION      -090DAYS           JAIL</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>11550 HS-USE UNDER INFLUENCE CONTROL SUBST</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1995-07-14</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest04">
+            <nc:ActivityDate>
+                <nc:Date>1995-07-14</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>M TRES REFUSE LEAVE PROP</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction03">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -036MONTHS         PROBATION      -030DAYS           JAIL           -                  IMP SEN SS</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>602 J  PC-TRESPASS INJURE PROPERTY</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1999-05-04</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest05">
+            <nc:ActivityDate>
+                <nc:Date>1999-05-04</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>001 COUNTS OF TAKE VEH W/O OWNER CONSNT</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>001 COUNTS OF GRAND THEFT,AUTO</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction04">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -036MO  PROBATION      -018DS  JAIL</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>369I A  PC-TRESPASS RAILROAD PROPERTY</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1998-04-14</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest06">
+            <nc:ActivityDate>
+                <nc:Date>1998-04-14</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>CT 1 BURG</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>CT 1 POSS NARC CONTRL SUB</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction05">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ATT EQUALS 1 YR 4 MON / UNABLE TO ASSOCIATE DISPOSITION WITH CHARGE</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>CT 1 BURG</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/A/ UNABLE TO ASSOCIATE DISPOSITION WITH CHARGE</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>CT 1 POSS NARC CONTRL SUB</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>2004-02-04</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest07">
+            <nc:ActivityDate>
+                <nc:Date>2004-02-04</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>001 COUNTS OF CNTL SUB PARAPHERNALIA</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>001 COUNTS OF VIOLATION OF PAROLE,FEL</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction06">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -003YR  PROBATION      -010DS  JAIL           -       IMP SEN SS                                                   -FOR CERT INFO SEE AUTO</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1997-02-24</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest08">
+            <nc:ActivityDate>
+                <nc:Date>1997-02-24</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>F GRAND THEFT AUTO</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestSubject>
+                <rap:SubjectFullName>MURPHEY,GREG</rap:SubjectFullName>
+            </rap:ArrestSubject>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction07">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>459 PC-BURGLARY</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>2007-08-31</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest09">
+            <nc:ActivityDate>
+                <nc:Date>2007-08-31</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>001 COUNTS OF DRIVE,LIC SUSPENDED/ETC</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction08">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ADISMISSED/FURTHERANCE OF JUSTICE</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>12500 A  VC-DRIVE W O LICENSE</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -036MO  PROBATION      -010DS  JAIL           -       FINE           -       WORK PROGRAM   -       IMP SEN SS</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>14601 1 A  VC-DRIVE WHILE LIC SUSPEND ETC</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1995-09-03</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest10">
+            <nc:ActivityDate>
+                <nc:Date>1995-09-03</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>POSS CONT SUB PARAPHERNALIA-WT 95M1163001</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction09">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -001YR  PROBATION      -030DS  JAIL</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1994-04-03</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest11">
+            <nc:ActivityDate>
+                <nc:Date>1994-04-03</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>TRESP/OCCUPY PROP W/O CONSENT-WRT#94M0035801</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1986-10-24</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest12">
+            <nc:ActivityDate>
+                <nc:Date>1986-10-24</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>P0SS C0NTR0LLED SUBS</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1989-03-08</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest13">
+            <nc:ActivityDate>
+                <nc:Date>1989-03-08</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>M-USE C0NT SUBS</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction10">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -012MONTHS         PROBATION      -090DAYS           JAIL</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>11550 HS-USE UNDER INFLUENCE CONTROL SUBST</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>2000-04-25</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest14">
+            <nc:ActivityDate>
+                <nc:Date>2000-04-25</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>001 COUNTS OF VIOLATION OF PAROLE,FEL</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>001 COUNTS OF POSSESS NARCOTIC CNTL SUB</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction11">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED COMMITTED TO PRISON           -016MONTHS         PRISON</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>11350 A  HS-POSSESS NARC CONTROL SUBSTANCE</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>2003-06-12</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest15">
+            <nc:ActivityDate>
+                <nc:Date>2003-06-12</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>001 COUNTS OF FRAUD CHARITY SOLICITATN</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction12">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-JAIL                          -180DS  JAIL</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>LOCAL ORDINANCE VIOLATION</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>2004-04-03</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest16">
+            <nc:ActivityDate>
+                <nc:Date>2004-04-03</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>001 COUNTS OF CNTL SUB PARAPHERNALIA</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>001 COUNTS OF THRTN CRIME,INT,TERRORIZE</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction13">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -001YR  PROBATION      -007DS  JAIL           -       IMP SEN SS</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1986-11-14</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest17">
+            <nc:ActivityDate>
+                <nc:Date>1986-11-14</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>P0SS NARC0 C0NTR0LLED SUBS</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction14">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ADIVERSION TERM/SUCCESSFUL/DISM</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>11350 A  HS-POSSESS NARC CONTROL SUBSTANCE</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1993-01-21</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest18">
+            <nc:ActivityDate>
+                <nc:Date>1993-01-21</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>POSS CONT SUB PARAPHERNALIA WRNT</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestSubject>
+                <rap:SubjectFullName>MURPHY,GREG</rap:SubjectFullName>
+            </rap:ArrestSubject>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction15">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -001YR  PROBATION      -010DS  JAIL           -       IMP SEN SS</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1994-01-13</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest19">
+            <nc:ActivityDate>
+                <nc:Date>1994-01-13</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>ATTEMPT PETTY THEFT</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>TRESPASS/OCCUPY PROP W/O CONSENT</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestSubject>
+                <rap:SubjectFullName>MURPHY,GREG</rap:SubjectFullName>
+            </rap:ArrestSubject>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction16">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/APROBATION MODIFIED/JAIL                 -045DAYS           JAIL</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>484 A  PC-THEFT OF PERSONAL PROPERTY</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1995-10-22</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest20">
+            <nc:ActivityDate>
+                <nc:Date>1995-10-22</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>POSS PARAPHERNALIA CONTROLLED SUBS</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction17">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -001YR  PROBATION      -010DS  JAIL           -       IMP SEN SS</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1989-01-11</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest21">
+            <nc:ActivityDate>
+                <nc:Date>1989-01-11</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>M FALSE ID TO PO WAR 03533501</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>F POSS NARCO CONTROLLED SUBSWARRANT 03514801</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>3</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>POSS NARCO CONTROLLED SUBS</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction18">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/AREL/DET ONLY/ADMISS EVIDENCE INSUFF</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>148 9 PC-FALSE IDENTIFICATION TO PEACE OFFICER</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>2000-06-20</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest22">
+            <nc:ActivityDate>
+                <nc:Date>2000-06-20</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>CMT#1: PAROLE VIOLATOR</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>CMT#2: CDC FROM: 19-LOS ANGELES CO (#2) X001 11350(A) HS (F) POSSESS NARCOTIC CNTL SUB</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction19">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACRT/NA044940 SENT 16 MONTHS PRISN</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>CMT#1: PAROLE VIOLATOR</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>2006-05-11</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest23">
+            <nc:ActivityDate>
+                <nc:Date>2006-05-11</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>001 COUNTS OF DRIVE,LIC SUSPENDED/ETC</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction20">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ADISMISSED/FURTHERANCE OF JUSTICE</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>16020 A  VC-NO PROOF FINANCIAL RESPONSE VEH</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROBATION                     -003YR  PROBATION      -       FINE           -       IMP SEN SS</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>3</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>14601 1 A  VC-DRIVE WHILE LIC SUSPEND ETC</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ADISMISSED/FURTHERANCE OF JUSTICE</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>TRAFFIC VIOLATION</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1991-09-11</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest24">
+            <nc:ActivityDate>
+                <nc:Date>1991-09-11</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>3</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>GIVE FALSE INFO TO PO WRNT LB91L06652</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>GRAND THEFT/PROP</jxdm:ChargeText>
+            </rap:ArrestCharge>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>TRESPASS/OCCUPY PROP W/O CONSENT</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction21">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -036MONTHS         PROBATION      -090DAYS           JAIL</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>487 1 PC-GRAND THEFT PROPERTY</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ADISMISSED/FURTHERANCE OF JUSTICE</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>602 J  PC-TRESPASS INJURE PROPERTY</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1990-11-30</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest25">
+            <nc:ActivityDate>
+                <nc:Date>1990-11-30</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>GRAND THEFT MOTO/VEH</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction22">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -036MONTHS         PROBATION      -180DAYS           JAIL           -                  IMP SEN SS</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>2</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>496 1 PC-RECEIVE ETC KNOWN STOLEN PROPERTY</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>10851 A  VC-TAKE VEH W O OWN CONSENT VEH THEFT</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>1995-05-31</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest26">
+            <nc:ActivityDate>
+                <nc:Date>1995-05-31</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>POSS CONT SUB PARAPHERNALIA-W#94S0143701</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+        <rap:CourtAction struct:id="courtAction23">
+            <rap:CourtCharge>
+                <jxdm:ChargeDisposition>
+                    <nc:DispositionDescriptionText> N/ACONVICTED-PROB/JAIL                     -036MONTHS         PROBATION      -045DAYS           JAIL           -002DAYS           JAIL SS        -                  IMP SEN SS</nc:DispositionDescriptionText>
+                </jxdm:ChargeDisposition>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeText>11364 HS-POSSESS CONTROL SUBSTANCE PARAPHERNA</jxdm:ChargeText>
+                <rap:ChargeSeverityDescriptionText>Unknown</rap:ChargeSeverityDescriptionText>
+            </rap:CourtCharge>
+        </rap:CourtAction>
+    </rap:RapSheetCycle>
+    <rap:RapSheetCycle>
+        <rap:CycleEarliestDate>
+            <nc:Date>2008-01-20</nc:Date>
+        </rap:CycleEarliestDate>
+        <rap:Arrest struct:id="arrest27">
+            <nc:ActivityDate>
+                <nc:Date>2008-01-20</nc:Date>
+            </nc:ActivityDate>
+            <rap:ArrestCharge>
+                <jxdm:ChargeSequenceID>
+                    <nc:IdentificationID>1</nc:IdentificationID>
+                </jxdm:ChargeSequenceID>
+                <jxdm:ChargeSeverityText>Unknown</jxdm:ChargeSeverityText>
+                <jxdm:ChargeText>001 COUNTS OF DRIVE,LIC SUSPENDED/ETC</jxdm:ChargeText>
+            </rap:ArrestCharge>
+        </rap:Arrest>
+    </rap:RapSheetCycle>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest01"/>
+        <nc:OrganizationReference struct:ref="agency01"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>2379948Y</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest02"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>0318409714</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest03"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>409714</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest04"/>
+        <nc:OrganizationReference struct:ref="agency01"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>2379948Y</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest05"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>6045077</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest06"/>
+        <nc:OrganizationReference struct:ref="agency03"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>K87308</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest07"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>8001994</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest08"/>
+        <nc:OrganizationReference struct:ref="agency01"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>2379948Y</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest09"/>
+        <nc:OrganizationReference struct:ref="agency04"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>9924182</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest10"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>3711409714</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest11"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>08008911</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest12"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>409714</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest13"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>409714</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest14"/>
+        <nc:OrganizationReference struct:ref="agency01"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>006440631</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest15"/>
+        <nc:OrganizationReference struct:ref="agency01"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>7729366</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest16"/>
+        <nc:OrganizationReference struct:ref="agency01"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>8074720</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest17"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>409714</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest18"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>7143388431</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest19"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>7143826691</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest20"/>
+        <nc:OrganizationReference struct:ref="agency04"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>4590706</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest21"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>409714</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest22"/>
+        <nc:OrganizationReference struct:ref="agency03"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>K87308</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest23"/>
+        <nc:OrganizationReference struct:ref="agency01"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>9039459</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest24"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>409714</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest25"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>409714</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest26"/>
+        <nc:OrganizationReference struct:ref="agency02"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>7144423247</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:ArrestAgencyAssociation>
+        <nc:ActivityReference struct:ref="arrest27"/>
+        <nc:OrganizationReference struct:ref="agency01"/>
+        <jxdm:ArrestAgencyRecordIdentification>
+            <nc:IdentificationID>1143798</nc:IdentificationID>
+        </jxdm:ArrestAgencyRecordIdentification>
+    </rap:ArrestAgencyAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction01"/>
+        <jxdm:CourtReference struct:ref="court01"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction02"/>
+        <jxdm:CourtReference struct:ref="court02"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction03"/>
+        <jxdm:CourtReference struct:ref="court01"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction04"/>
+        <jxdm:CourtReference struct:ref="court01"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction05"/>
+        <jxdm:CourtReference struct:ref="Unknown"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction06"/>
+        <jxdm:CourtReference struct:ref="court02"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction07"/>
+        <jxdm:CourtReference struct:ref="court03"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction08"/>
+        <jxdm:CourtReference struct:ref="court01"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction09"/>
+        <jxdm:CourtReference struct:ref="court02"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction10"/>
+        <jxdm:CourtReference struct:ref="court02"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction11"/>
+        <jxdm:CourtReference struct:ref="court03"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction12"/>
+        <jxdm:CourtReference struct:ref="court01"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction13"/>
+        <jxdm:CourtReference struct:ref="court02"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction14"/>
+        <jxdm:CourtReference struct:ref="court02"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction15"/>
+        <jxdm:CourtReference struct:ref="court02"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction16"/>
+        <jxdm:CourtReference struct:ref="court02"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction17"/>
+        <jxdm:CourtReference struct:ref="court02"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction18"/>
+        <jxdm:CourtReference struct:ref="court04"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction19"/>
+        <jxdm:CourtReference struct:ref="Unknown"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction20"/>
+        <jxdm:CourtReference struct:ref="court02"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction21"/>
+        <jxdm:CourtReference struct:ref="court02"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction22"/>
+        <jxdm:CourtReference struct:ref="court03"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:CourtActionCourtAssociation>
+        <nc:ActivityReference struct:ref="courtAction23"/>
+        <jxdm:CourtReference struct:ref="court01"/>
+    </rap:CourtActionCourtAssociation>
+    <rap:ExtensionField>
+        <rap:FieldName>NCN</rap:FieldName>
+        <rap:FieldValue>E2024263850000000026</rap:FieldValue>
+    </rap:ExtensionField>
+    <rap:ExtensionField>
+        <rap:FieldName>DestinationORIID</rap:FieldName>
+        <rap:FieldValue>USTVA010Z</rap:FieldValue>
+    </rap:ExtensionField>
+    <rap:ExtensionField>
+        <rap:FieldName>FBI_Response</rap:FieldName>
+        <rap:FieldValue>526680FA9</rap:FieldValue>
+    </rap:ExtensionField>
+</rap:RapSheet>
+</ersx>
+]]></ebts:TransactionElectronicRapSheetXML></ebts:TransactionResponseData>
+        </ebts:RecordTransactionData>
+        <ebts:RecordTransactionActivity>
+          <!--CRI 2.073-->
+          <ebts:RecordControllingAgencyID>USTVA010Z</ebts:RecordControllingAgencyID>
+        </ebts:RecordTransactionActivity>
+        <ebts:RecordSubject>
+          <!--NAM 2.018-->
+          <nc:PersonName>
+            <nc:PersonGivenName>GREGORY</nc:PersonGivenName>
+            <nc:PersonSurName>MURPHY</nc:PersonSurName>
+          </nc:PersonName>
+          <!-- FBI 2.014-->
+          <j:PersonFBIIdentification>
+            <nc:IdentificationID>526680FA9</nc:IdentificationID>
+          </j:PersonFBIIdentification>
+          <ebts:PersonEmployment>
+            <!--EAD 2.039-->
+            <nc:OrganizationName>400 W. SUMMIT HILL DRIVE. KNOXVILLE, TN. 37902</nc:OrganizationName>
+          </ebts:PersonEmployment>
+          <!-- BIA 2.2031 (0..6)-->
+          <ebts:BiometricImageAvailableCode>FP</ebts:BiometricImageAvailableCode>
+        </ebts:RecordSubject>
+      </ebts:DomainDefinedDescriptiveFields>
+    </itl:UserDefinedDescriptiveDetail>
+  </itl:PackageDescriptiveTextRecord>
+</itl:NISTBiometricInformationExchangePackage>
