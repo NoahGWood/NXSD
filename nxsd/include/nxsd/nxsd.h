@@ -4,7 +4,6 @@
 #include <nxsd/data/Registry.h>
 #include <nxsd/data/Types.h>
 #include <nxsd/logic/Resolver.h>
-#include <nxsd/logic/Walker.h>
 #include <nxsd/parse/SchemaLoader.h>
 #include <nxsd/parse/XsdParser.h>
 
