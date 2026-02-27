@@ -1,5 +1,6 @@
 #include <nxsd/logic/Resolver.h>
 
+#include <stdexcept>
 
 namespace nxsd {
 
@@ -15,7 +16,7 @@ namespace nxsd {
         return ResolveFacetsImpl(type, reg, visited);
     }
 
-    static PrimitiveKind ResolvePrimitiveImpl(
+    PrimitiveKind ResolvePrimitiveImpl(
         const QName& type, const TypeRegistry& reg,
         std::unordered_set<QName, QNameHash>& visiting) {
         // insert returns {iterator, inserted}
@@ -53,17 +54,33 @@ namespace nxsd {
 
         return PrimitiveKind::Unknown;
     }
-    static void MergeFacet(ValueFacet& dst, const ValueFacet& src) {
+
+    void MergeFacet(ValueFacet& dst, const ValueFacet& src) {
         if (src.min_inclusive)
-            dst.min_inclusive = src.min_inclusive;
+            dst.min_inclusive = dst.min_inclusive ? std::max(*dst.min_inclusive,
+                                                             *src.min_inclusive)
+                                                  : src.min_inclusive;
+
         if (src.max_inclusive)
-            dst.max_inclusive = src.max_inclusive;
+            dst.max_inclusive = dst.max_inclusive ? std::min(*dst.max_inclusive,
+                                                             *src.max_inclusive)
+                                                  : src.max_inclusive;
+
         if (src.min_length)
-            dst.min_length = src.min_length;
+            dst.min_length = dst.min_length
+                                 ? std::max(*dst.min_length, *src.min_length)
+                                 : src.min_length;
+
         if (src.max_length)
-            dst.max_length = src.max_length;
+            dst.max_length = dst.max_length
+                                 ? std::min(*dst.max_length, *src.max_length)
+                                 : src.max_length;
+        if (dst.min_inclusive && dst.max_inclusive &&
+            *dst.min_inclusive > *dst.max_inclusive) {
+            throw std::logic_error("Invalid facet merge: min > max");
+        }
     }
-    static std::optional<ValueFacet> ResolveFacetsImpl(
+    std::optional<ValueFacet> ResolveFacetsImpl(
         const QName& type, const TypeRegistry& reg,
         std::unordered_set<QName, QNameHash>& visited) {
         if (visited.contains(type))
@@ -98,4 +115,47 @@ namespace nxsd {
         return result;
     }
 
+    nxsd::ResolvedType ResolveType(const nxsd::QName& type,
+                                   const nxsd::SchemaRegistry& reg) {
+        if (auto it = reg.resolved_cache.find(type);
+            it != reg.resolved_cache.end()) {
+            return it->second;
+        }
+        
+        nxsd::ResolvedType out{};
+        out.is_union = false;
+        out.is_complex = false;
+
+        auto it = reg.types.find(type);
+        if (it == reg.types.end()) {
+            out.primitive = nxsd::PrimitiveKind::Unknown;
+            return out;
+        }
+
+        const nxsd::TypeNode& node = it->second;
+
+        if (node.IsComplex()) {
+            out.is_complex = true;
+            out.primitive = nxsd::PrimitiveKind::Unknown;
+            return out;
+        }
+
+        // ---- primitive ----
+        out.primitive = ResolvePrimitive(type, reg.types);
+
+        // ---- facets ----
+        out.facets = ResolveFacets(type, reg.types);
+
+        // ---- enums ----
+        if (node.enums)
+            out.enums = node.enums;
+
+        // ---- union ----
+        if (!node.union_types.empty()) {
+            out.is_union = true;
+            out.primitive = nxsd::PrimitiveKind::String;  // safest fallback
+        }
+
+        return out;
+    }
 }  // namespace nxsd

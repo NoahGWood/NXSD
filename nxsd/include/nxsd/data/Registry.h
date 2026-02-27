@@ -27,5 +27,6 @@ namespace nxsd {
     struct SchemaRegistry {
         TypeRegistry types;
         GlobalElementMap globalElements;
+        mutable std::unordered_map<QName, ResolvedType, QNameHash> resolved_cache;
     };
 }  // namespace nxsd

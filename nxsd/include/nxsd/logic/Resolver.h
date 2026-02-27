@@ -4,18 +4,20 @@
 #include "../data/Registry.h"
 
 namespace nxsd {
+
+    ResolvedType ResolveType(const QName& type, const SchemaRegistry& reg);
     PrimitiveKind ResolvePrimitive(const QName& type, const TypeRegistry& reg);
     std::optional<ValueFacet> ResolveFacets(const QName& type,
                                             const TypeRegistry& reg);
 
     // ---- Implementations ---- /
-    static PrimitiveKind ResolvePrimitiveImpl(
+    PrimitiveKind ResolvePrimitiveImpl(
         const QName& type, const TypeRegistry& reg,
         std::unordered_set<QName, QNameHash>& visiting);
 
-    static void MergeFacet(ValueFacet& dst, const ValueFacet& src);
+    void MergeFacet(ValueFacet& dst, const ValueFacet& src);
 
-    static std::optional<ValueFacet> ResolveFacetsImpl(
+    std::optional<ValueFacet> ResolveFacetsImpl(
         const QName& type, const TypeRegistry& reg,
         std::unordered_set<QName, QNameHash>& visited);
 }  // namespace nxsd
