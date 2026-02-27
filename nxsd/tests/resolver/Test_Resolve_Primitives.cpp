@@ -78,3 +78,31 @@ TEST(XSD_ResolvePrimitive_UnionType) {
     auto pk = ResolvePrimitive(unionType.name, reg);
     ASSERT_NE(pk, PrimitiveKind::Unknown);
 }
+
+TEST(ResolvePrimitive_InheritsThroughChain) {
+    SchemaRegistry reg;
+
+    QName A{"test", "A"};
+    QName B{"test", "B"};
+    QName C{"test", "C"};
+
+    TypeNode typeA{};
+    typeA.name = A;
+    typeA.primitive = PrimitiveKind::Integer;
+
+    TypeNode typeB{};
+    typeB.name = B;
+    typeB.base_types.push_back(A);
+
+    TypeNode typeC{};
+    typeC.name = C;
+    typeC.base_types.push_back(B);
+
+    reg.types[A] = typeA;
+    reg.types[B] = typeB;
+    reg.types[C] = typeC;
+
+    auto p = ResolvePrimitive(C, reg.types);
+
+    ASSERT_EQ(p, PrimitiveKind::Integer);
+}
